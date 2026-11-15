@@ -69,7 +69,13 @@ def call_cli(system, prompt):
     with tempfile.TemporaryDirectory() as tmp:
         p = subprocess.run(cmd, input=prompt, capture_output=True, text=True, timeout=420, cwd=tmp)
     if p.returncode != 0:
-        raise Fail("claude CLI failed (%d): %s" % (p.returncode, (p.stderr or p.stdout)[:500]))
+        detail = (p.stderr or "").strip()[:300]
+        try:  # the useful message is in the JSON's "result"/"subtype", not at the start of stdout
+            res = json.loads(p.stdout)
+            detail = "%s | %s | %s" % (res.get("subtype"), str(res.get("result"))[:400], detail)
+        except ValueError:
+            detail = "%s | %s" % (p.stdout[-400:], detail)
+        raise Fail("claude CLI failed (%d): %s" % (p.returncode, detail))
     try:
         res = json.loads(p.stdout)
     except ValueError:
