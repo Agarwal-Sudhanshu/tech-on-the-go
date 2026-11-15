@@ -1,0 +1,38 @@
+name: Script test
+
+# Quick check of the news + script steps only (no voice, video or publishing).
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  script:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: npm install -g @anthropic-ai/claude-code
+      - name: Collect news and write the script
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          DATE=$(TZ=Asia/Kolkata date +%F)
+          mkdir -p "out/$DATE"
+          python pipeline/collect.py --outdir "out/$DATE"
+          python pipeline/write_script.py --outdir "out/$DATE"
+          cp "out/$DATE/brief.json" brief.json
+          cat brief.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: brief
+          path: brief.json
+          retention-days: 7
