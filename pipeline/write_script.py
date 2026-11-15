@@ -70,6 +70,9 @@ def call_cli(system, prompt):
         # An empty ANTHROPIC_API_KEY (as CI passes for an unset secret) must not reach the CLI,
         # or it tries key auth with a blank key instead of the subscription token.
         env = {k: v for k, v in os.environ.items() if not (k.startswith("ANTHROPIC_") and not v)}
+        # A token pasted from a wrapped terminal line can carry a stray space or line break.
+        if env.get("CLAUDE_CODE_OAUTH_TOKEN"):
+            env["CLAUDE_CODE_OAUTH_TOKEN"] = "".join(env["CLAUDE_CODE_OAUTH_TOKEN"].split())
         p = subprocess.run(cmd, input=prompt, capture_output=True, text=True, timeout=420, cwd=tmp, env=env)
     if p.returncode != 0:
         detail = (p.stderr or "").strip()[:300]
