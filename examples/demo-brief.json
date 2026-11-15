@@ -1,0 +1,33 @@
+{
+  "channel": "Tech On The Go",
+  "date": "2026-11-15",
+  "title": "AI model prices cut in half, EU labelling rules, a faster open-source database",
+  "segments": [
+    {
+      "kind": "intro",
+      "text": "Good morning, and welcome to Tech On The Go, your five minute tech catch-up."
+    },
+    {
+      "kind": "story",
+      "headline": "Cloud provider cuts AI model prices by almost half",
+      "tag": "AI",
+      "text": "Here is what matters today. A major cloud provider cut the price of its fastest AI models by almost half, which could make advanced assistants affordable for much smaller teams."
+    },
+    {
+      "kind": "story",
+      "headline": "Europe publishes rules for labelling machine-made content",
+      "tag": "Regulation",
+      "text": "Meanwhile, regulators in Europe published new guidance on how companies must label content created by machines. If you publish online, this one affects you."
+    },
+    {
+      "kind": "story",
+      "headline": "New open-source database claims ten times the traffic",
+      "tag": "Infrastructure",
+      "text": "And finally, a new open-source database promises to handle ten times more traffic on the same hardware. Early tests look promising, but real-world results will tell the full story."
+    },
+    {
+      "kind": "outro",
+      "text": "That's the brief. Thanks for listening, and I'll see you tomorrow."
+    }
+  ]
+}

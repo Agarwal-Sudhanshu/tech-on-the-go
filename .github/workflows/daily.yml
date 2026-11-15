@@ -10,6 +10,10 @@ on:
         description: "Publish to YouTube and the podcast feed"
         type: boolean
         default: false
+      demo:
+        description: "Test run with the sample script (skips news and Claude)"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -65,6 +69,7 @@ jobs:
         env:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          BRIEF_FILE: ${{ inputs.demo && 'examples/demo-brief.json' || '' }}
         run: sh run_episode.sh "$DATE"
 
       - name: Remove decrypted voice reference

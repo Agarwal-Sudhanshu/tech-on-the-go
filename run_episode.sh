@@ -7,10 +7,15 @@ DATE="${1:-$(TZ=Asia/Kolkata date +%F)}"
 OUT="out/$DATE"
 mkdir -p "$OUT"
 
-echo "== 1/5 collect news"
-python pipeline/collect.py --outdir "$OUT"
-echo "== 2/5 write script"
-python pipeline/write_script.py --outdir "$OUT"
+if [ -n "${BRIEF_FILE:-}" ]; then
+  echo "== using ready-made script $BRIEF_FILE (news and script steps skipped)"
+  cp "$BRIEF_FILE" "$OUT/brief.json"
+else
+  echo "== 1/5 collect news"
+  python pipeline/collect.py --outdir "$OUT"
+  echo "== 2/5 write script"
+  python pipeline/write_script.py --outdir "$OUT"
+fi
 echo "== 3/5 narrate"
 python voice/speak.py --brief "$OUT/brief.json" --outdir "$OUT"
 echo "== 4/5 clean and master audio"
