@@ -1,0 +1,22 @@
+{
+  "channel_name": "Tech On The Go",
+  "tagline": "Your 5-minute tech catch-up.",
+  "author": "Sudhanshu Agarwal",
+  "language": "en",
+  "timezone": "Asia/Kolkata",
+  "stories_per_episode": 5,
+  "target_words": 500,
+  "youtube": {
+    "privacy": "private",
+    "category_id": "28",
+    "playlist_id": ""
+  },
+  "podcast": {
+    "base_url": "https://agarwal-sudhanshu.github.io/tech-on-the-go",
+    "owner_email": "agarwal.sudh@gmail.com",
+    "category": "Technology",
+    "subcategory": "",
+    "explicit": false
+  },
+  "topics_line": "Global Technology • AI • Startups • Innovation"
+}

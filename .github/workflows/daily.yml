@@ -1,0 +1,120 @@
+name: Daily brief
+
+on:
+  # The daily schedule is switched on once a manual test run has passed:
+  # schedule:
+  #   - cron: "0 0 * * *" # 05:30 India time; the episode is published roughly 45 minutes later
+  workflow_dispatch:
+    inputs:
+      publish:
+        description: "Publish to YouTube and the podcast feed"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-brief
+  cancel-in-progress: false
+
+jobs:
+  episode:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    env:
+      PUBLISH: ${{ github.event_name == 'schedule' || inputs.publish }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set episode date (India time)
+        run: echo "DATE=$(TZ=Asia/Kolkata date +%F)" >> "$GITHUB_ENV"
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install system tools and fonts
+        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends ffmpeg fonts-inter libsndfile1 gnupg
+
+      - name: Install Python packages (CPU-only PyTorch)
+        run: pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements.txt
+
+      - name: Cache voice model weights
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: voice-model-chatterbox-0.1.7
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install Claude Code (writes the script)
+        run: npm install -g @anthropic-ai/claude-code
+
+      - name: Decrypt voice reference
+        env:
+          VOICE_PASSPHRASE: ${{ secrets.VOICE_PASSPHRASE }}
+        run: |
+          gpg --batch --quiet --pinentry-mode loopback --passphrase "$VOICE_PASSPHRASE" \
+            --output voice/ref.wav --decrypt voice/ref.wav.gpg
+
+      - name: Build episode
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: sh run_episode.sh "$DATE"
+
+      - name: Remove decrypted voice reference
+        if: always()
+        run: rm -f voice/ref.wav
+
+      - name: Keep the built episode for a week
+        uses: actions/upload-artifact@v4
+        with:
+          name: episode-${{ env.DATE }}
+          path: |
+            out/${{ env.DATE }}/video.mp4
+            out/${{ env.DATE }}/voice.wav
+            out/${{ env.DATE }}/brief.json
+            out/${{ env.DATE }}/timings.json
+          retention-days: 7
+
+      - name: Upload to YouTube
+        if: env.PUBLISH == 'true'
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: python publish/youtube_upload.py --dir "out/$DATE"
+
+      - name: Check out the podcast site
+        if: env.PUBLISH == 'true' && !cancelled()
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: site
+
+      - name: Publish podcast episode
+        if: env.PUBLISH == 'true' && !cancelled()
+        run: |
+          python publish/podcast.py --dir "out/$DATE" --site site
+          cd site
+          git config user.name "daily-brief-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A
+          git commit -m "Episode $DATE" || echo "nothing to publish"
+          git push
+
+      - name: Archive the script in the repository
+        if: env.PUBLISH == 'true' && !cancelled()
+        run: |
+          mkdir -p episodes
+          cp "out/$DATE/brief.json" "episodes/$DATE.json"
+          git config user.name "daily-brief-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add episodes
+          git commit -m "Script for $DATE" || echo "nothing to archive"
+          git push

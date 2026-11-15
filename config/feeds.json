@@ -1,0 +1,316 @@
+{
+  "max_items_per_source": 40,
+  "topics": {
+    "AI": "Model launches, product, pricing and availability changes from major AI labs and tools",
+    "Outage": "Outages and incidents at major cloud and SaaS providers",
+    "Security": "Vulnerabilities, patches, actively exploited bugs, end-of-life runtimes",
+    "Breach": "Data breaches and leaks",
+    "Dev": "Developer platform and tooling updates",
+    "Tech": "Other significant tech industry news"
+  },
+  "sources": [
+    {
+      "name": "OpenAI",
+      "url": "https://openai.com/news/rss.xml",
+      "topic": "AI",
+      "weight": 1.5
+    },
+    {
+      "name": "Anthropic",
+      "url": "https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_news.xml",
+      "topic": "AI",
+      "weight": 1.5
+    },
+    {
+      "name": "Google AI Blog",
+      "url": "https://blog.google/technology/ai/rss/",
+      "topic": "AI",
+      "weight": 1.2
+    },
+    {
+      "name": "Google DeepMind",
+      "url": "https://deepmind.google/blog/rss.xml",
+      "topic": "AI",
+      "weight": 1.2
+    },
+    {
+      "name": "Hugging Face",
+      "url": "https://huggingface.co/blog/feed.xml",
+      "topic": "AI",
+      "weight": 0.8
+    },
+    {
+      "name": "NVIDIA Blog",
+      "url": "https://blogs.nvidia.com/feed/",
+      "topic": "AI",
+      "weight": 0.7
+    },
+    {
+      "name": "AWS Machine Learning Blog",
+      "url": "https://aws.amazon.com/blogs/machine-learning/feed/",
+      "topic": "AI",
+      "weight": 0.7
+    },
+    {
+      "name": "TechCrunch AI",
+      "url": "https://techcrunch.com/category/artificial-intelligence/feed/",
+      "topic": "AI",
+      "weight": 1.0
+    },
+    {
+      "name": "The Verge AI",
+      "url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml",
+      "topic": "AI",
+      "weight": 1.0
+    },
+    {
+      "name": "Simon Willison",
+      "url": "https://simonwillison.net/atom/everything/",
+      "topic": "AI",
+      "weight": 0.8
+    },
+    {
+      "name": "BleepingComputer",
+      "url": "https://www.bleepingcomputer.com/feed/",
+      "topic": "Security",
+      "weight": 1.4
+    },
+    {
+      "name": "The Hacker News",
+      "url": "https://feeds.feedburner.com/TheHackersNews",
+      "topic": "Security",
+      "weight": 1.2
+    },
+    {
+      "name": "Krebs on Security",
+      "url": "https://krebsonsecurity.com/feed/",
+      "topic": "Security",
+      "weight": 1.3
+    },
+    {
+      "name": "SecurityWeek",
+      "url": "https://feeds.feedburner.com/securityweek",
+      "topic": "Security",
+      "weight": 1.0
+    },
+    {
+      "name": "Dark Reading",
+      "url": "https://www.darkreading.com/rss.xml",
+      "topic": "Security",
+      "weight": 0.8
+    },
+    {
+      "name": "Node.js Blog",
+      "url": "https://nodejs.org/en/feed/blog.xml",
+      "topic": "Security",
+      "weight": 1.3
+    },
+    {
+      "name": "PHP.net",
+      "url": "https://www.php.net/feed.atom",
+      "topic": "Security",
+      "weight": 1.2
+    },
+    {
+      "name": "Chrome Releases",
+      "url": "https://chromereleases.googleblog.com/feeds/posts/default",
+      "topic": "Security",
+      "weight": 0.8
+    },
+    {
+      "name": "Google Cloud Status",
+      "url": "https://status.cloud.google.com/en/feed.atom",
+      "topic": "Outage",
+      "weight": 1.0
+    },
+    {
+      "name": "GitHub Status",
+      "url": "https://www.githubstatus.com/history.atom",
+      "topic": "Outage",
+      "weight": 1.0
+    },
+    {
+      "name": "Cloudflare Status",
+      "url": "https://www.cloudflarestatus.com/history.atom",
+      "topic": "Outage",
+      "weight": 1.0
+    },
+    {
+      "name": "OpenAI Status",
+      "url": "https://status.openai.com/history.rss",
+      "topic": "Outage",
+      "weight": 1.0
+    },
+    {
+      "name": "Claude Status",
+      "url": "https://status.claude.com/history.atom",
+      "topic": "Outage",
+      "weight": 1.0
+    },
+    {
+      "name": "AWS Status",
+      "url": "https://status.aws.amazon.com/rss/all.rss",
+      "topic": "Outage",
+      "weight": 1.0
+    },
+    {
+      "name": "GitHub Changelog",
+      "url": "https://github.blog/changelog/feed/",
+      "topic": "Dev",
+      "weight": 1.0
+    },
+    {
+      "name": "GitHub Blog",
+      "url": "https://github.blog/feed/",
+      "topic": "Dev",
+      "weight": 0.7
+    },
+    {
+      "name": "Cloudflare Blog",
+      "url": "https://blog.cloudflare.com/rss/",
+      "topic": "Dev",
+      "weight": 0.8
+    },
+    {
+      "name": "Kubernetes Blog",
+      "url": "https://kubernetes.io/feed.xml",
+      "topic": "Dev",
+      "weight": 0.8
+    },
+    {
+      "name": "Docker Blog",
+      "url": "https://www.docker.com/blog/feed/",
+      "topic": "Dev",
+      "weight": 0.7
+    },
+    {
+      "name": "Vercel Changelog",
+      "url": "https://vercel.com/atom",
+      "topic": "Dev",
+      "weight": 0.7
+    },
+    {
+      "name": "InfoQ",
+      "url": "https://feed.infoq.com/",
+      "topic": "Dev",
+      "weight": 0.8
+    },
+    {
+      "name": "Python Insider",
+      "url": "https://blog.python.org/feeds/posts/default",
+      "topic": "Dev",
+      "weight": 0.8
+    },
+    {
+      "name": "Rust Blog",
+      "url": "https://blog.rust-lang.org/feed.xml",
+      "topic": "Dev",
+      "weight": 0.7
+    },
+    {
+      "name": "TypeScript Blog",
+      "url": "https://devblogs.microsoft.com/typescript/feed/",
+      "topic": "Dev",
+      "weight": 0.7
+    },
+    {
+      "name": "Microsoft Azure Blog",
+      "url": "https://azure.microsoft.com/en-us/blog/feed/",
+      "topic": "Dev",
+      "weight": 0.7
+    },
+    {
+      "name": "AWS News Blog",
+      "url": "https://aws.amazon.com/blogs/aws/feed/",
+      "topic": "Dev",
+      "weight": 0.9
+    },
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/feed/",
+      "topic": "Tech",
+      "weight": 1.1
+    },
+    {
+      "name": "The Verge",
+      "url": "https://www.theverge.com/rss/index.xml",
+      "topic": "Tech",
+      "weight": 1.1
+    },
+    {
+      "name": "Ars Technica",
+      "url": "https://feeds.arstechnica.com/arstechnica/index",
+      "topic": "Tech",
+      "weight": 1.2
+    },
+    {
+      "name": "The Register",
+      "url": "https://www.theregister.com/headlines.atom",
+      "topic": "Tech",
+      "weight": 1.0
+    },
+    {
+      "name": "Hacker News",
+      "url": "https://hacker-news.firebaseio.com/v0/topstories.json",
+      "topic": "Tech",
+      "weight": 1.2,
+      "type": "hn",
+      "min_score": 150,
+      "limit": 40
+    },
+    {
+      "name": "DataBreaches.net",
+      "url": "https://databreaches.net/feed/",
+      "topic": "Breach",
+      "weight": 1.0
+    },
+    {
+      "name": "Troy Hunt",
+      "url": "https://www.troyhunt.com/rss/",
+      "topic": "Breach",
+      "weight": 0.7
+    },
+    {
+      "name": "Google Security Blog",
+      "url": "https://security.googleblog.com/feeds/posts/default",
+      "topic": "Security",
+      "weight": 0.8
+    },
+    {
+      "name": "Cisco Talos",
+      "url": "https://blog.talosintelligence.com/rss/",
+      "topic": "Security",
+      "weight": 0.8
+    },
+    {
+      "name": "Microsoft Security Blog",
+      "url": "https://www.microsoft.com/en-us/security/blog/feed/",
+      "topic": "Security",
+      "weight": 0.8
+    },
+    {
+      "name": "Slack Status",
+      "url": "https://slack-status.com/feed/rss",
+      "topic": "Outage",
+      "weight": 0.8
+    },
+    {
+      "name": "Mistral AI",
+      "url": "https://mistral.ai/rss.xml",
+      "topic": "AI",
+      "weight": 1.0
+    },
+    {
+      "name": "Google Cloud Blog",
+      "url": "https://cloudblog.withgoogle.com/rss/",
+      "topic": "Dev",
+      "weight": 0.7
+    },
+    {
+      "name": "Azure Updates",
+      "url": "https://www.microsoft.com/releasecommunications/api/v2/azure/rss",
+      "topic": "Dev",
+      "weight": 0.6
+    }
+  ]
+}

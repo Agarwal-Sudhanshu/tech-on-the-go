@@ -1,0 +1,13 @@
+# Private: the raw voice recording and the decrypted reference clip must never be committed.
+my-voice.*
+*.m4a
+voice/ref.wav
+.secrets/
+
+# Build output
+out/
+site/
+__pycache__/
+*.pyc
+.DS_Store
+.claude/
