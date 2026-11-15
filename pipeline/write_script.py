@@ -67,7 +67,10 @@ def call_cli(system, prompt):
            "--no-session-persistence", "--disable-slash-commands", "--system-prompt", system]
     # Run from an empty temp dir so no project CLAUDE.md / settings leak into the prompt.
     with tempfile.TemporaryDirectory() as tmp:
-        p = subprocess.run(cmd, input=prompt, capture_output=True, text=True, timeout=420, cwd=tmp)
+        # An empty ANTHROPIC_API_KEY (as CI passes for an unset secret) must not reach the CLI,
+        # or it tries key auth with a blank key instead of the subscription token.
+        env = {k: v for k, v in os.environ.items() if not (k.startswith("ANTHROPIC_") and not v)}
+        p = subprocess.run(cmd, input=prompt, capture_output=True, text=True, timeout=420, cwd=tmp, env=env)
     if p.returncode != 0:
         detail = (p.stderr or "").strip()[:300]
         try:  # the useful message is in the JSON's "result"/"subtype", not at the start of stdout
