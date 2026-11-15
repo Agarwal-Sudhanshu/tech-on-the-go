@@ -18,6 +18,7 @@ import http.server
 import json
 import os
 import secrets
+import ssl
 import subprocess
 import sys
 import threading
@@ -27,6 +28,20 @@ import urllib.parse
 import urllib.request
 import webbrowser
 from pathlib import Path
+
+
+def _ssl_context():
+    """python.org builds of Python on macOS ship without CA certificates; use the system bundle."""
+    ctx = ssl.create_default_context()
+    if not ctx.get_ca_certs():
+        for bundle in ("/etc/ssl/cert.pem", "/etc/ssl/certs/ca-certificates.crt"):
+            if os.path.exists(bundle):
+                ctx.load_verify_locations(bundle)
+                break
+    return ctx
+
+
+SSL_CTX = _ssl_context()
 
 ROOT = Path(__file__).resolve().parent.parent
 AUTH_URL = "https://accounts.google.com/o/oauth2/v2/auth"
@@ -57,7 +72,7 @@ def load_client(path):
 def post_form(url, fields):
     req = urllib.request.Request(url, data=urllib.parse.urlencode(fields).encode(), method="POST")
     try:
-        with urllib.request.urlopen(req, timeout=60) as r:
+        with urllib.request.urlopen(req, timeout=60, context=SSL_CTX) as r:
             return json.loads(r.read())
     except urllib.error.HTTPError as e:
         try:
@@ -160,7 +175,7 @@ def main():
     # Which channel does this token belong to?
     req = urllib.request.Request(CHANNELS_URL, headers={"Authorization": f"Bearer {tok['access_token']}"})
     try:
-        with urllib.request.urlopen(req, timeout=60) as r:
+        with urllib.request.urlopen(req, timeout=60, context=SSL_CTX) as r:
             items = json.loads(r.read()).get("items", [])
         channel = items[0]["snippet"]["title"] if items else None
     except Exception as e:
