@@ -1,4 +1,4 @@
-# Tech On The Go
+# Tech On The Go with Sudhanshu
 
 Your 5-minute tech catch-up. Global Technology • AI • Startups • Innovation.
 

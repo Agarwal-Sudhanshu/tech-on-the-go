@@ -1,5 +1,5 @@
 {
-  "channel_name": "Tech On The Go",
+  "channel_name": "Tech On The Go with Sudhanshu",
   "tagline": "Your 5-minute tech catch-up.",
   "author": "Sudhanshu Agarwal",
   "language": "en",
@@ -9,7 +9,9 @@
   "youtube": {
     "privacy": "private",
     "category_id": "28",
-    "playlist_id": ""
+    "playlist_id": "",
+    "channel_id": "UCyiuPu_V8FlUblfsNtI9elw",
+    "handle": "@techonthegowithsudhanshu"
   },
   "podcast": {
     "base_url": "https://agarwal-sudhanshu.github.io/tech-on-the-go",
