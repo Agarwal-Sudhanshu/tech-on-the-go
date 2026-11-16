@@ -1,9 +1,8 @@
 name: Daily brief
 
 on:
-  # The daily schedule is switched on once a manual test run has passed:
-  # schedule:
-  #   - cron: "0 0 * * *" # 05:30 India time; the episode is published roughly 45 minutes later
+  schedule:
+    - cron: "0 0 * * *" # 05:30 India time; the episode is published roughly 40 minutes later
   workflow_dispatch:
     inputs:
       publish:
