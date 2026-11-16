@@ -110,16 +110,20 @@ def slide(bg, brief, seg, story_no, story_total):
 
     if seg["kind"] == "intro":
         tracked(d, (MARGIN, 232), "TODAY'S CATCH-UP", font("SemiBold", 30), ACCENT, 6)
-        d.text((MARGIN - 4, 276), "Today in " + str(len(stories)) + " stories", font=font("Bold", 112), fill=TEXT)
-        y = 468
-        num_f, head_f = font("Bold", 40), font("Medium", 44)
+        # With more than three stories the list is set smaller so it stays clear of the captions.
+        compact = len(stories) > 3
+        d.text((MARGIN - 4, 276), "Today in " + str(len(stories)) + " stories",
+               font=font("Bold", 92 if compact else 112), fill=TEXT)
+        y = 404 if compact else 468
+        step = 60 if compact else 84
+        num_f, head_f = font("Bold", 32 if compact else 40), font("Medium", 36 if compact else 44)
         for i, s in enumerate(stories, 1):
             d.text((MARGIN, y + 2), f"{i:02d}", font=num_f, fill=ACCENT)
             line = wrap(d, s["headline"], head_f, max_w - 110)[0]
             if line != s["headline"]:
                 line = line.rstrip(" ,.") + "…"
             d.text((MARGIN + 100, y), line, font=head_f, fill=TEXT)
-            y += 84
+            y += step
     elif seg["kind"] == "story":
         label = f"STORY {story_no} OF {story_total}"
         w = tracked(d, (MARGIN, 250), label, font("SemiBold", 30), ACCENT, 6)
@@ -256,7 +260,7 @@ def main():
         "ffmpeg", "-hide_banner", "-loglevel", "error", "-y",
         "-f", "concat", "-safe", "0", "-i", concat, "-i", args.audio,
         "-filter_complex", wave, "-map", "[v]", "-map", "1:a",
-        "-c:v", "libx264", "-preset", "medium", "-crf", "19", "-pix_fmt", "yuv420p",
+        "-c:v", "libx264", "-preset", "medium", "-crf", "23", "-pix_fmt", "yuv420p",
         "-c:a", "aac", "-b:a", "192k", "-t", f"{timings['duration']:.3f}",
         "-movflags", "+faststart", args.out,
     ], check=True)
