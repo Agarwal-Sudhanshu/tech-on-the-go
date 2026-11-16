@@ -11,7 +11,31 @@
     "category_id": "28",
     "playlist_id": "",
     "channel_id": "UCyiuPu_V8FlUblfsNtI9elw",
-    "handle": "@techonthegowithsudhanshu"
+    "handle": "@techonthegowithsudhanshu",
+    "seo": {
+      "title_suffix": "Tech News",
+      "hashtags": [
+        "#TechNews",
+        "#AI",
+        "#CyberSecurity"
+      ],
+      "evergreen_tags": [
+        "tech news",
+        "tech news today",
+        "daily tech news",
+        "AI news",
+        "cybersecurity news",
+        "technology news",
+        "tech podcast",
+        "data breach",
+        "Tech On The Go"
+      ],
+      "footer": [
+        "Tech On The Go with Sudhanshu is your 5-minute daily tech catch-up: AI, security, outages, data breaches and the biggest tech news, every morning.",
+        "Subscribe: https://www.youtube.com/@techonthegowithsudhanshu?sub_confirmation=1",
+        "Listen as a podcast: https://agarwal-sudhanshu.github.io/tech-on-the-go/"
+      ]
+    }
   },
   "podcast": {
     "base_url": "https://agarwal-sudhanshu.github.io/tech-on-the-go",

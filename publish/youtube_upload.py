@@ -135,7 +135,8 @@ def collect_sources(brief):
     return out
 
 
-def build_description(brief, timings):
+def build_description(brief, timings, cfg=None):
+    seo = ((cfg or {}).get("youtube") or {}).get("seo") or {}
     parts = []
     if brief.get("description"):
         parts.append(clean(brief["description"]).strip())
@@ -146,7 +147,9 @@ def build_description(brief, timings):
         parts.append("\n".join(f"{fmt_ts(s)} {clean(t)}" for s, t in chapters))
 
     sources = collect_sources(brief)
-    tail = AI_DISCLOSURE
+    # Channel footer (links, what the show is) and hashtags; YouTube shows the first three hashtags above the title.
+    tail = "\n\n".join(x for x in ("\n".join(seo.get("footer") or []), AI_DISCLOSURE,
+                                   " ".join(seo.get("hashtags") or [])) if x)
     src_lines = [f"{clean(n)}: {u}" if n else u for n, u in sources]
 
     # Fit within the byte limit by dropping trailing source lines if needed.
@@ -162,15 +165,17 @@ def build_description(brief, timings):
     return truncate_bytes(text, DESC_MAX_BYTES), chapters
 
 
-def build_tags(brief):
+def build_tags(brief, cfg=None):
+    seo = ((cfg or {}).get("youtube") or {}).get("seo") or {}
     tags, total = [], 0
-    for t in brief.get("tags") or []:
+    # Story-specific tags first, then the channel's evergreen tags while space remains.
+    for t in list(brief.get("tags") or []) + list(seo.get("evergreen_tags") or []):
         t = clean(t).replace(",", " ").strip()
         if not t or t in tags:
             continue
         cost = len(t) + (2 if " " in t else 0) + (1 if tags else 0)
         if total + cost > TAGS_MAX_CHARS:
-            break
+            continue
         tags.append(t)
         total += cost
     return tags
@@ -179,13 +184,21 @@ def build_tags(brief):
 def build_metadata(brief, timings, cfg, privacy):
     yt = cfg.get("youtube", {})
     title = brief.get("title") or f"{cfg.get('channel_name', 'Daily Brief')} {brief.get('date', '')}"
-    description, chapters = build_description(brief, timings)
+    # Add a searchable suffix ("| Tech News 16 Nov") when it fits.
+    suffix = (yt.get("seo") or {}).get("title_suffix")
+    if suffix and brief.get("date"):
+        import datetime as _dt
+        d = _dt.date.fromisoformat(brief["date"])
+        cand = f"{title} | {suffix} {d.day} {d:%b %Y}"
+        if len(cand) <= TITLE_MAX:
+            title = cand
+    description, chapters = build_description(brief, timings, cfg)
     snippet = {
         "title": truncate_chars(title, TITLE_MAX),
         "description": description,
         "categoryId": str(yt.get("category_id") or "28"),
     }
-    tags = build_tags(brief)
+    tags = build_tags(brief, cfg)
     if tags:
         snippet["tags"] = tags
     if cfg.get("language"):
