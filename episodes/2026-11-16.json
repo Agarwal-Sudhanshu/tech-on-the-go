@@ -1,0 +1,97 @@
+{
+  "channel": "Tech On The Go with Sudhanshu",
+  "date": "2026-11-16",
+  "title": "Nvidia CEO Huang resigns, Cursor extension attack, FBI warns of ARTEX",
+  "description": "Today's brief covers Jensen Huang's exit as Nvidia CEO, the Cursor and Fireworks A I incident behind a tampered Claude Code extension, and an F B I warning about the ARTEX attack framework. It also covers an A W S sign-in outage in US East one and a data breach at France's Maileva.",
+  "tags": [
+    "Nvidia",
+    "Jensen Huang",
+    "Cursor",
+    "Claude Code",
+    "Fireworks AI",
+    "FBI",
+    "ARTEX",
+    "AWS",
+    "US-EAST-1",
+    "La Poste",
+    "Maileva",
+    "data breach",
+    "supply chain",
+    "cybersecurity",
+    "AI"
+  ],
+  "segments": [
+    {
+      "kind": "intro",
+      "text": "Hello, and welcome to Tech On The Go with Sudhanshu. It's Monday, the sixteenth of November."
+    },
+    {
+      "kind": "story",
+      "headline": "Nvidia CEO Jensen Huang steps down amid spy scandal",
+      "tag": "AI",
+      "text": "Nvidia co-founder Jensen Huang has stepped down as C E O after a scandal tied to a suspected Chinese spy. According to The Verge, it began when The New York Times reported that he had a close relationship with an executive at Megaspeed, a Singapore-based company investigated over suspected chip smuggling to China. Huang later admitted an extramarital affair, and Nvidia's board opened an investigation. The Verge also reports that members of Congress now want tighter export rules on A I chips.",
+      "sources": [
+        {
+          "name": "The Verge AI",
+          "url": "https://www.theverge.com/column/1033943/jensen-huang-nvidia-china-spying-scandal-resignation"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1033984/congress-export-rules-ai-chips-china"
+        }
+      ]
+    },
+    {
+      "kind": "story",
+      "headline": "Stolen key led to tampered Claude Code extension in Cursor",
+      "tag": "Security",
+      "text": "Cursor says a stolen access key led to a tampered version of Anthropic's Claude Code extension appearing on its marketplace. According to The Hacker News, citing Cursor, the key had been issued to Fireworks A I and was exposed in a breach there. On the twenty-ninth of October, the attacker used a stolen credential to place malicious builds on the marketplace cache. Cursor says at most five thousand users may have received one, and it was live for about eleven hours. Cursor says it found no evidence that users with Privacy Mode on were affected.",
+      "sources": [
+        {
+          "name": "The Hacker News",
+          "url": "https://thehackernews.com/2026/11/stolen-fireworks-ai-key-led-to-cursor.html"
+        }
+      ]
+    },
+    {
+      "kind": "story",
+      "headline": "FBI warns ARTEX A I tool is automating cyberattacks",
+      "tag": "Security",
+      "text": "The F B I is warning that hackers are using an A I penetration testing framework called ARTEX to automate attacks. According to BleepingComputer, the advisory says multiple threat actors have used it since at least August. Some intrusions went from first targeting to privileged access in under three hours. The original developer removed the code in October, but the F B I says copies and forks remain available. Researchers found about sixteen hundred exposed consoles. The advisory urges organizations to secure internet-facing applications, restrict cloud admin access, and review authentication logs.",
+      "sources": [
+        {
+          "name": "BleepingComputer",
+          "url": "https://www.bleepingcomputer.com/news/security/fbi-warns-artex-ai-hacking-tool-is-powering-global-cyberattacks/"
+        }
+      ]
+    },
+    {
+      "kind": "story",
+      "headline": "AWS sign-in and connectivity errors in US-EAST-1",
+      "tag": "Outage",
+      "text": "Amazon Web Services reported sign-in and connectivity problems in its US East one region. According to the A W S status page, the trouble ran from about five past three to ten past six in the morning, Pacific time. Customers using I A M Identity Center to sign in to the console, or to services such as Kiro and Connect, were affected. Engineers were engaged automatically within minutes. A W S says authentication was fully mitigated at five twenty, and most services saw recovery at about that time. The update does not give a cause.",
+      "sources": [
+        {
+          "name": "AWS Status",
+          "url": "https://status.aws.amazon.com/"
+        }
+      ]
+    },
+    {
+      "kind": "story",
+      "headline": "Cyberattack on La Poste unit exposes data of 22 million",
+      "tag": "Breach",
+      "text": "A cyberattack on Maileva, a digital subsidiary of France's postal operator La Poste Group, exposed the personal data of about twenty-two million people. According to a report from Türkiye Today and AFP, carried by DataBreaches.net, French media reported the figure on Sunday. La Poste confirmed on Saturday that the attack took place in mid-September. The report says the exposed data included first names, last names and postal addresses.",
+      "sources": [
+        {
+          "name": "DataBreaches.net",
+          "url": "https://databreaches.net/2026/11/15/hack-at-french-postal-unit-exposes-22-million-peoples-data/"
+        }
+      ]
+    },
+    {
+      "kind": "outro",
+      "text": "That's the brief for today. Thanks for listening, and see you next time."
+    }
+  ]
+}
