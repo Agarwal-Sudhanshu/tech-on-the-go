@@ -210,7 +210,29 @@ SCRIPT_SYSTEM = ("You are the scriptwriter of a daily spoken news brief for work
                  "reply with a single JSON object and nothing else.")
 
 
-def pick_prompt(items, n):
+def recent_coverage(today, days=4):
+    """Headlines and source URLs from the last few published episodes (episodes/*.json)."""
+    heads, urls = [], set()
+    for f in sorted((ROOT / "episodes").glob("*.json"))[-days:]:
+        if f.stem >= today:
+            continue
+        try:
+            ep = json.loads(f.read_text())
+        except ValueError:
+            continue
+        for seg in ep.get("segments", []):
+            if seg.get("kind") == "story":
+                heads.append("%s: %s" % (f.stem, seg.get("headline", "")))
+                urls.update(src.get("url", "") for src in seg.get("sources", []))
+    return heads, urls
+
+
+def written(text):
+    """Undo spoken spellings ("A I", "F B I") in text that is shown on screen, not read aloud."""
+    return re.sub(r"\b(?:[A-Z] )+[A-Z]\b", lambda m: m.group(0).replace(" ", ""), text).strip()
+
+
+def pick_prompt(items, n, covered=()):
     lines = []
     for i in items:
         lines.append("[%s] (%s | %s | covered by %d source%s) %s - %s" % (
@@ -233,11 +255,15 @@ Rules:
 - If several candidates report the same event or closely related facets of it (for example different outlets covering one incident), pick the best one as "id" and list the others under "related" so the writer can combine them.
 - If fewer than %(n)d candidates are genuinely worth a listener's time, choose fewer. Never pad.
 - Order the picks from most to least important.
-
+%(covered)s
 Candidates:
 %(cands)s
 
-Reply as JSON: {"picks": [{"id": "<candidate id>", "related": ["<ids of candidates about the same event>"], "why": "<few words>"}]}""" % {"n": n, "cands": "\n".join(lines)}
+Reply as JSON: {"picks": [{"id": "<candidate id>", "related": ["<ids of candidates about the same event>"], "why": "<few words>"}]}""" % {
+        "n": n, "cands": "\n".join(lines),
+        "covered": ("- Listeners heard the stories below in recent episodes. Do NOT pick them again. The only exception is a "
+                    "genuinely new development since then (not a recap or more reaction); such a pick must be about the new development.\n"
+                    "Already covered:\n" + "\n".join("  * " + h for h in covered) + "\n") if covered else ""}
 
 
 def script_prompt(picks, n, target, date_phrase, channel, spoken_channel, per_story, total_words):
@@ -257,6 +283,7 @@ HARD RULES
 - Neutral, factual tone. No hype, no opinion, no advice beyond what the source itself states. A short "what to check" pointer is fine only if the source supports it.
 - Written for the ear: short sentences, plain words, no URLs, no markdown, no bullet lists, no emoji, no parentheses.
 - Easy on the ear: at most two or three figures per story, and round large ones the way a newsreader would ("about one hundred sixty thousand", "nearly a quarter") unless the exact value is the news (a version number, a price, a deadline). Never read out a string of precise counts.
+- The spoken spellings below apply ONLY to the "intro", "outro" and story "text" fields. "title", "description", "tags" and "headline" are read on screen, so write those normally (AI, FBI, AWS, US-EAST-1, digits for numbers).
 - Text-to-speech friendly: write numbers and money in words ("two hundred million dollars", "forty percent"); write dates spoken ("the twelfth of November"); write version numbers the way you would say them ("PHP seven point four", "Node twenty two"); write initialisms that are spoken letter by letter with spaces ("A I", "A P I", "C V E", "S Q L", "I T", "D N S"), and spell out symbols or unusual names phonetically only when the normal spelling would be mispronounced. Keep ordinary words and acronyms read as words (NASA, SaaS) as they are. Say CVE numbers digit by digit only if essential; otherwise leave them out.
 - Total spoken length about %(total)d words across intro, stories and outro (target %(target)d for a full %(n)d-story episode). Each story roughly %(per)d words. Fewer stories means a shorter episode: do not pad.
 - Keep the story order given. Each story must be a distinct event.
@@ -414,9 +441,12 @@ def main():
 
     # Stage 1: choose stories from headlines.
     t0 = time.time()
-    cands = items[:CANDIDATES]  # news.json is already ordered by coverage then recency
+    covered, used_urls = recent_coverage(dstr)
+    fresh = [i for i in items if i["url"] not in used_urls]
+    log("%d recent headlines to avoid; %d of %d items are articles already used" % (len(covered), len(items) - len(fresh), len(items)))
+    cands = fresh[:CANDIDATES]  # news.json is already ordered by coverage then recency
     cmap = {i["id"]: i for i in cands}
-    picks_obj = ask_json(PICK_SYSTEM, pick_prompt(cands, n), lambda o: validate_picks(o, cmap, n))
+    picks_obj = ask_json(PICK_SYSTEM, pick_prompt(cands, n, covered), lambda o: validate_picks(o, cmap, n))
     picked = [by_id[p["id"]] for p in picks_obj["picks"]]
     related = {p["id"]: [by_id[r] for r in p.get("related", []) if r != p["id"] and r in by_id]
                for p in picks_obj["picks"]}
@@ -452,15 +482,15 @@ def main():
             if it["url"] not in seen:
                 seen.add(it["url"])
                 srcs.append({"name": it["source"], "url": it["url"]})
-        segments.append({"kind": "story", "headline": s["headline"].strip(), "tag": s["tag"],
+        segments.append({"kind": "story", "headline": written(s["headline"]), "tag": s["tag"],
                          "text": s["text"].strip(), "sources": srcs})
     segments.append({"kind": "outro", "text": obj["outro"].strip()})
     brief = {
         "channel": chan["channel_name"],
         "date": dstr,
-        "title": obj["title"].strip(),
-        "description": obj["description"].strip(),
-        "tags": [t.strip() for t in obj["tags"]],
+        "title": written(obj["title"]),
+        "description": written(obj["description"]),
+        "tags": [written(t) for t in obj["tags"]],
         "segments": segments,
     }
     (outdir / "brief.json").write_text(json.dumps(brief, indent=2, ensure_ascii=False))
