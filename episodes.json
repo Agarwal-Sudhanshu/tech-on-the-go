@@ -1,0 +1,88 @@
+{
+  "episodes": [
+    {
+      "date": "2026-11-16",
+      "title": "Nvidia CEO Huang resigns, Cursor extension attack, FBI warns of ARTEX",
+      "description": "Today's brief covers Jensen Huang's exit as Nvidia CEO, the Cursor and Fireworks A I incident behind a tampered Claude Code extension, and an F B I warning about the ARTEX attack framework. It also covers an A W S sign-in outage in US East one and a data breach at France's Maileva.",
+      "show_notes_html": "<p>Today&#x27;s brief covers Jensen Huang&#x27;s exit as Nvidia CEO, the Cursor and Fireworks A I incident behind a tampered Claude Code extension, and an F B I warning about the ARTEX attack framework. It also covers an A W S sign-in outage in US East one and a data breach at France&#x27;s Maileva.</p><p>Stories covered:</p><ul><li>Nvidia CEO Jensen Huang steps down amid spy scandal &mdash; Sources: <a href=\"https://www.theverge.com/column/1033943/jensen-huang-nvidia-china-spying-scandal-resignation\">The Verge AI</a>, <a href=\"https://www.theverge.com/ai-artificial-intelligence/1033984/congress-export-rules-ai-chips-china\">The Verge</a></li><li>Stolen key led to tampered Claude Code extension in Cursor &mdash; Sources: <a href=\"https://thehackernews.com/2026/11/stolen-fireworks-ai-key-led-to-cursor.html\">The Hacker News</a></li><li>FBI warns ARTEX A I tool is automating cyberattacks &mdash; Sources: <a href=\"https://www.bleepingcomputer.com/news/security/fbi-warns-artex-ai-hacking-tool-is-powering-global-cyberattacks/\">BleepingComputer</a></li><li>AWS sign-in and connectivity errors in US-EAST-1 &mdash; Sources: <a href=\"https://status.aws.amazon.com/\">AWS Status</a></li><li>Cyberattack on La Poste unit exposes data of 22 million &mdash; Sources: <a href=\"https://databreaches.net/2026/11/15/hack-at-french-postal-unit-exposes-22-million-peoples-data/\">DataBreaches.net</a></li></ul>",
+      "stories": [
+        {
+          "headline": "Nvidia CEO Jensen Huang steps down amid spy scandal",
+          "tag": "AI",
+          "sources": [
+            {
+              "name": "The Verge AI",
+              "url": "https://www.theverge.com/column/1033943/jensen-huang-nvidia-china-spying-scandal-resignation"
+            },
+            {
+              "name": "The Verge",
+              "url": "https://www.theverge.com/ai-artificial-intelligence/1033984/congress-export-rules-ai-chips-china"
+            }
+          ]
+        },
+        {
+          "headline": "Stolen key led to tampered Claude Code extension in Cursor",
+          "tag": "Security",
+          "sources": [
+            {
+              "name": "The Hacker News",
+              "url": "https://thehackernews.com/2026/11/stolen-fireworks-ai-key-led-to-cursor.html"
+            }
+          ]
+        },
+        {
+          "headline": "FBI warns ARTEX A I tool is automating cyberattacks",
+          "tag": "Security",
+          "sources": [
+            {
+              "name": "BleepingComputer",
+              "url": "https://www.bleepingcomputer.com/news/security/fbi-warns-artex-ai-hacking-tool-is-powering-global-cyberattacks/"
+            }
+          ]
+        },
+        {
+          "headline": "AWS sign-in and connectivity errors in US-EAST-1",
+          "tag": "Outage",
+          "sources": [
+            {
+              "name": "AWS Status",
+              "url": "https://status.aws.amazon.com/"
+            }
+          ]
+        },
+        {
+          "headline": "Cyberattack on La Poste unit exposes data of 22 million",
+          "tag": "Breach",
+          "sources": [
+            {
+              "name": "DataBreaches.net",
+              "url": "https://databreaches.net/2026/11/15/hack-at-french-postal-unit-exposes-22-million-peoples-data/"
+            }
+          ]
+        }
+      ],
+      "tags": [
+        "Nvidia",
+        "Jensen Huang",
+        "Cursor",
+        "Claude Code",
+        "Fireworks AI",
+        "FBI",
+        "ARTEX",
+        "AWS",
+        "US-EAST-1",
+        "La Poste",
+        "Maileva",
+        "data breach",
+        "supply chain",
+        "cybersecurity",
+        "AI"
+      ],
+      "pub_date": "2026-11-16T07:00:00+05:30",
+      "mp3": "episodes/2026-11-16.mp3",
+      "bytes": 2262256,
+      "duration": 181.1,
+      "guid": "2d78b1c8-762d-53d3-96c3-1657b33eaf03"
+    }
+  ]
+}

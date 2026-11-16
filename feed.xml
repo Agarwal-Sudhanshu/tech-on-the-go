@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<title>Tech On The Go with Sudhanshu</title>
+<link>https://agarwal-sudhanshu.github.io/tech-on-the-go/</link>
+<atom:link href="https://agarwal-sudhanshu.github.io/tech-on-the-go/feed.xml" rel="self" type="application/rss+xml"/>
+<description>Your 5-minute tech catch-up.</description>
+<language>en</language>
+<copyright>© 2026 Sudhanshu Agarwal</copyright>
+<generator>briefstudio podcast.py</generator>
+<lastBuildDate>Mon, 16 Nov 2026 02:54:05 +0000</lastBuildDate>
+<itunes:type>episodic</itunes:type>
+<itunes:author>Sudhanshu Agarwal</itunes:author>
+<itunes:summary>Your 5-minute tech catch-up.</itunes:summary>
+<itunes:explicit>false</itunes:explicit>
+<itunes:image href="https://agarwal-sudhanshu.github.io/tech-on-the-go/cover.jpg"/>
+<image><url>https://agarwal-sudhanshu.github.io/tech-on-the-go/cover.jpg</url><title>Tech On The Go with Sudhanshu</title><link>https://agarwal-sudhanshu.github.io/tech-on-the-go/</link></image>
+<itunes:category text="Technology"/>
+<itunes:owner><itunes:name>Sudhanshu Agarwal</itunes:name><itunes:email>agarwal.sudh@gmail.com</itunes:email></itunes:owner>
+<item>
+<title>Nvidia CEO Huang resigns, Cursor extension attack, FBI warns of ARTEX</title>
+<link>https://agarwal-sudhanshu.github.io/tech-on-the-go/#2026-11-16</link>
+<description><![CDATA[<p>Today&#x27;s brief covers Jensen Huang&#x27;s exit as Nvidia CEO, the Cursor and Fireworks A I incident behind a tampered Claude Code extension, and an F B I warning about the ARTEX attack framework. It also covers an A W S sign-in outage in US East one and a data breach at France&#x27;s Maileva.</p><p>Stories covered:</p><ul><li>Nvidia CEO Jensen Huang steps down amid spy scandal &mdash; Sources: <a href="https://www.theverge.com/column/1033943/jensen-huang-nvidia-china-spying-scandal-resignation">The Verge AI</a>, <a href="https://www.theverge.com/ai-artificial-intelligence/1033984/congress-export-rules-ai-chips-china">The Verge</a></li><li>Stolen key led to tampered Claude Code extension in Cursor &mdash; Sources: <a href="https://thehackernews.com/2026/11/stolen-fireworks-ai-key-led-to-cursor.html">The Hacker News</a></li><li>FBI warns ARTEX A I tool is automating cyberattacks &mdash; Sources: <a href="https://www.bleepingcomputer.com/news/security/fbi-warns-artex-ai-hacking-tool-is-powering-global-cyberattacks/">BleepingComputer</a></li><li>AWS sign-in and connectivity errors in US-EAST-1 &mdash; Sources: <a href="https://status.aws.amazon.com/">AWS Status</a></li><li>Cyberattack on La Poste unit exposes data of 22 million &mdash; Sources: <a href="https://databreaches.net/2026/11/15/hack-at-french-postal-unit-exposes-22-million-peoples-data/">DataBreaches.net</a></li></ul>]]></description>
+<content:encoded><![CDATA[<p>Today&#x27;s brief covers Jensen Huang&#x27;s exit as Nvidia CEO, the Cursor and Fireworks A I incident behind a tampered Claude Code extension, and an F B I warning about the ARTEX attack framework. It also covers an A W S sign-in outage in US East one and a data breach at France&#x27;s Maileva.</p><p>Stories covered:</p><ul><li>Nvidia CEO Jensen Huang steps down amid spy scandal &mdash; Sources: <a href="https://www.theverge.com/column/1033943/jensen-huang-nvidia-china-spying-scandal-resignation">The Verge AI</a>, <a href="https://www.theverge.com/ai-artificial-intelligence/1033984/congress-export-rules-ai-chips-china">The Verge</a></li><li>Stolen key led to tampered Claude Code extension in Cursor &mdash; Sources: <a href="https://thehackernews.com/2026/11/stolen-fireworks-ai-key-led-to-cursor.html">The Hacker News</a></li><li>FBI warns ARTEX A I tool is automating cyberattacks &mdash; Sources: <a href="https://www.bleepingcomputer.com/news/security/fbi-warns-artex-ai-hacking-tool-is-powering-global-cyberattacks/">BleepingComputer</a></li><li>AWS sign-in and connectivity errors in US-EAST-1 &mdash; Sources: <a href="https://status.aws.amazon.com/">AWS Status</a></li><li>Cyberattack on La Poste unit exposes data of 22 million &mdash; Sources: <a href="https://databreaches.net/2026/11/15/hack-at-french-postal-unit-exposes-22-million-peoples-data/">DataBreaches.net</a></li></ul>]]></content:encoded>
+<itunes:summary>Today&apos;s brief covers Jensen Huang&apos;s exit as Nvidia CEO, the Cursor and Fireworks A I incident behind a tampered Claude Code extension, and an F B I warning about the ARTEX attack framework. It also covers an A W S sign-in outage in US East one and a data breach at France&apos;s Maileva.</itunes:summary>
+<enclosure url="https://agarwal-sudhanshu.github.io/tech-on-the-go/episodes/2026-11-16.mp3" length="2262256" type="audio/mpeg"/>
+<guid isPermaLink="false">2d78b1c8-762d-53d3-96c3-1657b33eaf03</guid>
+<pubDate>Mon, 16 Nov 2026 07:00:00 +0530</pubDate>
+<itunes:duration>00:03:01</itunes:duration>
+<itunes:author>Sudhanshu Agarwal</itunes:author>
+<itunes:episodeType>full</itunes:episodeType>
+<itunes:explicit>false</itunes:explicit>
+</item>
+</channel>
+</rss>
