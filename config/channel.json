@@ -33,7 +33,8 @@
       "footer": [
         "Tech On The Go with Sudhanshu is your 5-minute daily tech catch-up: AI, security, outages, data breaches and the biggest tech news, every morning.",
         "Subscribe: https://www.youtube.com/@techonthegowithsudhanshu?sub_confirmation=1",
-        "Listen as a podcast: https://agarwal-sudhanshu.github.io/tech-on-the-go/"
+        "Listen on Spotify: https://open.spotify.com/show/0WWwBs5p64Cu6rhllo5Iet",
+        "All episodes and podcast feed: https://agarwal-sudhanshu.github.io/tech-on-the-go/"
       ]
     }
   },
@@ -42,7 +43,17 @@
     "owner_email": "agarwal.sudh@gmail.com",
     "category": "Technology",
     "subcategory": "",
-    "explicit": false
+    "explicit": false,
+    "links": [
+      {
+        "label": "Listen on Spotify",
+        "url": "https://open.spotify.com/show/0WWwBs5p64Cu6rhllo5Iet"
+      },
+      {
+        "label": "Watch on YouTube",
+        "url": "https://www.youtube.com/@techonthegowithsudhanshu"
+      }
+    ]
   },
   "topics_line": "Global Technology • AI • Startups • Innovation"
 }

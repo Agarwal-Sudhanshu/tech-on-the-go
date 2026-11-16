@@ -256,6 +256,8 @@ def render_index(eps, cfg, base, has_cover):
          f"<style>{CSS}</style></head><body><main><header>",
          f"<h1>{hesc(name)}</h1>",
          f'<p class="tag">{hesc(cfg.get("tagline", ""))}</p>',
+         "".join(f'<a class="feed" href="{hesc(l["url"])}" rel="noopener">{hesc(l["label"])}</a> '
+                 for l in (cfg.get("podcast", {}).get("links") or []) if safe_url(l.get("url", ""))),
          '<a class="feed" href="feed.xml">Subscribe via RSS</a>',
          f'<div class="feedurl">Feed: {hesc(base + "/feed.xml")}</div></header>']
     for e in eps:
