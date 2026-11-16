@@ -7,7 +7,7 @@
   "stories_per_episode": 5,
   "target_words": 500,
   "youtube": {
-    "privacy": "private",
+    "privacy": "public",
     "category_id": "28",
     "playlist_id": "",
     "channel_id": "UCyiuPu_V8FlUblfsNtI9elw",
