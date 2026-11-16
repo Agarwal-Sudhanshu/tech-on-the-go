@@ -23,4 +23,5 @@ sh voice/master.sh "$OUT/voice-raw.wav" "$OUT/voice.wav"
 echo "== 5/5 render video"
 python video/render.py --brief "$OUT/brief.json" --timings "$OUT/timings.json" \
   --audio "$OUT/voice.wav" --out "$OUT/video.mp4"
+python video/thumbnail.py --brief "$OUT/brief.json" --out "$OUT/thumbnail.jpg"
 echo "episode built in $OUT"

@@ -293,7 +293,8 @@ OUTPUT: one JSON object:
  "title": "YouTube title, at most 90 characters, naming the 2 or 3 biggest stories, plain and factual, no clickbait, no all caps, no emoji",
  "description": "2 or 3 plain-text sentences summarising the episode",
  "tags": ["8 to 15 short lowercase-or-proper tags relevant to the stories"],
- "intro": "one or two sentences: a greeting naming the show as '%(spoken)s', and the day and date spoken naturally: %(date)s",
+ "thumbnail": "3 to 5 words, at most 30 characters, the single biggest story as a punchy factual label for the video thumbnail, normal writing, no full stop",
+ "intro": "two sentences, about 30 words. FIRST sentence: no greeting; go straight into the top two or three stories as a fast factual teaser, biggest first, so the opening seconds give a reason to keep listening. SECOND sentence: name the show as '%(spoken)s' and give the day and date spoken naturally: %(date)s",
  "stories": [
    {"id": "<the story id above>", "headline": "at most 60 characters, plain on-screen headline, normal writing (not phonetic)", "tag": "one of AI, Security, Outage, Breach, Dev, Tech", "text": "the spoken text for this story", "source_ids": ["<ids of the story and of any related reports this text draws on>"]}
  ],
@@ -485,12 +486,17 @@ def main():
         segments.append({"kind": "story", "headline": written(s["headline"]), "tag": s["tag"],
                          "text": s["text"].strip(), "sources": srcs})
     segments.append({"kind": "outro", "text": obj["outro"].strip()})
+    # Optional: fall back to the lead headline if the thumbnail label is missing or too long.
+    thumb = written(str(obj.get("thumbnail") or "")).rstrip(".")
+    if not (0 < len(thumb) <= 34):
+        thumb = ""
     brief = {
         "channel": chan["channel_name"],
         "date": dstr,
         "title": written(obj["title"]),
         "description": written(obj["description"]),
         "tags": [written(t) for t in obj["tags"]],
+        "thumbnail_text": thumb,
         "segments": segments,
     }
     (outdir / "brief.json").write_text(json.dumps(brief, indent=2, ensure_ascii=False))

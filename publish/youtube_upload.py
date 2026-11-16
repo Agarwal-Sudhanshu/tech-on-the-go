@@ -230,10 +230,25 @@ def api_error_text(raw):
     return str(data)[:500]
 
 
+def _ssl_context():
+    """python.org builds of Python on macOS ship without CA certificates; use the system bundle."""
+    import ssl
+    ctx = ssl.create_default_context()
+    if not ctx.get_ca_certs():
+        for bundle in ("/etc/ssl/cert.pem", "/etc/ssl/certs/ca-certificates.crt"):
+            if os.path.exists(bundle):
+                ctx.load_verify_locations(bundle)
+                break
+    return ctx
+
+
+SSL_CTX = _ssl_context()
+
+
 def http(req, timeout=300):
     """Return (status, headers, body). Raises UploadError on network failure."""
     try:
-        with urllib.request.urlopen(req, timeout=timeout) as r:
+        with urllib.request.urlopen(req, timeout=timeout, context=SSL_CTX) as r:
             return r.status, r.headers, r.read()
     except urllib.error.HTTPError as e:
         return e.code, e.headers, e.read()
@@ -334,6 +349,21 @@ def add_to_playlist(token, playlist_id, video_id):
         raise UploadError(f"adding to playlist failed, HTTP {status}: {api_error_text(resp)}")
 
 
+def set_thumbnail(token, video_id, image_path):
+    """Set a custom thumbnail (the channel must have custom thumbnails enabled, i.e. be phone-verified)."""
+    data = Path(image_path).read_bytes()
+    url = "https://www.googleapis.com/upload/youtube/v3/thumbnails/set?" + urllib.parse.urlencode(
+        {"videoId": video_id, "uploadType": "media"})
+    req = urllib.request.Request(url, data=data, method="POST", headers={
+        "Authorization": f"Bearer {token}",
+        "Content-Type": "image/jpeg",
+        "Content-Length": str(len(data)),
+    })
+    status, _h, resp = http(req, 120)
+    if status != 200:
+        raise UploadError(f"setting thumbnail failed, HTTP {status}: {api_error_text(resp)}")
+
+
 # ------------------------------------------------------------------------- main
 def load_json(path):
     try:
@@ -350,10 +380,16 @@ def main(argv=None):
     ap.add_argument("--privacy", choices=["private", "unlisted", "public"])
     ap.add_argument("--dry-run", action="store_true", help="print metadata, make no network calls")
     ap.add_argument("--force", action="store_true", help="upload even if youtube.json already exists")
+    ap.add_argument("--thumbnail-for", metavar="VIDEO_ID",
+                    help="only set <dir>/thumbnail.jpg on an existing video, then exit")
     args = ap.parse_args(argv)
 
     try:
         d = Path(args.dir)
+        if args.thumbnail_for:
+            set_thumbnail(get_access_token(), args.thumbnail_for, d / "thumbnail.jpg")
+            print(f"Thumbnail set on {args.thumbnail_for}")
+            return 0
         record = d / "youtube.json"
         if record.exists() and not args.force and not args.dry_run:
             raise UploadError(f"{record} already exists (already uploaded); use --force to upload again")
@@ -388,6 +424,13 @@ def main(argv=None):
                                       "uploaded_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())},
                                      indent=2) + "\n")
         print(f"Uploaded: {vid}\n{url}")
+        thumb = d / "thumbnail.jpg"
+        if thumb.is_file():
+            try:
+                set_thumbnail(token, vid, thumb)
+                print("Thumbnail set")
+            except UploadError as e:  # never fail the episode over a thumbnail
+                print(f"WARNING: video uploaded but {e}", file=sys.stderr)
         if playlist_id:
             try:
                 add_to_playlist(token, playlist_id, vid)

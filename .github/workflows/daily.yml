@@ -84,6 +84,7 @@ jobs:
             out/${{ env.DATE }}/voice.wav
             out/${{ env.DATE }}/brief.json
             out/${{ env.DATE }}/timings.json
+            out/${{ env.DATE }}/thumbnail.jpg
           retention-days: 7
 
       - name: Upload to YouTube
