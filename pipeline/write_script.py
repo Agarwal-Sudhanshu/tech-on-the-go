@@ -33,7 +33,7 @@ CLI_MODEL = "sonnet"
 TAGS = ["AI", "Security", "Outage", "Breach", "Dev", "Tech"]
 MAX_RETRIES = 2
 ARTICLE_CHARS = 4000
-CANDIDATES = 70
+CANDIDATES = 120
 
 
 def log(msg):
@@ -240,18 +240,24 @@ def pick_prompt(items, n, covered=()):
             i["title"], i["summary"][:220]))
     return """Choose the %(n)d most important stories for today's brief from the candidate list below.
 
-Audience: a working IT professional who wants the day's must-know list. Topics, in rough order of interest:
-1. AI: model launches, product, pricing and availability changes from the major labs and tools
-2. Outages and incidents at major cloud and SaaS providers
-3. Security: vulnerabilities, patches, actively exploited bugs, end-of-life runtimes (PHP, Node and similar)
-4. Data breaches and leaks
-5. Developer platform and tooling updates
-6. Other significant tech industry news
+Audience: a working IT professional or developer (many of them in India) who wants the day's must-know list: things they may need to patch, check, change or be able to explain at work today.
+
+What to prefer, most important first:
+1. Security they must act on: vulnerabilities being exploited now, major vendor patch releases (Microsoft, Google, Apple, Cisco, VMware, Linux and similar), certificate or trust changes, supply-chain compromises, end-of-life runtimes (PHP, Node and similar)
+2. Breaches and incidents with concrete facts: who was hit, how it happened, what was exposed, what it cost
+3. AI: model and product launches, pricing and availability changes from the major labs and tools, plus notable AI security research
+4. Outages at major cloud and SaaS providers, and their published causes
+5. Developer platform and tooling changes that alter how people work
+6. India: CERT-In advisories, data protection (DPDP) and IT rules, incidents at Indian companies or affecting Indian users
+7. Major industry news, only when it directly affects IT professionals (a regulator acting on an AI incident, a company filing that changes a product's future)
 
 Rules:
-- Prefer concrete, actionable, verifiable events over opinion pieces, funding rounds, listicles and rumours.
-- Aim for variety across topics; do not pick two items about the same event. If one event is covered by several outlets, that signals importance, but pick it once.
-- Ignore items that are not about technology or IT (consumer deals, science, entertainment, space) and routine minor status-page entries with no real user impact.
+- Each pick must pass this test: would a working engineer do something or decide something differently because of it? If not, skip it.
+- De-prioritise executive departures and personal scandals, lawsuits and politics without a direct practical effect, funding rounds, opinion pieces, listicles, rumours and consumer gadget news. Pick one of these only if it is the single biggest technology story of the day.
+- Prefer the primary source (the vendor's own advisory, blog or incident report) when it is among the candidates; otherwise the most detailed report.
+- Aim for a mix: normally at least two security or breach items and at least one AI item when good ones exist. Include one India item when a concrete, verifiable one exists; never force one.
+- Do not pick two items about the same event. If one event is covered by several outlets, that signals importance, but pick it once.
+- Ignore items that are not about technology or IT and routine minor status-page entries with no real user impact.
 - If several candidates report the same event or closely related facets of it (for example different outlets covering one incident), pick the best one as "id" and list the others under "related" so the writer can combine them.
 - If fewer than %(n)d candidates are genuinely worth a listener's time, choose fewer. Never pad.
 - Order the picks from most to least important.
