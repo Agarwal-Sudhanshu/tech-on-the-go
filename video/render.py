@@ -115,8 +115,10 @@ def slide(bg, brief, seg, story_no, story_total):
         d.text((MARGIN - 4, 276), "Today in " + str(len(stories)) + " stories",
                font=font("Bold", 92 if compact else 112), fill=TEXT)
         y = 404 if compact else 468
-        step = 60 if compact else 84
-        num_f, head_f = font("Bold", 32 if compact else 40), font("Medium", 36 if compact else 44)
+        # the list must end above the caption box (top ~720)
+        step = min(60, (700 - 404) // len(stories)) if compact else 84
+        hs = min(36, int(step * 0.62)) if compact else 44
+        num_f, head_f = font("Bold", hs - 4 if compact else 40), font("Medium", hs)
         for i, s in enumerate(stories, 1):
             d.text((MARGIN, y + 2), f"{i:02d}", font=num_f, fill=ACCENT)
             line = wrap(d, s["headline"], head_f, max_w - 110)[0]
@@ -150,9 +152,15 @@ def slide(bg, brief, seg, story_no, story_total):
     return Image.alpha_composite(bg, img)
 
 
+def on_screen(text):
+    """Captions show written forms of spoken spellings ("A I" -> "AI", "F B I" -> "FBI")."""
+    return re.sub(r"\b(?:[A-Z] )+[A-Z]\b", lambda m: m.group(0).replace(" ", ""), text)
+
+
 def with_caption(base, text):
     if not text:
         return base
+    text = on_screen(text)
     img = base.copy()
     layer = Image.new("RGBA", img.size, (0, 0, 0, 0))
     d = ImageDraw.Draw(layer)

@@ -4,8 +4,8 @@
   "author": "Sudhanshu Agarwal",
   "language": "en",
   "timezone": "Asia/Kolkata",
-  "stories_per_episode": 5,
-  "target_words": 500,
+  "stories_per_episode": 7,
+  "target_words": 720,
   "youtube": {
     "privacy": "public",
     "category_id": "28",
