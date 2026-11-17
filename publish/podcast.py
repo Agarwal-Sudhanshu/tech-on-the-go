@@ -90,7 +90,10 @@ def pub_date(date_str, tzname):
             tz = ZoneInfo(tzname)
         except Exception:
             pass
-    return d.replace(hour=PUB_HOUR, tzinfo=tz)
+    stamp = d.replace(hour=PUB_HOUR, tzinfo=tz)
+    # Never stamp an episode in the future: podcast apps hold such episodes back until that time.
+    now = dt.datetime.now(tz).replace(microsecond=0)
+    return min(stamp, now)
 
 
 def build_episode(brief, date_str, cfg):
