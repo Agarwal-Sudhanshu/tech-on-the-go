@@ -210,6 +210,13 @@ SCRIPT_SYSTEM = ("You are the scriptwriter of a daily spoken news brief for work
                  "reply with a single JSON object and nothing else.")
 
 
+try:
+    AUDIENCE = json.loads((ROOT / "config" / "channel.json").read_text()).get("audience") or ""
+except (OSError, ValueError):
+    AUDIENCE = ""
+AUDIENCE = AUDIENCE or "Working IT professionals and developers who want what they should act on today, not hype."
+
+
 def recent_coverage(today, days=4):
     """Headlines and source URLs from the last few published episodes (episodes/*.json)."""
     heads, urls = [], set()
@@ -240,7 +247,10 @@ def pick_prompt(items, n, covered=()):
             i["title"], i["summary"][:220]))
     return """Choose the %(n)d most important stories for today's brief from the candidate list below.
 
-Audience: a working IT professional or developer (many of them in India) who wants the day's must-know list: things they may need to patch, check, change or be able to explain at work today.
+Audience: %(audience)s
+They want the day's must-know list: things they may need to patch, rotate, review, change or be able to explain at work today.
+
+Judge every candidate on four things: actionability (does this audience need to patch, rotate, review or decide something?), relevance to their stack, severity or scale (actively exploited beats theoretical; real money or data lost beats potential), and novelty (new today, or a real development in an older story).
 
 What to prefer, most important first:
 1. Security they must act on: vulnerabilities being exploited now, major vendor patch releases (Microsoft, Google, Apple, Cisco, VMware, Linux and similar), certificate or trust changes, supply-chain compromises, end-of-life runtimes (PHP, Node and similar)
@@ -266,7 +276,7 @@ Candidates:
 %(cands)s
 
 Reply as JSON: {"picks": [{"id": "<candidate id>", "related": ["<ids of candidates about the same event>"], "why": "<few words>"}]}""" % {
-        "n": n, "cands": "\n".join(lines),
+        "n": n, "cands": "\n".join(lines), "audience": AUDIENCE,
         "covered": ("- Listeners heard the stories below in recent episodes. Do NOT pick them again. The only exception is a "
                     "genuinely new development since then (not a recap or more reaction); such a pick must be about the new development.\n"
                     "Already covered:\n" + "\n".join("  * " + h for h in covered) + "\n") if covered else ""}
@@ -288,6 +298,8 @@ HARD RULES
 - Attribute with "according to <outlet>" wherever a claim rests on a single source, and for anything unconfirmed.
 - Neutral, factual tone. No hype, no opinion, no advice beyond what the source itself states. A short "what to check" pointer is fine only if the source supports it.
 - Written for the ear: short sentences, plain words, no URLs, no markdown, no bullet lists, no emoji, no parentheses.
+- Every story ends with exactly one short sentence on why it matters to this audience or what to do about it, concrete and specific ("patch Outlook first", "rotate any keys stored there before the twenty-first of October", "check your certificate inventory"). Base it only on the supplied facts; if the sources give no clear action, say plainly why it matters. No generic advice like "stay vigilant".
+- Use product names or a flaw's nickname instead of reading out long C V E numbers.
 - Easy on the ear: at most two or three figures per story, and round large ones the way a newsreader would ("about one hundred sixty thousand", "nearly a quarter") unless the exact value is the news (a version number, a price, a deadline). Never read out a string of precise counts.
 - The spoken spellings below apply ONLY to the "intro", "outro" and story "text" fields. "title", "description", "tags" and "headline" are read on screen, so write those normally (AI, FBI, AWS, US-EAST-1, digits for numbers).
 - Text-to-speech friendly: write numbers and money in words ("two hundred million dollars", "forty percent"); write dates spoken ("the twelfth of November"); write version numbers the way you would say them ("PHP seven point four", "Node twenty two"); write initialisms that are spoken letter by letter with spaces ("A I", "A P I", "C V E", "S Q L", "I T", "D N S"), and spell out symbols or unusual names phonetically only when the normal spelling would be mispronounced. Keep ordinary words and acronyms read as words (NASA, SaaS) as they are. Say CVE numbers digit by digit only if essential; otherwise leave them out.

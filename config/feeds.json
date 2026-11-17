@@ -359,6 +359,12 @@
       "url": "https://inc42.com/feed/",
       "topic": "Tech",
       "weight": 0.8
+    },
+    {
+      "name": "Techmeme",
+      "url": "https://www.techmeme.com/feed.xml",
+      "topic": "Tech",
+      "weight": 1.4
     }
   ]
 }

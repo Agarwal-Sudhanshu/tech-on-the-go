@@ -55,5 +55,6 @@
       }
     ]
   },
-  "topics_line": "Global Technology • AI • Startups • Innovation"
+  "topics_line": "Global Technology • AI • Startups • Innovation",
+  "audience": "Solution architects, senior engineers, developers and security leads, many of them in India. They work with SaaS, identity and access management (Okta, Auth0, Microsoft Entra), application security, Node.js, PHP and Laravel, Python, the big clouds (AWS, Azure, Google Cloud), and they build AI and LLM pipelines and agents. They want what they should act on today, not hype."
 }
