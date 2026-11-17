@@ -290,7 +290,7 @@ HARD RULES
 
 OUTPUT: one JSON object:
 {
- "title": "YouTube title, at most 90 characters, naming the 2 or 3 biggest stories, plain and factual, no clickbait, no all caps, no emoji",
+ "title": "YouTube title, at most 72 characters, naming the 2 or 3 biggest stories, plain and factual, no clickbait, no all caps, no emoji",
  "description": "2 or 3 plain-text sentences summarising the episode",
  "tags": ["8 to 15 short lowercase-or-proper tags relevant to the stories"],
  "thumbnail": "3 to 5 words, at most 30 characters, the single biggest story as a punchy factual label for the video thumbnail, normal writing, no full stop",
@@ -369,8 +369,8 @@ def validate_script(obj, packs, n, target, picks_count):
     if not isinstance(obj, dict):
         return ["reply must be a JSON object"]
     title = obj.get("title", "")
-    if not isinstance(title, str) or not title.strip() or len(title) > 90:
-        errs.append("title must be 1-90 chars (got %d)" % len(title or ""))
+    if not isinstance(title, str) or not title.strip() or len(title) > 72:
+        errs.append("title must be 1-72 chars (got %d)" % len(title or ""))
     if EMOJI.search(str(title)):
         errs.append("title contains emoji")
     desc = obj.get("description", "")
