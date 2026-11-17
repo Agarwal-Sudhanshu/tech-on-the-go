@@ -1,8 +1,12 @@
 name: Daily brief
 
 on:
+  # GitHub often delays or skips schedules at busy times (the top of the hour, midnight UTC),
+  # so the run starts at an off-peak minute and a second slot acts as a safety net.
+  # The second slot does nothing if the day's episode is already published.
   schedule:
-    - cron: "0 0 * * *" # 05:30 India time; the episode is published roughly 40 minutes later
+    - cron: "23 23 * * *" # 04:53 India time; published roughly 40 minutes later
+    - cron: "23 1 * * *"  # 06:53 India time; fallback
   workflow_dispatch:
     inputs:
       publish:
@@ -22,7 +26,27 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  check:
+    runs-on: ubuntu-latest
+    outputs:
+      go: ${{ steps.c.outputs.go }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: c
+        env:
+          PUBLISH: ${{ github.event_name == 'schedule' || inputs.publish }}
+        run: |
+          DATE=$(TZ=Asia/Kolkata date +%F)
+          if [ "$PUBLISH" = "true" ] && [ -f "episodes/$DATE.json" ]; then
+            echo "Episode for $DATE is already published; nothing to do."
+            echo "go=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "go=true" >> "$GITHUB_OUTPUT"
+          fi
+
   episode:
+    needs: check
+    if: needs.check.outputs.go == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 150
     env:
