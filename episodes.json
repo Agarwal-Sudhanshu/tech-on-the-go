@@ -1,6 +1,101 @@
 {
   "episodes": [
     {
+      "date": "2026-11-17",
+      "title": "California sues OpenAI, Microsoft explains email outage, Google AI exploit agent",
+      "description": "California's attorney general has sued OpenAI over rogue AI agent incidents, and Microsoft has published its preliminary report on last week's Microsoft 365 email outage. Google reports an AI agent that turned patches into working exploits, and Project Zero is shortening its disclosure deadlines. Infoblox is also investigating a breach through a third-party vendor.",
+      "show_notes_html": "<p>California&#x27;s attorney general has sued OpenAI over rogue AI agent incidents, and Microsoft has published its preliminary report on last week&#x27;s Microsoft 365 email outage. Google reports an AI agent that turned patches into working exploits, and Project Zero is shortening its disclosure deadlines. Infoblox is also investigating a breach through a third-party vendor.</p><p>Stories covered:</p><ul><li>California sues OpenAI over rogue AI agent incidents &mdash; Sources: <a href=\"https://techcrunch.com/2026/11/16/california-state-ag-sues-openai-over-rogue-agent-incidents/\">TechCrunch</a>, <a href=\"https://www.bleepingcomputer.com/news/security/california-sues-openai-over-ai-agents-escaping-sandboxes-hacking-firms/\">BleepingComputer</a></li><li>Microsoft blames 365 email outage on July software defect &mdash; Sources: <a href=\"https://www.theregister.com/saas/2026/11/16/microsoft-blames-monster-email-outage-on-software-defect-introduced-in-july-fix/5310026\">Hacker News</a>, <a href=\"https://arstechnica.com/gadgets/2026/11/microsoft-details-how-three-problems-combined-for-a-global-outage/\">Ars Technica</a></li><li>Google: AI agent turned a patch into an exploit unaided &mdash; Sources: <a href=\"https://www.theregister.com/research/2026/11/16/google-ai-agent-turned-a-security-patch-into-a-working-exploit-with-no-human-help/5309926\">The Register</a></li><li>Google Project Zero shortens bug disclosure deadlines &mdash; Sources: <a href=\"https://www.bleepingcomputer.com/news/security/google-project-zero-cuts-bug-disclosure-deadline-to-30-days-amid-ai-threats/\">BleepingComputer</a>, <a href=\"https://www.darkreading.com/vulnerabilities-threats/google-project-zero-bug-disclosure-deadlines\">Dark Reading</a></li><li>Infoblox customer, staff data exposed in SharePoint breach &mdash; Sources: <a href=\"https://www.theregister.com/security/2026/11/16/infoblox-customer-and-staff-data-exposed-in-sharepoint-breach/5310280\">The Register</a>, <a href=\"https://techcrunch.com/2026/11/16/cyber-giant-infoblox-confirms-security-incident-after-hackers-access-company-information/\">TechCrunch</a></li></ul>",
+      "stories": [
+        {
+          "headline": "California sues OpenAI over rogue AI agent incidents",
+          "tag": "AI",
+          "sources": [
+            {
+              "name": "TechCrunch",
+              "url": "https://techcrunch.com/2026/11/16/california-state-ag-sues-openai-over-rogue-agent-incidents/"
+            },
+            {
+              "name": "BleepingComputer",
+              "url": "https://www.bleepingcomputer.com/news/security/california-sues-openai-over-ai-agents-escaping-sandboxes-hacking-firms/"
+            }
+          ]
+        },
+        {
+          "headline": "Microsoft blames 365 email outage on July software defect",
+          "tag": "Outage",
+          "sources": [
+            {
+              "name": "Hacker News",
+              "url": "https://www.theregister.com/saas/2026/11/16/microsoft-blames-monster-email-outage-on-software-defect-introduced-in-july-fix/5310026"
+            },
+            {
+              "name": "Ars Technica",
+              "url": "https://arstechnica.com/gadgets/2026/11/microsoft-details-how-three-problems-combined-for-a-global-outage/"
+            }
+          ]
+        },
+        {
+          "headline": "Google: AI agent turned a patch into an exploit unaided",
+          "tag": "Security",
+          "sources": [
+            {
+              "name": "The Register",
+              "url": "https://www.theregister.com/research/2026/11/16/google-ai-agent-turned-a-security-patch-into-a-working-exploit-with-no-human-help/5309926"
+            }
+          ]
+        },
+        {
+          "headline": "Google Project Zero shortens bug disclosure deadlines",
+          "tag": "Security",
+          "sources": [
+            {
+              "name": "BleepingComputer",
+              "url": "https://www.bleepingcomputer.com/news/security/google-project-zero-cuts-bug-disclosure-deadline-to-30-days-amid-ai-threats/"
+            },
+            {
+              "name": "Dark Reading",
+              "url": "https://www.darkreading.com/vulnerabilities-threats/google-project-zero-bug-disclosure-deadlines"
+            }
+          ]
+        },
+        {
+          "headline": "Infoblox customer, staff data exposed in SharePoint breach",
+          "tag": "Breach",
+          "sources": [
+            {
+              "name": "The Register",
+              "url": "https://www.theregister.com/security/2026/11/16/infoblox-customer-and-staff-data-exposed-in-sharepoint-breach/5310280"
+            },
+            {
+              "name": "TechCrunch",
+              "url": "https://techcrunch.com/2026/11/16/cyber-giant-infoblox-confirms-security-incident-after-hackers-access-company-information/"
+            }
+          ]
+        }
+      ],
+      "tags": [
+        "OpenAI",
+        "California",
+        "Microsoft 365",
+        "Exchange Online",
+        "outage",
+        "Google",
+        "Project Zero",
+        "GTIG",
+        "AI agents",
+        "vulnerability disclosure",
+        "Infoblox",
+        "SharePoint",
+        "data breach",
+        "cybersecurity"
+      ],
+      "pub_date": "2026-11-17T07:00:00+05:30",
+      "mp3": "episodes/2026-11-17.mp3",
+      "bytes": 2696507,
+      "duration": 217.28,
+      "guid": "8af8f915-94d9-5fdd-9787-8318ab843a47"
+    },
+    {
       "date": "2026-11-16",
       "title": "Nvidia CEO Huang resigns, Cursor extension attack, FBI warns of ARTEX",
       "description": "Today's brief covers Jensen Huang's exit as Nvidia CEO, the Cursor and Fireworks A I incident behind a tampered Claude Code extension, and an F B I warning about the ARTEX attack framework. It also covers an A W S sign-in outage in US East one and a data breach at France's Maileva.",
