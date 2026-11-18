@@ -1,0 +1,8 @@
+name = "tech-on-the-go-trigger"
+main = "worker.js"
+compatibility_date = "2026-11-01"
+workers_dev = false
+
+# Times are UTC. 23:23 UTC = 04:53 India time; 01:23 UTC = 06:53 India time (fallback).
+[triggers]
+crons = ["23 23 * * *", "23 1 * * *"]
