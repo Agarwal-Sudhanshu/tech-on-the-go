@@ -135,7 +135,7 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
           git add -A
           git commit -m "Episode $DATE" || echo "nothing to publish"
-          git push
+          for i in 1 2 3; do git pull --rebase -q && git push && break; sleep 5; done
 
       - name: Archive the script in the repository
         if: env.PUBLISH == 'true' && !cancelled()
@@ -146,4 +146,5 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
           git add episodes
           git commit -m "Script for $DATE" || echo "nothing to archive"
-          git push
+          # main may have moved while the episode was building
+          for i in 1 2 3; do git pull --rebase -q && git push && break; sleep 5; done
