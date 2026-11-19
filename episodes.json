@@ -1,6 +1,121 @@
 {
   "episodes": [
     {
+      "date": "2026-11-19",
+      "title": "Microsoft AI package hijacked, NGINX flaw, PHP patch due Thursday",
+      "description": "A Microsoft agent framework package on PyPI was hijacked to steal credentials, and a ten-year-old NGINX flaw can allow code execution. PHP has another critical release due Thursday, and F5 disclosed six critical BIG-IP flaws. Also covered are Gemini 4 Neon, banks shifting AI agent risk to customers, and an Irish credit union data breach.",
+      "show_notes_html": "<p>A Microsoft agent framework package on PyPI was hijacked to steal credentials, and a ten-year-old NGINX flaw can allow code execution. PHP has another critical release due Thursday, and F5 disclosed six critical BIG-IP flaws. Also covered are Gemini 4 Neon, banks shifting AI agent risk to customers, and an Irish credit union data breach.</p><p>Stories covered:</p><ul><li>Microsoft Agent Framework PyPI package compromised &mdash; Sources: <a href=\"https://www.bleepingcomputer.com/news/security/microsofts-agent-framework-pypi-package-compromised-to-steal-credentials/\">BleepingComputer</a>, <a href=\"https://www.theregister.com/security/2026/11/18/microsofts-official-python-agent-framework-hijacked-to-distribute-malware/5310858\">The Register Security</a></li><li>Decade-old NGINX HTTP/2 flaw allows remote code execution &mdash; Sources: <a href=\"https://thehackernews.com/2026/11/10-year-old-nginx-http2-flaw-lets.html\">The Hacker News</a>, <a href=\"https://www.theregister.com/security/2026/11/18/ai-found-more-critical-bugs-in-another-widely-used-technology-running-225m-websites/5310887\">The Register Security</a>, <a href=\"https://isc.sans.edu/diary/rss/33532\">SANS Internet Storm Center</a></li><li>Another critical PHP security release due Thursday &mdash; Sources: <a href=\"https://www.theregister.com/patches/2026/11/18/get-ready-for-another-critical-php-security-release-to-drop/5310911\">The Register Security</a></li><li>F5 discloses six critical BIG-IP flaws &mdash; Sources: <a href=\"https://thehackernews.com/2026/11/f5-warns-6-critical-big-ip-flaws-can.html\">The Hacker News</a></li><li>Gemini 4 Neon rolls out, now in GitHub Copilot &mdash; Sources: <a href=\"https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/\">Hacker News</a>, <a href=\"https://www.techmeme.com/261118/p44#a261118p44\">Techmeme</a></li><li>Banks tell customers AI agent risk is theirs &mdash; Sources: <a href=\"https://techcrunch.com/2026/11/18/more-banks-says-customers-using-ai-agents-are-on-their-own-even-if-they-get-hacked/\">TechCrunch</a></li><li>Wellington IT hack exposes Irish credit union data &mdash; Sources: <a href=\"https://www.bleepingcomputer.com/news/security/data-breach-impacts-40-irish-credit-unions-in-reported-it-provider-hack/\">BleepingComputer</a></li></ul>",
+      "stories": [
+        {
+          "headline": "Microsoft Agent Framework PyPI package compromised",
+          "tag": "Security",
+          "sources": [
+            {
+              "name": "BleepingComputer",
+              "url": "https://www.bleepingcomputer.com/news/security/microsofts-agent-framework-pypi-package-compromised-to-steal-credentials/"
+            },
+            {
+              "name": "The Register Security",
+              "url": "https://www.theregister.com/security/2026/11/18/microsofts-official-python-agent-framework-hijacked-to-distribute-malware/5310858"
+            }
+          ]
+        },
+        {
+          "headline": "Decade-old NGINX HTTP/2 flaw allows remote code execution",
+          "tag": "Security",
+          "sources": [
+            {
+              "name": "The Hacker News",
+              "url": "https://thehackernews.com/2026/11/10-year-old-nginx-http2-flaw-lets.html"
+            },
+            {
+              "name": "The Register Security",
+              "url": "https://www.theregister.com/security/2026/11/18/ai-found-more-critical-bugs-in-another-widely-used-technology-running-225m-websites/5310887"
+            },
+            {
+              "name": "SANS Internet Storm Center",
+              "url": "https://isc.sans.edu/diary/rss/33532"
+            }
+          ]
+        },
+        {
+          "headline": "Another critical PHP security release due Thursday",
+          "tag": "Security",
+          "sources": [
+            {
+              "name": "The Register Security",
+              "url": "https://www.theregister.com/patches/2026/11/18/get-ready-for-another-critical-php-security-release-to-drop/5310911"
+            }
+          ]
+        },
+        {
+          "headline": "F5 discloses six critical BIG-IP flaws",
+          "tag": "Security",
+          "sources": [
+            {
+              "name": "The Hacker News",
+              "url": "https://thehackernews.com/2026/11/f5-warns-6-critical-big-ip-flaws-can.html"
+            }
+          ]
+        },
+        {
+          "headline": "Gemini 4 Neon rolls out, now in GitHub Copilot",
+          "tag": "AI",
+          "sources": [
+            {
+              "name": "Hacker News",
+              "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/"
+            },
+            {
+              "name": "Techmeme",
+              "url": "https://www.techmeme.com/261118/p44#a261118p44"
+            }
+          ]
+        },
+        {
+          "headline": "Banks tell customers AI agent risk is theirs",
+          "tag": "Tech",
+          "sources": [
+            {
+              "name": "TechCrunch",
+              "url": "https://techcrunch.com/2026/11/18/more-banks-says-customers-using-ai-agents-are-on-their-own-even-if-they-get-hacked/"
+            }
+          ]
+        },
+        {
+          "headline": "Wellington IT hack exposes Irish credit union data",
+          "tag": "Breach",
+          "sources": [
+            {
+              "name": "BleepingComputer",
+              "url": "https://www.bleepingcomputer.com/news/security/data-breach-impacts-40-irish-credit-unions-in-reported-it-provider-hack/"
+            }
+          ]
+        }
+      ],
+      "tags": [
+        "PyPI",
+        "Microsoft",
+        "Agent Framework",
+        "NGINX",
+        "PHP",
+        "F5",
+        "BIG-IP",
+        "Gemini 4 Neon",
+        "GitHub Copilot",
+        "Citi",
+        "AI agents",
+        "Data breach",
+        "Credit unions",
+        "Supply chain"
+      ],
+      "pub_date": "2026-11-19T05:34:56+05:30",
+      "mp3": "episodes/2026-11-19.mp3",
+      "bytes": 3916487,
+      "duration": 318.94,
+      "guid": "44904152-199c-5d76-a591-cb67313b1016"
+    },
+    {
       "date": "2026-11-18",
       "title": "Java4Shell Java flaw, GPT-6.2 launch, Docker Hub key theft",
       "description": "A critical Java flaw called Java4Shell affects Jenkins, Jira and other major applications, and Oracle has patched it. OpenAI launches GPT-6.2 Astra and Sol, and researchers show cloud keys leaked in Docker Hub images are stolen within seconds. Also: the Microsoft 365 outage, a Fugaku supercomputer breach, a Gemini agent test and an FAA router pause.",
