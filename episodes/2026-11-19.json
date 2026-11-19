@@ -1,0 +1,133 @@
+{
+  "channel": "Tech On The Go with Sudhanshu",
+  "date": "2026-11-19",
+  "title": "Microsoft AI package hijacked, NGINX flaw, PHP patch due Thursday",
+  "description": "A Microsoft agent framework package on PyPI was hijacked to steal credentials, and a ten-year-old NGINX flaw can allow code execution. PHP has another critical release due Thursday, and F5 disclosed six critical BIG-IP flaws. Also covered are Gemini 4 Neon, banks shifting AI agent risk to customers, and an Irish credit union data breach.",
+  "tags": [
+    "PyPI",
+    "Microsoft",
+    "Agent Framework",
+    "NGINX",
+    "PHP",
+    "F5",
+    "BIG-IP",
+    "Gemini 4 Neon",
+    "GitHub Copilot",
+    "Citi",
+    "AI agents",
+    "Data breach",
+    "Credit unions",
+    "Supply chain"
+  ],
+  "thumbnail_text": "Microsoft PyPI Package Hijacked",
+  "segments": [
+    {
+      "kind": "intro",
+      "text": "A Microsoft AI package on PyPI was hijacked to steal credentials, a ten-year-old NGINX flaw allows code execution, and PHP has another critical fix due Thursday. This is Tech On The Go with Sudhanshu for Wednesday, the eighteenth of November."
+    },
+    {
+      "kind": "story",
+      "headline": "Microsoft Agent Framework PyPI package compromised",
+      "tag": "Security",
+      "text": "Attackers compromised Microsoft's Agent Framework package on PyPI, according to BleepingComputer. Two malicious versions, one point twenty six point one and one point twenty six point two, were published on the seventeenth of November. They ran a credential stealer every time Python started, even without importing the package. It targeted secrets for Azure, AWS, GitHub and other services. The package sees roughly two hundred thousand downloads a month. It is unclear how the attacker got publishing access, though The Register reports that GitHub organization admin credentials may have been compromised. If you installed either version, rebuild from a clean environment on version one point twenty six point zero and rotate exposed credentials.",
+      "sources": [
+        {
+          "name": "BleepingComputer",
+          "url": "https://www.bleepingcomputer.com/news/security/microsofts-agent-framework-pypi-package-compromised-to-steal-credentials/"
+        },
+        {
+          "name": "The Register Security",
+          "url": "https://www.theregister.com/security/2026/11/18/microsofts-official-python-agent-framework-hijacked-to-distribute-malware/5310858"
+        }
+      ]
+    },
+    {
+      "kind": "story",
+      "headline": "Decade-old NGINX HTTP/2 flaw allows remote code execution",
+      "tag": "Security",
+      "text": "A flaw in NGINX's HTTP/2 support lets an unauthenticated attacker run code on servers, according to The Hacker News. Nicknamed nginx2root, it has been present since version one point nine point five, released in twenty fifteen. Fixed versions one point thirty one point nine and one point thirty point seven came out today. Code runs with worker process permissions. Neither the vendor nor researchers report attacks so far, but public proof of concept code exists. Ubuntu and Debian had not shipped fixes as of today. Upgrade, then fully restart NGINX, because a reload alone leaves the old executable running.",
+      "sources": [
+        {
+          "name": "The Hacker News",
+          "url": "https://thehackernews.com/2026/11/10-year-old-nginx-http2-flaw-lets.html"
+        },
+        {
+          "name": "The Register Security",
+          "url": "https://www.theregister.com/security/2026/11/18/ai-found-more-critical-bugs-in-another-widely-used-technology-running-225m-websites/5310887"
+        },
+        {
+          "name": "SANS Internet Storm Center",
+          "url": "https://isc.sans.edu/diary/rss/33532"
+        }
+      ]
+    },
+    {
+      "kind": "story",
+      "headline": "Another critical PHP security release due Thursday",
+      "tag": "Security",
+      "text": "The PHP Foundation will release a critical security update on Thursday between fourteen hundred and fourteen thirty U T C, according to The Register. The foundation says the critical issues need non-default configuration or uncommon setups. At least one is another remote code execution flaw. Details have not been published. This follows last month's PHP2Shell flaws, which CISA added to its Known Exploited Vulnerabilities catalog on the twenty sixth of October. The foundation urges users to prepare to upgrade promptly. Line up your PHP patch window for Thursday afternoon.",
+      "sources": [
+        {
+          "name": "The Register Security",
+          "url": "https://www.theregister.com/patches/2026/11/18/get-ready-for-another-critical-php-security-release-to-drop/5310911"
+        }
+      ]
+    },
+    {
+      "kind": "story",
+      "headline": "F5 discloses six critical BIG-IP flaws",
+      "tag": "Security",
+      "text": "F5 disclosed six critical flaws in BIG-IP that let an attacker crash the Traffic Management Microkernel without logging in, according to The Hacker News. F5 says they may also allow remote code execution. Each needs a specific setup, such as an iRule using a particular command, or an APM policy with two particular agents. All six score nine point eight under CVSS version three point one. None of the advisories says they have been exploited. The only fixes are engineering hotfixes, and F5 lists no workaround. Check whether your virtual servers use the affected iRule commands or APM policy, then ask F5 support for a hotfix.",
+      "sources": [
+        {
+          "name": "The Hacker News",
+          "url": "https://thehackernews.com/2026/11/f5-warns-6-critical-big-ip-flaws-can.html"
+        }
+      ]
+    },
+    {
+      "kind": "story",
+      "headline": "Gemini 4 Neon rolls out, now in GitHub Copilot",
+      "tag": "AI",
+      "text": "Google has released Gemini 4 Neon, and it is now generally available in GitHub Copilot, according to the GitHub Blog. Google says it ranks third overall on the Artificial Analysis Intelligence Index. Those are Google's own figures. Pricing is three dollars per million input tokens and fifteen dollars per million output tokens, with a one million token context window. It is also available in the Gemini A P I, Google AI Studio and the Gemini app for Pro and Ultra subscribers. If you pay per token, those rates are what you will be comparing against.",
+      "sources": [
+        {
+          "name": "Hacker News",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/"
+        },
+        {
+          "name": "Techmeme",
+          "url": "https://www.techmeme.com/261118/p44#a261118p44"
+        }
+      ]
+    },
+    {
+      "kind": "story",
+      "headline": "Banks tell customers AI agent risk is theirs",
+      "tag": "Tech",
+      "text": "Citi has changed its terms to say customers who use third-party AI tools for personal finance are responsible for what happens, even if the tool is hacked, according to TechCrunch. JPMorgan and Bank of America announced similar policies last month, and PNC changed its terms today. Citizens also emailed customers this week. Citi's update says that if an AI tool leaks credentials, the customer is responsible for what hackers do with the account. Anthropic's finance tool is billed as read-only. Before giving any AI agent your banking credentials, read your bank's current user agreement.",
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/11/18/more-banks-says-customers-using-ai-agents-are-on-their-own-even-if-they-get-hacked/"
+        }
+      ]
+    },
+    {
+      "kind": "story",
+      "headline": "Wellington IT hack exposes Irish credit union data",
+      "tag": "Breach",
+      "text": "A reported cyberattack on Belfast-based supplier Wellington IT exposed data from about forty Irish credit unions, according to BleepingComputer. Minister of State Robert Troy confirmed Wellington IT is the provider linked to the incident. The Irish Examiner reports an automated script made five million requests exploiting an authorization flaw between the second and fourth of October. Saved payee details, including names and bank account numbers, may be exposed. Passwords, PINs and card details were not affected. The firm reportedly lacks logs showing exactly what was taken. Credit union members should expect phishing and impersonation attempts using payee details.",
+      "sources": [
+        {
+          "name": "BleepingComputer",
+          "url": "https://www.bleepingcomputer.com/news/security/data-breach-impacts-40-irish-credit-unions-in-reported-it-provider-hack/"
+        }
+      ]
+    },
+    {
+      "kind": "outro",
+      "text": "That's the brief for today. Thanks for listening, and I'll see you next time."
+    }
+  ]
+}
