@@ -1,0 +1,129 @@
+{
+  "channel": "Tech On The Go with Sudhanshu",
+  "date": "2026-11-21",
+  "title": "Ruby flaw ruby2shell, AI agent attack, VMware critical bugs",
+  "description": "A critical Ruby flaw called ruby2shell reaches default Rails and Sinatra apps, and Amazon reports AI agents that found and exploited a zero-day on a university server. Also covered: VMware and KVM flaws, a Bell Canada breach, a European Commission cyberattack, WhatsApp fixes and a Windows 11 passkey error.",
+  "tags": [
+    "Ruby",
+    "ruby2shell",
+    "Rails",
+    "Cairn",
+    "AI agents",
+    "VMware",
+    "KVM",
+    "Bell Canada",
+    "European Commission",
+    "WhatsApp",
+    "Windows 11",
+    "passkeys",
+    "cybersecurity",
+    "zero-day"
+  ],
+  "thumbnail_text": "Critical Ruby flaw ruby2shell",
+  "segments": [
+    {
+      "kind": "intro",
+      "text": "A critical Ruby flaw hits default Rails apps, AI agents exploited a zero day to take over a university server, and VMware has two critical bugs. This is Tech On The Go with Sudhanshu, for Saturday, the twenty first of November."
+    },
+    {
+      "kind": "story",
+      "headline": "Critical Ruby flaw ruby2shell hits default Rails apps",
+      "tag": "Security",
+      "text": "The Ruby team disclosed a critical flaw called ruby2shell on the nineteenth of November. It is a heap buffer overflow in the way Ruby changes the case of strings. Ruby says it knows of proofs of concept that reach remote code execution in some scenarios. According to Veria Labs, Rails and classic style Sinatra apps reach the bug in their default setup, before any login. Fixes are in Ruby three point three point fourteen, three point four point thirteen and four point zero point ten. Cloudflare says its WAF blocks the attack, but calls that a stopgap. Upgrade Ruby first, including inside bundled products like GitLab.",
+      "sources": [
+        {
+          "name": "Cloudflare Blog",
+          "url": "https://blog.cloudflare.com/ruby2shell-waf-protection/"
+        }
+      ]
+    },
+    {
+      "kind": "story",
+      "headline": "AI agents find and exploit zero-day on university server",
+      "tag": "Security",
+      "text": "Suspected Chinese attackers used AI agents to find and exploit a zero day and take over a university server, according to Amazon's chief information security officer, CJ Moses. The agents used an open source framework called Cairn. They first failed against a Redis server and other targets over many hours. Then they found a path traversal flaw in MONAI Label, a medical imaging application. In about eleven minutes they went from mapping its A P I to writing files, and later ran a reverse shell as root. The maintainers have released a fix. If you run MONAI Label, update it now.",
+      "sources": [
+        {
+          "name": "The Register Security",
+          "url": "https://www.theregister.com/security/2026/11/20/china-attackers-deployed-ai-agents-that-autonomously-found-and-exploited-a-0-day-to-take-over-a-university-server/5311382"
+        },
+        {
+          "name": "BleepingComputer",
+          "url": "https://www.bleepingcomputer.com/news/security/hackers-use-autonomous-ai-tool-cairn-to-find-zero-day-take-over-server/"
+        },
+        {
+          "name": "The Record",
+          "url": "https://therecord.media/amazon-research-cairn-ai-university-attacks-possible-zero-day"
+        }
+      ]
+    },
+    {
+      "kind": "story",
+      "headline": "VMware critical bugs and a KVM nested virtualization flaw",
+      "tag": "Security",
+      "text": "VMware published two critical advisories, according to The Register. One covers a vCenter flaw that lets an attacker with network access bypass authentication, plus a second flaw in SDDC Manager that allows commands as root. Both are fixed. The other advisory covers a critical Apache bug in several VMware products. There is no patch yet, only a workaround that disables the http two protocol. Separately, a Linux KVM bug lets a guest attack the host, but only on AMD processors using nested virtualization. Disabling nested virtualization defeats it. Patch vCenter and SDDC Manager first, and apply the http two workaround where the Apache bug applies.",
+      "sources": [
+        {
+          "name": "The Register Security",
+          "url": "https://www.theregister.com/security/2026/11/20/flaws-in-vmware-and-kvm-need-attention-if-you-have-time-while-fixing-java-php-and-everything-else/5311193"
+        }
+      ]
+    },
+    {
+      "kind": "story",
+      "headline": "Bell Canada says agentic attacker stole customer data",
+      "tag": "Breach",
+      "text": "Bell Canada confirmed that an agentic threat actor breached its systems on the seventeenth of November and stole enterprise customer data. According to BleepingComputer, the attacker reached a pre-production environment of a system used to order and provision circuits. The data may include business contact details, ticket titles and some I P addresses. Bell says it did not include credentials or highly sensitive personal information, and customer services were not affected. Bell has not named the attacker or published its indicators of compromise. If you are a Bell enterprise customer, watch for anyone impersonating Bell, as its notice warns.",
+      "sources": [
+        {
+          "name": "BleepingComputer",
+          "url": "https://www.bleepingcomputer.com/news/security/bell-canada-says-agentic-hacker-stole-enterprise-customer-data/"
+        }
+      ]
+    },
+    {
+      "kind": "story",
+      "headline": "European Commission confirms AI-driven cyberattack",
+      "tag": "Security",
+      "text": "The European Commission has confirmed a cyberattack that misused a publicly available AI tool. A spokesperson said it was detected on the twenty second of October and confirmed four days later. The Commission temporarily took several applications offline, and most are back. It has found no evidence of a data breach affecting staff as a whole, and the investigation continues. According to Politico, the tool was ARTEX, an AI penetration testing framework. CERT-EU warned that its public availability will likely speed up adoption by attackers. Expect more AI-driven probing, and check your exposed systems with that in mind.",
+      "sources": [
+        {
+          "name": "Help Net Security",
+          "url": "https://www.helpnetsecurity.com/2026/11/20/european-commission-ai-generated-cyberattack-publicly-available-tool/"
+        }
+      ]
+    },
+    {
+      "kind": "story",
+      "headline": "WhatsApp patches three flaws, one tied to scams",
+      "tag": "Security",
+      "text": "WhatsApp has fixed three security flaws, according to The Hacker News. The first affects the Android apps before version two point twenty six point seventeen point four. It could reveal a device's I P address through a crafted ad reply message, and WhatsApp believes a scammer used it to make a scam look credible. The second is an S Q L injection on Android that could delete local files. The third is a certificate trust flaw in infrastructure for Meta AI, with no sign of exploitation. Make sure WhatsApp is updated on your Android and iOS devices.",
+      "sources": [
+        {
+          "name": "The Hacker News",
+          "url": "https://thehackernews.com/2026/11/whatsapp-patches-3-security-flaws.html"
+        },
+        {
+          "name": "SecurityWeek",
+          "url": "https://www.securityweek.com/whatsapp-fixes-flaw-uncovered-while-disrupting-scam-campaign/"
+        }
+      ]
+    },
+    {
+      "kind": "story",
+      "headline": "Windows 11 passkey bug shows false failure on Android",
+      "tag": "Tech",
+      "text": "A Windows 11 bug can make an Android phone show an error after a passkey sign in actually succeeded. It happens when users sign in on a PC with a passkey stored on an Android phone. The message says something went wrong. Microsoft says it can be safely ignored if sign in completed on the PC. Passkeys on iPhone are not affected. Microsoft's fix is in the optional update K B five one three two zero five seven, released on the nineteenth of November for Windows eleven versions twenty five H two and twenty six H two. Tell your help desk to expect these tickets.",
+      "sources": [
+        {
+          "name": "The Register Security",
+          "url": "https://www.theregister.com/security/2026/11/20/windows-11-passkey-bug-cries-failure-after-successful-sign-in/5311263"
+        }
+      ]
+    },
+    {
+      "kind": "outro",
+      "text": "That is the brief for today. Thanks for listening."
+    }
+  ]
+}
