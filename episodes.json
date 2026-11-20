@@ -1,6 +1,126 @@
 {
   "episodes": [
     {
+      "date": "2026-11-20",
+      "title": "VMware vCenter zero-day, plus critical PHP and NGINX patches",
+      "description": "A China-linked group exploited a VMware vCenter flaw before Broadcom released a patch. PHP and F5 NGINX both shipped critical fixes, and ASUS patched its management console. The episode also covers vendor breaches at Chase, Visa and Mastercard, Meta's Muse agent, and Android developer verification.",
+      "show_notes_html": "<p>A China-linked group exploited a VMware vCenter flaw before Broadcom released a patch. PHP and F5 NGINX both shipped critical fixes, and ASUS patched its management console. The episode also covers vendor breaches at Chase, Visa and Mastercard, Meta&#x27;s Muse agent, and Android developer verification.</p><p>Stories covered:</p><ul><li>China-linked group exploited VMware vCenter zero-day &mdash; Sources: <a href=\"https://www.securityweek.com/newly-patched-vmware-vcenter-flaw-exploited-as-zero-day-by-chinese-apt/\">SecurityWeek</a></li><li>PHP November release fixes seven critical flaws &mdash; Sources: <a href=\"https://www.darkreading.com/application-security/critical-php-flaws-code-execution-panic-php2shell\">Dark Reading</a>, <a href=\"https://www.theregister.com/patches/2026/11/18/another-critical-php-security-release-has-dropped/5310911\">The Register Security</a></li><li>F5 patches five critical NGINX flaws called NGINX2Root &mdash; Sources: <a href=\"https://www.helpnetsecurity.com/2026/11/19/nginx2root-nginx-vulnerabilities/\">Help Net Security</a>, <a href=\"https://www.docker.com/blog/docker-patches-java4shell-and-the-nginx-http-2-with-docker-hardened-images/\">Docker Blog</a></li><li>ASUS fixes critical flaws in Control Center Express &mdash; Sources: <a href=\"https://www.bleepingcomputer.com/news/security/asus-warns-of-critical-hard-coded-key-flaw-in-control-center-express/\">BleepingComputer</a></li><li>Chase, Visa and Mastercard confirm vendor breaches &mdash; Sources: <a href=\"https://thenextweb.com/news/jpmorgan-chase-visa-mastercard-vendor-breach-n0n-leak\">The Next Web</a>, <a href=\"https://www.theregister.com/security/2026/11/19/chase-visa-mastercard-confirm-third-party-cyberattacks-that-may-have-exposed-customers-info/5311175\">The Register Security</a>, <a href=\"https://databreaches.net/2026/11/19/visa-mastercard-and-jpmorgan-customer-data-leaked-by-hackers/\">DataBreaches.net</a></li><li>Meta employees say AI agent Muse mixes up user data &mdash; Sources: <a href=\"https://techcrunch.com/2026/11/19/metas-ai-agent-muse-is-mixing-up-conversations-and-exposing-private-data-report-says/\">TechCrunch</a></li><li>Android developer verification goes global in January 2027 &mdash; Sources: <a href=\"https://www.helpnetsecurity.com/2026/11/20/android-developer-verification-power-users/\">Help Net Security</a>, <a href=\"https://arstechnica.com/gadgets/2026/11/google-will-launch-android-app-verification-requirement-globally-in-january-2027/\">Ars Technica</a></li></ul>",
+      "stories": [
+        {
+          "headline": "China-linked group exploited VMware vCenter zero-day",
+          "tag": "Security",
+          "sources": [
+            {
+              "name": "SecurityWeek",
+              "url": "https://www.securityweek.com/newly-patched-vmware-vcenter-flaw-exploited-as-zero-day-by-chinese-apt/"
+            }
+          ]
+        },
+        {
+          "headline": "PHP November release fixes seven critical flaws",
+          "tag": "Security",
+          "sources": [
+            {
+              "name": "Dark Reading",
+              "url": "https://www.darkreading.com/application-security/critical-php-flaws-code-execution-panic-php2shell"
+            },
+            {
+              "name": "The Register Security",
+              "url": "https://www.theregister.com/patches/2026/11/18/another-critical-php-security-release-has-dropped/5310911"
+            }
+          ]
+        },
+        {
+          "headline": "F5 patches five critical NGINX flaws called NGINX2Root",
+          "tag": "Security",
+          "sources": [
+            {
+              "name": "Help Net Security",
+              "url": "https://www.helpnetsecurity.com/2026/11/19/nginx2root-nginx-vulnerabilities/"
+            },
+            {
+              "name": "Docker Blog",
+              "url": "https://www.docker.com/blog/docker-patches-java4shell-and-the-nginx-http-2-with-docker-hardened-images/"
+            }
+          ]
+        },
+        {
+          "headline": "ASUS fixes critical flaws in Control Center Express",
+          "tag": "Security",
+          "sources": [
+            {
+              "name": "BleepingComputer",
+              "url": "https://www.bleepingcomputer.com/news/security/asus-warns-of-critical-hard-coded-key-flaw-in-control-center-express/"
+            }
+          ]
+        },
+        {
+          "headline": "Chase, Visa and Mastercard confirm vendor breaches",
+          "tag": "Breach",
+          "sources": [
+            {
+              "name": "The Next Web",
+              "url": "https://thenextweb.com/news/jpmorgan-chase-visa-mastercard-vendor-breach-n0n-leak"
+            },
+            {
+              "name": "The Register Security",
+              "url": "https://www.theregister.com/security/2026/11/19/chase-visa-mastercard-confirm-third-party-cyberattacks-that-may-have-exposed-customers-info/5311175"
+            },
+            {
+              "name": "DataBreaches.net",
+              "url": "https://databreaches.net/2026/11/19/visa-mastercard-and-jpmorgan-customer-data-leaked-by-hackers/"
+            }
+          ]
+        },
+        {
+          "headline": "Meta employees say AI agent Muse mixes up user data",
+          "tag": "AI",
+          "sources": [
+            {
+              "name": "TechCrunch",
+              "url": "https://techcrunch.com/2026/11/19/metas-ai-agent-muse-is-mixing-up-conversations-and-exposing-private-data-report-says/"
+            }
+          ]
+        },
+        {
+          "headline": "Android developer verification goes global in January 2027",
+          "tag": "Tech",
+          "sources": [
+            {
+              "name": "Help Net Security",
+              "url": "https://www.helpnetsecurity.com/2026/11/20/android-developer-verification-power-users/"
+            },
+            {
+              "name": "Ars Technica",
+              "url": "https://arstechnica.com/gadgets/2026/11/google-will-launch-android-app-verification-requirement-globally-in-january-2027/"
+            }
+          ]
+        }
+      ],
+      "tags": [
+        "VMware",
+        "vCenter",
+        "zero-day",
+        "PHP",
+        "NGINX",
+        "F5",
+        "ASUS",
+        "JPMorgan Chase",
+        "Visa",
+        "Mastercard",
+        "Meta",
+        "Muse",
+        "Android",
+        "Google",
+        "security news"
+      ],
+      "pub_date": "2026-11-20T05:31:50+05:30",
+      "mp3": "episodes/2026-11-20.mp3",
+      "bytes": 3489496,
+      "duration": 283.37,
+      "guid": "e9194e47-a6b4-5859-904f-d5ea7110f9a1"
+    },
+    {
       "date": "2026-11-19",
       "title": "Microsoft AI package hijacked, NGINX flaw, PHP patch due Thursday",
       "description": "A Microsoft agent framework package on PyPI was hijacked to steal credentials, and a ten-year-old NGINX flaw can allow code execution. PHP has another critical release due Thursday, and F5 disclosed six critical BIG-IP flaws. Also covered are Gemini 4 Neon, banks shifting AI agent risk to customers, and an Irish credit union data breach.",
