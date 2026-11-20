@@ -1,0 +1,138 @@
+{
+  "channel": "Tech On The Go with Sudhanshu",
+  "date": "2026-11-20",
+  "title": "VMware vCenter zero-day, plus critical PHP and NGINX patches",
+  "description": "A China-linked group exploited a VMware vCenter flaw before Broadcom released a patch. PHP and F5 NGINX both shipped critical fixes, and ASUS patched its management console. The episode also covers vendor breaches at Chase, Visa and Mastercard, Meta's Muse agent, and Android developer verification.",
+  "tags": [
+    "VMware",
+    "vCenter",
+    "zero-day",
+    "PHP",
+    "NGINX",
+    "F5",
+    "ASUS",
+    "JPMorgan Chase",
+    "Visa",
+    "Mastercard",
+    "Meta",
+    "Muse",
+    "Android",
+    "Google",
+    "security news"
+  ],
+  "thumbnail_text": "vCenter Zero-Day Exploited",
+  "segments": [
+    {
+      "kind": "intro",
+      "text": "A China-linked group exploited a VMware vCenter flaw before the patch, while PHP and NGINX both ship critical fixes. This is Tech On The Go with Sudhanshu, for Thursday, the nineteenth of November."
+    },
+    {
+      "kind": "story",
+      "headline": "China-linked group exploited VMware vCenter zero-day",
+      "tag": "Security",
+      "text": "Google says a China-linked espionage group exploited a critical VMware vCenter authentication bypass as a zero-day, according to SecurityWeek. The attacks came before Broadcom released a patch. The flaw is now patched, but the report gives few further details. Apply the Broadcom patch to your vCenter servers first, because attackers used this flaw before any fix existed.",
+      "sources": [
+        {
+          "name": "SecurityWeek",
+          "url": "https://www.securityweek.com/newly-patched-vmware-vcenter-flaw-exploited-as-zero-day-by-chinese-apt/"
+        }
+      ]
+    },
+    {
+      "kind": "story",
+      "headline": "PHP November release fixes seven critical flaws",
+      "tag": "Security",
+      "text": "Next, PHP. November's monthly security release patches seven critical flaws, according to Dark Reading. Experts quoted there say the flaws should be addressed as soon as possible. They also say how exploitable each one is varies and depends heavily on configuration, so Dark Reading advises against panic. The Register reports that at least one dangerous remote code execution bug received a fix on Thursday. Update PHP soon, and check which of the seven flaws apply to your configuration.",
+      "sources": [
+        {
+          "name": "Dark Reading",
+          "url": "https://www.darkreading.com/application-security/critical-php-flaws-code-execution-panic-php2shell"
+        },
+        {
+          "name": "The Register Security",
+          "url": "https://www.theregister.com/patches/2026/11/18/another-critical-php-security-release-has-dropped/5310911"
+        }
+      ]
+    },
+    {
+      "kind": "story",
+      "headline": "F5 patches five critical NGINX flaws called NGINX2Root",
+      "tag": "Security",
+      "text": "F5 has patched five critical flaws in NGINX that can allow remote code execution under certain conditions, according to Help Net Security. Researchers at Xint call the set NGINX2Root. There is no evidence of exploitation in the wild, but a public proof of concept exists for one of them. Tenable researchers describe that exploit as constrained, since it needs a very large volume of HTTP two traffic. Fixed releases include NGINX Open Source one point thirty point seven and one point thirty one point nine. Docker has also published fixed images. If you use distro packages, check for backported fixes. Upgrade, then restart NGINX, because a configuration reload does not replace the running executable.",
+      "sources": [
+        {
+          "name": "Help Net Security",
+          "url": "https://www.helpnetsecurity.com/2026/11/19/nginx2root-nginx-vulnerabilities/"
+        },
+        {
+          "name": "Docker Blog",
+          "url": "https://www.docker.com/blog/docker-patches-java4shell-and-the-nginx-http-2-with-docker-hardened-images/"
+        }
+      ]
+    },
+    {
+      "kind": "story",
+      "headline": "ASUS fixes critical flaws in Control Center Express",
+      "tag": "Security",
+      "text": "ASUS released Control Center Express version one point seven point twenty nine to fix three critical flaws, according to BleepingComputer. The worst scores the maximum ten out of ten. A hard-coded cryptographic key lets an unauthenticated remote attacker forge a token and gain administrator privileges. The product is a central dashboard that IT administrators use to manage fleets of PCs. ASUS also patched a critical flaw in Control Center Enterprise and a high-severity flaw in Armoury Crate. Install the new version, then update the agents on managed devices through the Client Agent Updater and verify their versions.",
+      "sources": [
+        {
+          "name": "BleepingComputer",
+          "url": "https://www.bleepingcomputer.com/news/security/asus-warns-of-critical-hard-coded-key-flaw-in-control-center-express/"
+        }
+      ]
+    },
+    {
+      "kind": "story",
+      "headline": "Chase, Visa and Mastercard confirm vendor breaches",
+      "tag": "Breach",
+      "text": "JPMorgan Chase, Visa and Mastercard have each confirmed incidents at outside service providers. Chase says attackers reached marketing data held by vendors, which may include some customer names and email addresses. According to Cybernews, a ransomware gang called n0n published about sixteen thousand customer email addresses after a deadline passed. Visa says its systems were not involved and no payments data was affected. Mastercard says a limited number of email addresses were exposed in one benefit programme. None of the three has named the vendors. The data sat with suppliers, not the banks' own systems, so review what marketing data your own vendors hold.",
+      "sources": [
+        {
+          "name": "The Next Web",
+          "url": "https://thenextweb.com/news/jpmorgan-chase-visa-mastercard-vendor-breach-n0n-leak"
+        },
+        {
+          "name": "The Register Security",
+          "url": "https://www.theregister.com/security/2026/11/19/chase-visa-mastercard-confirm-third-party-cyberattacks-that-may-have-exposed-customers-info/5311175"
+        },
+        {
+          "name": "DataBreaches.net",
+          "url": "https://databreaches.net/2026/11/19/visa-mastercard-and-jpmorgan-customer-data-leaked-by-hackers/"
+        }
+      ]
+    },
+    {
+      "kind": "story",
+      "headline": "Meta employees say AI agent Muse mixes up user data",
+      "tag": "AI",
+      "text": "Meta employees have raised concerns that its A I agent Muse mixes up conversations across accounts and exposes private data, according to a Reuters report relayed by TechCrunch. Employees said Muse surfaced messages and bank balances that did not belong to them. One said it reminded her about a Signal message she had not given it access to. Meta says employees test different versions of Muse than the public, and that feedback is the point of testing. Muse launched in September and has more than ten million downloads. Before you roll out any A I agent, check exactly which accounts and apps it can reach.",
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/11/19/metas-ai-agent-muse-is-mixing-up-conversations-and-exposing-private-data-report-says/"
+        }
+      ]
+    },
+    {
+      "kind": "story",
+      "headline": "Android developer verification goes global in January 2027",
+      "tag": "Tech",
+      "text": "Google will extend Android developer verification to every country starting in January twenty twenty seven, according to Help Net Security. It already applies at participating stores in Brazil, Indonesia, Singapore and Thailand. Apps from unverified developers lose the normal install experience on certified Android devices. Google says registered apps make up over ninety nine percent of installs, and says registering takes less than ten minutes. Experienced users keep an advanced flow to install unregistered apps. If you ship apps outside Google Play, make sure those apps are registered too.",
+      "sources": [
+        {
+          "name": "Help Net Security",
+          "url": "https://www.helpnetsecurity.com/2026/11/20/android-developer-verification-power-users/"
+        },
+        {
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/gadgets/2026/11/google-will-launch-android-app-verification-requirement-globally-in-january-2027/"
+        }
+      ]
+    },
+    {
+      "kind": "outro",
+      "text": "That is the brief for today. Thanks for listening, and see you next time."
+    }
+  ]
+}
