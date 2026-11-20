@@ -1,6 +1,117 @@
 {
   "episodes": [
     {
+      "date": "2026-11-21",
+      "title": "Ruby flaw ruby2shell, AI agent attack, VMware critical bugs",
+      "description": "A critical Ruby flaw called ruby2shell reaches default Rails and Sinatra apps, and Amazon reports AI agents that found and exploited a zero-day on a university server. Also covered: VMware and KVM flaws, a Bell Canada breach, a European Commission cyberattack, WhatsApp fixes and a Windows 11 passkey error.",
+      "show_notes_html": "<p>A critical Ruby flaw called ruby2shell reaches default Rails and Sinatra apps, and Amazon reports AI agents that found and exploited a zero-day on a university server. Also covered: VMware and KVM flaws, a Bell Canada breach, a European Commission cyberattack, WhatsApp fixes and a Windows 11 passkey error.</p><p>Stories covered:</p><ul><li>Critical Ruby flaw ruby2shell hits default Rails apps &mdash; Sources: <a href=\"https://blog.cloudflare.com/ruby2shell-waf-protection/\">Cloudflare Blog</a></li><li>AI agents find and exploit zero-day on university server &mdash; Sources: <a href=\"https://www.theregister.com/security/2026/11/20/china-attackers-deployed-ai-agents-that-autonomously-found-and-exploited-a-0-day-to-take-over-a-university-server/5311382\">The Register Security</a>, <a href=\"https://www.bleepingcomputer.com/news/security/hackers-use-autonomous-ai-tool-cairn-to-find-zero-day-take-over-server/\">BleepingComputer</a>, <a href=\"https://therecord.media/amazon-research-cairn-ai-university-attacks-possible-zero-day\">The Record</a></li><li>VMware critical bugs and a KVM nested virtualization flaw &mdash; Sources: <a href=\"https://www.theregister.com/security/2026/11/20/flaws-in-vmware-and-kvm-need-attention-if-you-have-time-while-fixing-java-php-and-everything-else/5311193\">The Register Security</a></li><li>Bell Canada says agentic attacker stole customer data &mdash; Sources: <a href=\"https://www.bleepingcomputer.com/news/security/bell-canada-says-agentic-hacker-stole-enterprise-customer-data/\">BleepingComputer</a></li><li>European Commission confirms AI-driven cyberattack &mdash; Sources: <a href=\"https://www.helpnetsecurity.com/2026/11/20/european-commission-ai-generated-cyberattack-publicly-available-tool/\">Help Net Security</a></li><li>WhatsApp patches three flaws, one tied to scams &mdash; Sources: <a href=\"https://thehackernews.com/2026/11/whatsapp-patches-3-security-flaws.html\">The Hacker News</a>, <a href=\"https://www.securityweek.com/whatsapp-fixes-flaw-uncovered-while-disrupting-scam-campaign/\">SecurityWeek</a></li><li>Windows 11 passkey bug shows false failure on Android &mdash; Sources: <a href=\"https://www.theregister.com/security/2026/11/20/windows-11-passkey-bug-cries-failure-after-successful-sign-in/5311263\">The Register Security</a></li></ul>",
+      "stories": [
+        {
+          "headline": "Critical Ruby flaw ruby2shell hits default Rails apps",
+          "tag": "Security",
+          "sources": [
+            {
+              "name": "Cloudflare Blog",
+              "url": "https://blog.cloudflare.com/ruby2shell-waf-protection/"
+            }
+          ]
+        },
+        {
+          "headline": "AI agents find and exploit zero-day on university server",
+          "tag": "Security",
+          "sources": [
+            {
+              "name": "The Register Security",
+              "url": "https://www.theregister.com/security/2026/11/20/china-attackers-deployed-ai-agents-that-autonomously-found-and-exploited-a-0-day-to-take-over-a-university-server/5311382"
+            },
+            {
+              "name": "BleepingComputer",
+              "url": "https://www.bleepingcomputer.com/news/security/hackers-use-autonomous-ai-tool-cairn-to-find-zero-day-take-over-server/"
+            },
+            {
+              "name": "The Record",
+              "url": "https://therecord.media/amazon-research-cairn-ai-university-attacks-possible-zero-day"
+            }
+          ]
+        },
+        {
+          "headline": "VMware critical bugs and a KVM nested virtualization flaw",
+          "tag": "Security",
+          "sources": [
+            {
+              "name": "The Register Security",
+              "url": "https://www.theregister.com/security/2026/11/20/flaws-in-vmware-and-kvm-need-attention-if-you-have-time-while-fixing-java-php-and-everything-else/5311193"
+            }
+          ]
+        },
+        {
+          "headline": "Bell Canada says agentic attacker stole customer data",
+          "tag": "Breach",
+          "sources": [
+            {
+              "name": "BleepingComputer",
+              "url": "https://www.bleepingcomputer.com/news/security/bell-canada-says-agentic-hacker-stole-enterprise-customer-data/"
+            }
+          ]
+        },
+        {
+          "headline": "European Commission confirms AI-driven cyberattack",
+          "tag": "Security",
+          "sources": [
+            {
+              "name": "Help Net Security",
+              "url": "https://www.helpnetsecurity.com/2026/11/20/european-commission-ai-generated-cyberattack-publicly-available-tool/"
+            }
+          ]
+        },
+        {
+          "headline": "WhatsApp patches three flaws, one tied to scams",
+          "tag": "Security",
+          "sources": [
+            {
+              "name": "The Hacker News",
+              "url": "https://thehackernews.com/2026/11/whatsapp-patches-3-security-flaws.html"
+            },
+            {
+              "name": "SecurityWeek",
+              "url": "https://www.securityweek.com/whatsapp-fixes-flaw-uncovered-while-disrupting-scam-campaign/"
+            }
+          ]
+        },
+        {
+          "headline": "Windows 11 passkey bug shows false failure on Android",
+          "tag": "Tech",
+          "sources": [
+            {
+              "name": "The Register Security",
+              "url": "https://www.theregister.com/security/2026/11/20/windows-11-passkey-bug-cries-failure-after-successful-sign-in/5311263"
+            }
+          ]
+        }
+      ],
+      "tags": [
+        "Ruby",
+        "ruby2shell",
+        "Rails",
+        "Cairn",
+        "AI agents",
+        "VMware",
+        "KVM",
+        "Bell Canada",
+        "European Commission",
+        "WhatsApp",
+        "Windows 11",
+        "passkeys",
+        "cybersecurity",
+        "zero-day"
+      ],
+      "pub_date": "2026-11-21T05:21:48+05:30",
+      "mp3": "episodes/2026-11-21.mp3",
+      "bytes": 3688870,
+      "duration": 299.97,
+      "guid": "f9bd2893-0c01-59d1-abd1-c1e0f1a7f8e2"
+    },
+    {
       "date": "2026-11-20",
       "title": "VMware vCenter zero-day, plus critical PHP and NGINX patches",
       "description": "A China-linked group exploited a VMware vCenter flaw before Broadcom released a patch. PHP and F5 NGINX both shipped critical fixes, and ASUS patched its management console. The episode also covers vendor breaches at Chase, Visa and Mastercard, Meta's Muse agent, and Android developer verification.",
