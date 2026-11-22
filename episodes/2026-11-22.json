@@ -1,0 +1,121 @@
+{
+  "channel": "Tech On The Go with Sudhanshu",
+  "date": "2026-11-22",
+  "title": "Microsoft Entra Connect Health, Rackspace Spot and GPGME flaws",
+  "description": "Microsoft confirms attackers read tenant metadata through a flaw in Entra Connect Health, and Rackspace Spot customers are told to rotate Kubernetes secrets after a breach. Also covered: a critical GPGME flaw, four actively exploited flaws added to CISA's catalog, AI router key theft research, a Meta Muse demonstration and a MoEngage vendor breach.",
+  "tags": [
+    "Microsoft",
+    "Entra Connect Health",
+    "Rackspace Spot",
+    "Kubernetes",
+    "GnuPG",
+    "GPGME",
+    "CISA KEV",
+    "VMware vCenter",
+    "Cisco Expressway",
+    "Meta Muse",
+    "AI routers",
+    "MoEngage",
+    "Security",
+    "Breach"
+  ],
+  "thumbnail_text": "Entra Connect Health Breach",
+  "segments": [
+    {
+      "kind": "intro",
+      "text": "Microsoft confirms attackers read tenant data through Entra Connect Health, Rackspace Spot customers must rotate Kubernetes secrets, and a critical GnuPG library flaw needs patching. This is Tech On The Go with Sudhanshu, for Sunday, the twenty second of November."
+    },
+    {
+      "kind": "story",
+      "headline": "Entra Connect Health flaw exploited to read tenant data",
+      "tag": "Breach",
+      "text": "Microsoft says attackers exploited a flaw in its Entra Connect Health service to read tenant data, according to BleepingComputer. Microsoft found the flaw on the ninth of November. The exposed data included administrator email addresses, tenant I D s, domain names and license tiers. Microsoft says no passwords, password hashes or authentication tokens were exposed, and it found no unauthorized configuration changes. A server-side fix went in on the nineteenth of November. Microsoft has not said how many organizations were hit. It advises phishing-resistant multifactor authentication for privileged accounts and a review of Entra audit and sign-in logs. Tell your security team now, because the exposed administrator addresses could be used for phishing.",
+      "sources": [
+        {
+          "name": "BleepingComputer",
+          "url": "https://www.bleepingcomputer.com/news/security/microsoft-entra-connect-health-flaw-exploited-to-steal-tenant-data/"
+        }
+      ]
+    },
+    {
+      "kind": "story",
+      "headline": "Rackspace Spot breach exposed customer Kubernetes secrets",
+      "tag": "Breach",
+      "text": "Rackspace says attackers used leaked credentials to break into its Rackspace Spot Kubernetes platform, according to BleepingComputer. The access happened on the seventeenth of November. The attackers could act as legitimate users in some customer organizations, create pods, and read Kubernetes Secrets, which can hold passwords and A P I keys. Rackspace says it revoked tokens, removed unauthorized pods and rotated keys. Customers are told to reissue Spot A P I tokens, download fresh Kubernetes configuration files and rotate credentials stored in Secrets. The admin console was down for an extended period, and service was fully restored on the twenty first of November. If you run clusters on Spot, rotate every credential in your Secrets and check logs back to the seventeenth of November.",
+      "sources": [
+        {
+          "name": "BleepingComputer",
+          "url": "https://www.bleepingcomputer.com/news/security/rackspace-spot-breach-let-hackers-access-customer-kubernetes-secrets/"
+        }
+      ]
+    },
+    {
+      "kind": "story",
+      "headline": "Researchers say AI routers broke privacy and stole keys",
+      "tag": "AI",
+      "text": "Researchers say AI router services often broke their privacy promises and stole keys, according to Ars Technica, as relayed by Techmeme. The researchers planted two million canary credentials in requests sent through services such as OpenRouter and Vercel. They report that privacy was often broken even under zero data retention policies. Only the summary was available to us, so we cannot give more detail. If your team sends requests through AI routers, check which credentials those requests carry.",
+      "sources": [
+        {
+          "name": "Techmeme",
+          "url": "https://www.techmeme.com/261121/p10#a261121p10"
+        }
+      ]
+    },
+    {
+      "kind": "story",
+      "headline": "Critical GPGME flaw could expose application data",
+      "tag": "Security",
+      "text": "The GnuPG project warns of a critical flaw in GPGME, the library programs use to work with GnuPG, according to The Hacker News. A malicious OpenPGP key with an unusually long user I D can trigger a double free memory bug that could expose application data. It affects software using GPGME before version two point three point zero, including most mail clients and Gpg4win. No attacks have been reported, but remote code execution cannot be ruled out. The fix is GPGME two point three point one. Gpg4win five point one point two bundles it. Statically linked copies need their own rebuilt releases. Update GPGME, then check which of your applications bundle their own copy.",
+      "sources": [
+        {
+          "name": "The Hacker News",
+          "url": "https://thehackernews.com/2026/11/gnupg-warns-critical-gpgme-flaw-could.html"
+        },
+        {
+          "name": "Hacker News",
+          "url": "https://lists.gnupg.org/pipermail/gnupg-announce/2026q4/000517.html"
+        }
+      ]
+    },
+    {
+      "kind": "story",
+      "headline": "CISA adds four exploited flaws, including VMware vCenter",
+      "tag": "Security",
+      "text": "CISA on Friday added four flaws to its Known Exploited Vulnerabilities catalog, according to The Hacker News. They affect Apache Roller, Cisco Expressway, SAP NetWeaver and VMware vCenter. Three of them carry a severity score of nine point eight. The vCenter flaw has been linked to a suspected China-nexus group called Armory Castle, which used it with a BeyondTrust flaw to deploy backdoors. The Cisco flaw was reportedly used to breach a Russian organization, according to F6. Federal agencies must patch by the twenty third of November. Check whether you run any of these four products and patch them.",
+      "sources": [
+        {
+          "name": "The Hacker News",
+          "url": "https://thehackernews.com/2026/11/hackers-exploit-critical-vmware-cisco.html"
+        }
+      ]
+    },
+    {
+      "kind": "story",
+      "headline": "Researchers hijack Meta Muse AI agent with a malicious page",
+      "tag": "AI",
+      "text": "Researchers showed that a malicious webpage could pull private chats and memories from Meta's Muse AI agent, according to The Hacker News. Security firm NebuSec published the work. It was a lab demonstration, not an attack on real users. The researchers chained a browser flaw to a Linux kernel flaw to take control of one user's cloud machine. NebuSec says the Muse team fixed every weakness before publication. Meta has not confirmed the fixes, and the write-up does not say whether any user data was accessed. It shows that an AI agent that opens web pages can become a path to private data.",
+      "sources": [
+        {
+          "name": "The Hacker News",
+          "url": "https://thehackernews.com/2026/11/a-single-malicious-webpage-let.html"
+        }
+      ]
+    },
+    {
+      "kind": "story",
+      "headline": "MoEngage breached through a compromised vendor account",
+      "tag": "Breach",
+      "text": "SaaS company MoEngage says it suffered a breach through a compromised third-party vendor account, according to Inc42. Attackers reached a limited part of its cloud infrastructure. The company says it contained the incident in late October and that fewer than one percent of customer accounts were affected, all notified directly. A report by ET said some customers had trouble accessing the platform for nearly seven days, but MoEngage denies any disruption. It says independent experts validated its findings. Review which vendors hold access to your own cloud accounts.",
+      "sources": [
+        {
+          "name": "Inc42",
+          "url": "https://inc42.com/buzz/now-moengage-suffers-cybersecurity-attack-due-to-compromised-third-party-vendor/"
+        }
+      ]
+    },
+    {
+      "kind": "outro",
+      "text": "That's the brief for today. Thanks for listening, and see you next time."
+    }
+  ]
+}
