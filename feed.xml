@@ -8,7 +8,7 @@
 <language>en</language>
 <copyright>© 2026 Sudhanshu Agarwal</copyright>
 <generator>briefstudio podcast.py</generator>
-<lastBuildDate>Fri, 20 Nov 2026 23:51:50 +0000</lastBuildDate>
+<lastBuildDate>Sun, 22 Nov 2026 00:16:14 +0000</lastBuildDate>
 <itunes:type>episodic</itunes:type>
 <itunes:author>Sudhanshu Agarwal</itunes:author>
 <itunes:summary>Your 5-minute tech catch-up.</itunes:summary>
@@ -17,6 +17,20 @@
 <image><url>https://agarwal-sudhanshu.github.io/tech-on-the-go/cover.jpg</url><title>Tech On The Go with Sudhanshu</title><link>https://agarwal-sudhanshu.github.io/tech-on-the-go/</link></image>
 <itunes:category text="Technology"/>
 <itunes:owner><itunes:name>Sudhanshu Agarwal</itunes:name><itunes:email>agarwal.sudh@gmail.com</itunes:email></itunes:owner>
+<item>
+<title>Microsoft Entra Connect Health, Rackspace Spot and GPGME flaws</title>
+<link>https://agarwal-sudhanshu.github.io/tech-on-the-go/#2026-11-22</link>
+<description><![CDATA[<p>Microsoft confirms attackers read tenant metadata through a flaw in Entra Connect Health, and Rackspace Spot customers are told to rotate Kubernetes secrets after a breach. Also covered: a critical GPGME flaw, four actively exploited flaws added to CISA&#x27;s catalog, AI router key theft research, a Meta Muse demonstration and a MoEngage vendor breach.</p><p>Stories covered:</p><ul><li>Entra Connect Health flaw exploited to read tenant data &mdash; Sources: <a href="https://www.bleepingcomputer.com/news/security/microsoft-entra-connect-health-flaw-exploited-to-steal-tenant-data/">BleepingComputer</a></li><li>Rackspace Spot breach exposed customer Kubernetes secrets &mdash; Sources: <a href="https://www.bleepingcomputer.com/news/security/rackspace-spot-breach-let-hackers-access-customer-kubernetes-secrets/">BleepingComputer</a></li><li>Researchers say AI routers broke privacy and stole keys &mdash; Sources: <a href="https://www.techmeme.com/261121/p10#a261121p10">Techmeme</a></li><li>Critical GPGME flaw could expose application data &mdash; Sources: <a href="https://thehackernews.com/2026/11/gnupg-warns-critical-gpgme-flaw-could.html">The Hacker News</a>, <a href="https://lists.gnupg.org/pipermail/gnupg-announce/2026q4/000517.html">Hacker News</a></li><li>CISA adds four exploited flaws, including VMware vCenter &mdash; Sources: <a href="https://thehackernews.com/2026/11/hackers-exploit-critical-vmware-cisco.html">The Hacker News</a></li><li>Researchers hijack Meta Muse AI agent with a malicious page &mdash; Sources: <a href="https://thehackernews.com/2026/11/a-single-malicious-webpage-let.html">The Hacker News</a></li><li>MoEngage breached through a compromised vendor account &mdash; Sources: <a href="https://inc42.com/buzz/now-moengage-suffers-cybersecurity-attack-due-to-compromised-third-party-vendor/">Inc42</a></li></ul>]]></description>
+<content:encoded><![CDATA[<p>Microsoft confirms attackers read tenant metadata through a flaw in Entra Connect Health, and Rackspace Spot customers are told to rotate Kubernetes secrets after a breach. Also covered: a critical GPGME flaw, four actively exploited flaws added to CISA&#x27;s catalog, AI router key theft research, a Meta Muse demonstration and a MoEngage vendor breach.</p><p>Stories covered:</p><ul><li>Entra Connect Health flaw exploited to read tenant data &mdash; Sources: <a href="https://www.bleepingcomputer.com/news/security/microsoft-entra-connect-health-flaw-exploited-to-steal-tenant-data/">BleepingComputer</a></li><li>Rackspace Spot breach exposed customer Kubernetes secrets &mdash; Sources: <a href="https://www.bleepingcomputer.com/news/security/rackspace-spot-breach-let-hackers-access-customer-kubernetes-secrets/">BleepingComputer</a></li><li>Researchers say AI routers broke privacy and stole keys &mdash; Sources: <a href="https://www.techmeme.com/261121/p10#a261121p10">Techmeme</a></li><li>Critical GPGME flaw could expose application data &mdash; Sources: <a href="https://thehackernews.com/2026/11/gnupg-warns-critical-gpgme-flaw-could.html">The Hacker News</a>, <a href="https://lists.gnupg.org/pipermail/gnupg-announce/2026q4/000517.html">Hacker News</a></li><li>CISA adds four exploited flaws, including VMware vCenter &mdash; Sources: <a href="https://thehackernews.com/2026/11/hackers-exploit-critical-vmware-cisco.html">The Hacker News</a></li><li>Researchers hijack Meta Muse AI agent with a malicious page &mdash; Sources: <a href="https://thehackernews.com/2026/11/a-single-malicious-webpage-let.html">The Hacker News</a></li><li>MoEngage breached through a compromised vendor account &mdash; Sources: <a href="https://inc42.com/buzz/now-moengage-suffers-cybersecurity-attack-due-to-compromised-third-party-vendor/">Inc42</a></li></ul>]]></content:encoded>
+<itunes:summary>Microsoft confirms attackers read tenant metadata through a flaw in Entra Connect Health, and Rackspace Spot customers are told to rotate Kubernetes secrets after a breach. Also covered: a critical GPGME flaw, four actively exploited flaws added to CISA&apos;s catalog, AI router key theft research, a Meta Muse demonstration and a MoEngage vendor breach.</itunes:summary>
+<enclosure url="https://agarwal-sudhanshu.github.io/tech-on-the-go/episodes/2026-11-22.mp3" length="3920883" type="audio/mpeg"/>
+<guid isPermaLink="false">ff6fdc19-4566-5d98-8368-cef9ddbc85ac</guid>
+<pubDate>Sun, 22 Nov 2026 05:46:12 +0530</pubDate>
+<itunes:duration>00:05:19</itunes:duration>
+<itunes:author>Sudhanshu Agarwal</itunes:author>
+<itunes:episodeType>full</itunes:episodeType>
+<itunes:explicit>false</itunes:explicit>
+</item>
 <item>
 <title>Ruby flaw ruby2shell, AI agent attack, VMware critical bugs</title>
 <link>https://agarwal-sudhanshu.github.io/tech-on-the-go/#2026-11-21</link>

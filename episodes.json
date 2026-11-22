@@ -1,6 +1,109 @@
 {
   "episodes": [
     {
+      "date": "2026-11-22",
+      "title": "Microsoft Entra Connect Health, Rackspace Spot and GPGME flaws",
+      "description": "Microsoft confirms attackers read tenant metadata through a flaw in Entra Connect Health, and Rackspace Spot customers are told to rotate Kubernetes secrets after a breach. Also covered: a critical GPGME flaw, four actively exploited flaws added to CISA's catalog, AI router key theft research, a Meta Muse demonstration and a MoEngage vendor breach.",
+      "show_notes_html": "<p>Microsoft confirms attackers read tenant metadata through a flaw in Entra Connect Health, and Rackspace Spot customers are told to rotate Kubernetes secrets after a breach. Also covered: a critical GPGME flaw, four actively exploited flaws added to CISA&#x27;s catalog, AI router key theft research, a Meta Muse demonstration and a MoEngage vendor breach.</p><p>Stories covered:</p><ul><li>Entra Connect Health flaw exploited to read tenant data &mdash; Sources: <a href=\"https://www.bleepingcomputer.com/news/security/microsoft-entra-connect-health-flaw-exploited-to-steal-tenant-data/\">BleepingComputer</a></li><li>Rackspace Spot breach exposed customer Kubernetes secrets &mdash; Sources: <a href=\"https://www.bleepingcomputer.com/news/security/rackspace-spot-breach-let-hackers-access-customer-kubernetes-secrets/\">BleepingComputer</a></li><li>Researchers say AI routers broke privacy and stole keys &mdash; Sources: <a href=\"https://www.techmeme.com/261121/p10#a261121p10\">Techmeme</a></li><li>Critical GPGME flaw could expose application data &mdash; Sources: <a href=\"https://thehackernews.com/2026/11/gnupg-warns-critical-gpgme-flaw-could.html\">The Hacker News</a>, <a href=\"https://lists.gnupg.org/pipermail/gnupg-announce/2026q4/000517.html\">Hacker News</a></li><li>CISA adds four exploited flaws, including VMware vCenter &mdash; Sources: <a href=\"https://thehackernews.com/2026/11/hackers-exploit-critical-vmware-cisco.html\">The Hacker News</a></li><li>Researchers hijack Meta Muse AI agent with a malicious page &mdash; Sources: <a href=\"https://thehackernews.com/2026/11/a-single-malicious-webpage-let.html\">The Hacker News</a></li><li>MoEngage breached through a compromised vendor account &mdash; Sources: <a href=\"https://inc42.com/buzz/now-moengage-suffers-cybersecurity-attack-due-to-compromised-third-party-vendor/\">Inc42</a></li></ul>",
+      "stories": [
+        {
+          "headline": "Entra Connect Health flaw exploited to read tenant data",
+          "tag": "Breach",
+          "sources": [
+            {
+              "name": "BleepingComputer",
+              "url": "https://www.bleepingcomputer.com/news/security/microsoft-entra-connect-health-flaw-exploited-to-steal-tenant-data/"
+            }
+          ]
+        },
+        {
+          "headline": "Rackspace Spot breach exposed customer Kubernetes secrets",
+          "tag": "Breach",
+          "sources": [
+            {
+              "name": "BleepingComputer",
+              "url": "https://www.bleepingcomputer.com/news/security/rackspace-spot-breach-let-hackers-access-customer-kubernetes-secrets/"
+            }
+          ]
+        },
+        {
+          "headline": "Researchers say AI routers broke privacy and stole keys",
+          "tag": "AI",
+          "sources": [
+            {
+              "name": "Techmeme",
+              "url": "https://www.techmeme.com/261121/p10#a261121p10"
+            }
+          ]
+        },
+        {
+          "headline": "Critical GPGME flaw could expose application data",
+          "tag": "Security",
+          "sources": [
+            {
+              "name": "The Hacker News",
+              "url": "https://thehackernews.com/2026/11/gnupg-warns-critical-gpgme-flaw-could.html"
+            },
+            {
+              "name": "Hacker News",
+              "url": "https://lists.gnupg.org/pipermail/gnupg-announce/2026q4/000517.html"
+            }
+          ]
+        },
+        {
+          "headline": "CISA adds four exploited flaws, including VMware vCenter",
+          "tag": "Security",
+          "sources": [
+            {
+              "name": "The Hacker News",
+              "url": "https://thehackernews.com/2026/11/hackers-exploit-critical-vmware-cisco.html"
+            }
+          ]
+        },
+        {
+          "headline": "Researchers hijack Meta Muse AI agent with a malicious page",
+          "tag": "AI",
+          "sources": [
+            {
+              "name": "The Hacker News",
+              "url": "https://thehackernews.com/2026/11/a-single-malicious-webpage-let.html"
+            }
+          ]
+        },
+        {
+          "headline": "MoEngage breached through a compromised vendor account",
+          "tag": "Breach",
+          "sources": [
+            {
+              "name": "Inc42",
+              "url": "https://inc42.com/buzz/now-moengage-suffers-cybersecurity-attack-due-to-compromised-third-party-vendor/"
+            }
+          ]
+        }
+      ],
+      "tags": [
+        "Microsoft",
+        "Entra Connect Health",
+        "Rackspace Spot",
+        "Kubernetes",
+        "GnuPG",
+        "GPGME",
+        "CISA KEV",
+        "VMware vCenter",
+        "Cisco Expressway",
+        "Meta Muse",
+        "AI routers",
+        "MoEngage",
+        "Security",
+        "Breach"
+      ],
+      "pub_date": "2026-11-22T05:46:12+05:30",
+      "mp3": "episodes/2026-11-22.mp3",
+      "bytes": 3920883,
+      "duration": 319.3,
+      "guid": "ff6fdc19-4566-5d98-8368-cef9ddbc85ac"
+    },
+    {
       "date": "2026-11-21",
       "title": "Ruby flaw ruby2shell, AI agent attack, VMware critical bugs",
       "description": "A critical Ruby flaw called ruby2shell reaches default Rails and Sinatra apps, and Amazon reports AI agents that found and exploited a zero-day on a university server. Also covered: VMware and KVM flaws, a Bell Canada breach, a European Commission cyberattack, WhatsApp fixes and a Windows 11 passkey error.",
