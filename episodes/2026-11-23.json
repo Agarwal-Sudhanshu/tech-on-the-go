@@ -1,0 +1,117 @@
+{
+  "channel": "Tech On The Go with Sudhanshu",
+  "date": "2026-11-23",
+  "title": "OpenRouter Drops 3 AI Hosts, GL.iNet Routers Hacked, Ghostscript Flaw",
+  "description": "Researchers found attackers copying prompts inside three AI inference providers, and OpenRouter removed them. GL.iNet confirmed hackers infected routers and KVM devices through its cloud, and a patched Ghostscript flaw lets crafted uploads run commands. The episode also covers Claude Code secret leaks, the Cleverbridge card breach, and Google's Agent Compute Engine.",
+  "tags": [
+    "OpenRouter",
+    "Dragos",
+    "GL.iNet",
+    "Ghostscript",
+    "Claude Code",
+    "Cleverbridge",
+    "Optimizely",
+    "VMware vCenter",
+    "Google Agent Compute Engine",
+    "AI security",
+    "data breach",
+    "routers",
+    "cybersecurity",
+    "developers"
+  ],
+  "thumbnail_text": "AI Hosts Caught Stealing Prompts",
+  "segments": [
+    {
+      "kind": "intro",
+      "text": "Attackers copied customer prompts inside three AI hosting providers for months, hackers are infecting GL.iNet routers through its cloud, and a Ghostscript flaw turns file uploads into code execution. This is Tech On The Go with Sudhanshu, for Sunday, the twenty second of November."
+    },
+    {
+      "kind": "story",
+      "headline": "OpenRouter drops 3 providers over months of prompt theft",
+      "tag": "Security",
+      "text": "OpenRouter has removed three AI providers from its platform after researchers found attackers had been stealing prompts inside them for months. According to Dragos, none of the three providers knew until researchers told them. The researchers seeded about two million prompts with planted links and credentials, then watched for anyone using them. Some stolen requests were flagged Zero Data Retention. OpenRouter says it notified potentially affected customers and that OpenRouter itself was not breached. If you route prompts through OpenRouter, check its notice, because a privacy flag did not stop this theft.",
+      "sources": [
+        {
+          "name": "The Hacker News",
+          "url": "https://thehackernews.com/2026/11/openrouter-drops-3-providers-after.html"
+        }
+      ]
+    },
+    {
+      "kind": "story",
+      "headline": "GL.iNet confirms hackers infected routers and KVM devices",
+      "tag": "Security",
+      "text": "GL.iNet has confirmed that hackers exploited a flaw in its cloud remote management services to install custom malware on customers' routers and KVM devices. Some users report backdoors and reverse shells. The company says it fixed the cloud flaw, but that does not remove malware from devices already infected. It has not said how many customers were hit. According to BleepingComputer, forum members warn the company's detection steps may miss some infections. Stable firmware updates are scheduled for the twenty second of November. Check your GL.iNet devices for infection and install the latest firmware.",
+      "sources": [
+        {
+          "name": "BleepingComputer",
+          "url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-glinet-cloud-flaw-to-infect-routers-kvm-devices/"
+        }
+      ]
+    },
+    {
+      "kind": "story",
+      "headline": "Ghostscript flaw lets crafted uploads run server commands",
+      "tag": "Security",
+      "text": "Researchers at pwn.ai showed that a now-patched Ghostscript flaw lets a crafted file escape its sandbox and run commands on the server. According to The Hacker News, about ten common applications could be tricked through ordinary upload, preview, and print features, including some WordPress plugins and Roundcube webmail. Artifex fixed it in version ten point oh eight point oh on the eighth of September, and no attacks have been reported. A fixed host does not update a separate Ghostscript copy bundled inside a container image. Check which Ghostscript your document workers actually run.",
+      "sources": [
+        {
+          "name": "The Hacker News",
+          "url": "https://thehackernews.com/2026/11/researchers-demonstrate-ghostscript.html"
+        }
+      ]
+    },
+    {
+      "kind": "story",
+      "headline": "Claude Code's \"Don't Ask Again\" leaks secrets into repos",
+      "tag": "Dev",
+      "text": "Security firm Apiiro says Claude Code has been exposing secrets in public repositories through its Don't Ask Again feature. According to InfoQ, approved shell commands are saved in a local settings file, and those commands can contain passwords and tokens. Apiiro found more than eleven hundred secrets in such files, across sixty three organizations. GitGuardian separately reported more than thirty one thousand on public GitHub. Common secret scanners missed some, because the secrets sat inside shell commands. Untrack that settings file, add it to your gitignore, and rotate every credential it has ever held.",
+      "sources": [
+        {
+          "name": "InfoQ",
+          "url": "https://www.infoq.com/news/2026/11/claude-code-leaking-secrets/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global"
+        }
+      ]
+    },
+    {
+      "kind": "story",
+      "headline": "Cleverbridge breach exposes card numbers and CVVs",
+      "tag": "Breach",
+      "text": "E-commerce platform Cleverbridge says hackers copied payment card data stored on its platform. It detected unauthorized activity on the fourth of November. According to a notification seen by BleepingComputer, the stolen data includes card numbers, expiry dates, and security codes, but not names or billing details. Cleverbridge serves software and SaaS companies, and has not said which businesses' customers were affected or how many. It says this was not ransomware. It is offering affected customers credit monitoring. If you bought software through Cleverbridge, review your card statements and ask your card issuer about replacing the card.",
+      "sources": [
+        {
+          "name": "BleepingComputer",
+          "url": "https://www.bleepingcomputer.com/news/security/cleverbridge-warns-hackers-stole-credit-card-numbers-cvvs-in-data-breach/"
+        }
+      ]
+    },
+    {
+      "kind": "story",
+      "headline": "Optimizely script attack hits 178 organizations",
+      "tag": "Security",
+      "text": "According to Help Net Security's weekly review, an attacker exploited a flaw in Optimizely's web experimentation platform to plant malicious JavaScript on customer websites. The company confirmed it, and the review says 178 organizations were hit, including the BBC, CNN, and Zoom. The same review reports that a suspected China-nexus group exploited a VMware vCenter zero-day for more than two months before Broadcom released a fix, according to Google's threat intelligence group. It also says attackers are exploiting a critical Puppet Enterprise flaw. Patch vCenter, and check whether Optimizely scripts run on your sites.",
+      "sources": [
+        {
+          "name": "Help Net Security",
+          "url": "https://www.helpnetsecurity.com/2026/11/22/week-in-review-java4shell-proves-tricky-to-exploit-malware-planted-via-optimizely-hits-178-orgs/"
+        }
+      ]
+    },
+    {
+      "kind": "story",
+      "headline": "Google announces Agent Compute Engine for AI agents",
+      "tag": "Dev",
+      "text": "Google has announced Agent Compute Engine, a managed service that runs AI agents in isolated microVMs and can suspend and resume them. According to InfoQ, credentials and tokens stay outside the sandbox, and an external gateway injects them when needed. Google says the service is targeted for preview in the coming months. An analyst cited by InfoQ notes the announcement gives no boot time, price, or density figures for it. AWS and Azure offer similar isolated environments for agents. If you are comparing agent sandboxes, note this one is not available yet.",
+      "sources": [
+        {
+          "name": "InfoQ",
+          "url": "https://www.infoq.com/news/2026/11/google-agent-compute-engine/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global"
+        }
+      ]
+    },
+    {
+      "kind": "outro",
+      "text": "That is the brief for today. Thanks for listening."
+    }
+  ]
+}
