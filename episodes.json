@@ -1,6 +1,105 @@
 {
   "episodes": [
     {
+      "date": "2026-11-23",
+      "title": "OpenRouter Drops 3 AI Hosts, GL.iNet Routers Hacked, Ghostscript Flaw",
+      "description": "Researchers found attackers copying prompts inside three AI inference providers, and OpenRouter removed them. GL.iNet confirmed hackers infected routers and KVM devices through its cloud, and a patched Ghostscript flaw lets crafted uploads run commands. The episode also covers Claude Code secret leaks, the Cleverbridge card breach, and Google's Agent Compute Engine.",
+      "show_notes_html": "<p>Researchers found attackers copying prompts inside three AI inference providers, and OpenRouter removed them. GL.iNet confirmed hackers infected routers and KVM devices through its cloud, and a patched Ghostscript flaw lets crafted uploads run commands. The episode also covers Claude Code secret leaks, the Cleverbridge card breach, and Google&#x27;s Agent Compute Engine.</p><p>Stories covered:</p><ul><li>OpenRouter drops 3 providers over months of prompt theft &mdash; Sources: <a href=\"https://thehackernews.com/2026/11/openrouter-drops-3-providers-after.html\">The Hacker News</a></li><li>GL.iNet confirms hackers infected routers and KVM devices &mdash; Sources: <a href=\"https://www.bleepingcomputer.com/news/security/hackers-exploit-glinet-cloud-flaw-to-infect-routers-kvm-devices/\">BleepingComputer</a></li><li>Ghostscript flaw lets crafted uploads run server commands &mdash; Sources: <a href=\"https://thehackernews.com/2026/11/researchers-demonstrate-ghostscript.html\">The Hacker News</a></li><li>Claude Code&#x27;s &quot;Don&#x27;t Ask Again&quot; leaks secrets into repos &mdash; Sources: <a href=\"https://www.infoq.com/news/2026/11/claude-code-leaking-secrets/?utm_campaign=infoq_content&amp;utm_source=infoq&amp;utm_medium=feed&amp;utm_term=global\">InfoQ</a></li><li>Cleverbridge breach exposes card numbers and CVVs &mdash; Sources: <a href=\"https://www.bleepingcomputer.com/news/security/cleverbridge-warns-hackers-stole-credit-card-numbers-cvvs-in-data-breach/\">BleepingComputer</a></li><li>Optimizely script attack hits 178 organizations &mdash; Sources: <a href=\"https://www.helpnetsecurity.com/2026/11/22/week-in-review-java4shell-proves-tricky-to-exploit-malware-planted-via-optimizely-hits-178-orgs/\">Help Net Security</a></li><li>Google announces Agent Compute Engine for AI agents &mdash; Sources: <a href=\"https://www.infoq.com/news/2026/11/google-agent-compute-engine/?utm_campaign=infoq_content&amp;utm_source=infoq&amp;utm_medium=feed&amp;utm_term=global\">InfoQ</a></li></ul>",
+      "stories": [
+        {
+          "headline": "OpenRouter drops 3 providers over months of prompt theft",
+          "tag": "Security",
+          "sources": [
+            {
+              "name": "The Hacker News",
+              "url": "https://thehackernews.com/2026/11/openrouter-drops-3-providers-after.html"
+            }
+          ]
+        },
+        {
+          "headline": "GL.iNet confirms hackers infected routers and KVM devices",
+          "tag": "Security",
+          "sources": [
+            {
+              "name": "BleepingComputer",
+              "url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-glinet-cloud-flaw-to-infect-routers-kvm-devices/"
+            }
+          ]
+        },
+        {
+          "headline": "Ghostscript flaw lets crafted uploads run server commands",
+          "tag": "Security",
+          "sources": [
+            {
+              "name": "The Hacker News",
+              "url": "https://thehackernews.com/2026/11/researchers-demonstrate-ghostscript.html"
+            }
+          ]
+        },
+        {
+          "headline": "Claude Code's \"Don't Ask Again\" leaks secrets into repos",
+          "tag": "Dev",
+          "sources": [
+            {
+              "name": "InfoQ",
+              "url": "https://www.infoq.com/news/2026/11/claude-code-leaking-secrets/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global"
+            }
+          ]
+        },
+        {
+          "headline": "Cleverbridge breach exposes card numbers and CVVs",
+          "tag": "Breach",
+          "sources": [
+            {
+              "name": "BleepingComputer",
+              "url": "https://www.bleepingcomputer.com/news/security/cleverbridge-warns-hackers-stole-credit-card-numbers-cvvs-in-data-breach/"
+            }
+          ]
+        },
+        {
+          "headline": "Optimizely script attack hits 178 organizations",
+          "tag": "Security",
+          "sources": [
+            {
+              "name": "Help Net Security",
+              "url": "https://www.helpnetsecurity.com/2026/11/22/week-in-review-java4shell-proves-tricky-to-exploit-malware-planted-via-optimizely-hits-178-orgs/"
+            }
+          ]
+        },
+        {
+          "headline": "Google announces Agent Compute Engine for AI agents",
+          "tag": "Dev",
+          "sources": [
+            {
+              "name": "InfoQ",
+              "url": "https://www.infoq.com/news/2026/11/google-agent-compute-engine/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global"
+            }
+          ]
+        }
+      ],
+      "tags": [
+        "OpenRouter",
+        "Dragos",
+        "GL.iNet",
+        "Ghostscript",
+        "Claude Code",
+        "Cleverbridge",
+        "Optimizely",
+        "VMware vCenter",
+        "Google Agent Compute Engine",
+        "AI security",
+        "data breach",
+        "routers",
+        "cybersecurity",
+        "developers"
+      ],
+      "pub_date": "2026-11-23T05:41:57+05:30",
+      "mp3": "episodes/2026-11-23.mp3",
+      "bytes": 3665117,
+      "duration": 298.0,
+      "guid": "0da2ac6a-393a-5b5c-b5a7-a21f21bb64db"
+    },
+    {
       "date": "2026-11-22",
       "title": "Microsoft Entra Connect Health, Rackspace Spot and GPGME flaws",
       "description": "Microsoft confirms attackers read tenant metadata through a flaw in Entra Connect Health, and Rackspace Spot customers are told to rotate Kubernetes secrets after a breach. Also covered: a critical GPGME flaw, four actively exploited flaws added to CISA's catalog, AI router key theft research, a Meta Muse demonstration and a MoEngage vendor breach.",
