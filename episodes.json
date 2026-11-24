@@ -1,6 +1,117 @@
 {
   "episodes": [
     {
+      "date": "2026-11-24",
+      "title": "Cisco Expressway bug exploited; Azure API credentials stolen",
+      "description": "Attackers are exploiting a critical Cisco Expressway flaw, and Microsoft warns that an Azure API Management flaw exposed stored credentials. Google says a China-linked group hit VMware vCenter before the patch. The episode also covers the ShinyHunters-linked Inception group, Claude Ship, the KEPCO breach and Anthropic's Enterprise Frontier Safeguards.",
+      "show_notes_html": "<p>Attackers are exploiting a critical Cisco Expressway flaw, and Microsoft warns that an Azure API Management flaw exposed stored credentials. Google says a China-linked group hit VMware vCenter before the patch. The episode also covers the ShinyHunters-linked Inception group, Claude Ship, the KEPCO breach and Anthropic&#x27;s Enterprise Frontier Safeguards.</p><p>Stories covered:</p><ul><li>Azure API Management flaw exploited to steal credentials &mdash; Sources: <a href=\"https://www.bleepingcomputer.com/news/security/microsoft-azure-flaw-exploited-to-steal-customers-api-credentials/\">BleepingComputer</a>, <a href=\"https://www.theregister.com/security/2026/11/23/norway-links-energy-firm-cyberattacks-to-critical-azure-api-management-flaw/5311598\">The Register Security</a></li><li>Critical Cisco Expressway bug under attack &mdash; Sources: <a href=\"https://www.theregister.com/security/2026/11/23/critical-cisco-remote-code-execution-bug-under-attack/5311722\">The Register Security</a></li><li>Possible ShinyHunters reboot Inception claims seven victims &mdash; Sources: <a href=\"https://www.theregister.com/security/2026/11/23/inception-possibly-a-shinyhunters-reboot-claims-seven-victims-in-a-week/5311768\">The Register Security</a></li><li>Anthropic launches Claude Ship for code review and approval &mdash; Sources: <a href=\"https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/\">TechCrunch</a>, <a href=\"https://www.theverge.com/ai-artificial-intelligence/1040134/anthropic-claude-ship-ai-pull-requests\">The Verge</a>, <a href=\"https://www.techmeme.com/261123/p41#a261123p41\">Techmeme</a></li><li>Google: VMware vCenter bug exploited in September &mdash; Sources: <a href=\"https://www.theregister.com/virtualization/2026/11/23/google-claims-last-weeks-critical-vmware-bug-was-under-attack-in-september/5311547\">The Register Security</a></li><li>KEPCO confirms breach affecting 1.5 million people &mdash; Sources: <a href=\"https://www.bleepingcomputer.com/news/security/south-koreas-power-giant-kepco-confirms-data-breach-impacting-15-million/\">BleepingComputer</a></li><li>Anthropic opens Enterprise Frontier Safeguards in beta &mdash; Sources: <a href=\"https://thenextweb.com/news/anthropic-enterprise-frontier-safeguards-zero-data-retention-beta\">The Next Web</a></li></ul>",
+      "stories": [
+        {
+          "headline": "Azure API Management flaw exploited to steal credentials",
+          "tag": "Security",
+          "sources": [
+            {
+              "name": "BleepingComputer",
+              "url": "https://www.bleepingcomputer.com/news/security/microsoft-azure-flaw-exploited-to-steal-customers-api-credentials/"
+            },
+            {
+              "name": "The Register Security",
+              "url": "https://www.theregister.com/security/2026/11/23/norway-links-energy-firm-cyberattacks-to-critical-azure-api-management-flaw/5311598"
+            }
+          ]
+        },
+        {
+          "headline": "Critical Cisco Expressway bug under attack",
+          "tag": "Security",
+          "sources": [
+            {
+              "name": "The Register Security",
+              "url": "https://www.theregister.com/security/2026/11/23/critical-cisco-remote-code-execution-bug-under-attack/5311722"
+            }
+          ]
+        },
+        {
+          "headline": "Possible ShinyHunters reboot Inception claims seven victims",
+          "tag": "Breach",
+          "sources": [
+            {
+              "name": "The Register Security",
+              "url": "https://www.theregister.com/security/2026/11/23/inception-possibly-a-shinyhunters-reboot-claims-seven-victims-in-a-week/5311768"
+            }
+          ]
+        },
+        {
+          "headline": "Anthropic launches Claude Ship for code review and approval",
+          "tag": "AI",
+          "sources": [
+            {
+              "name": "TechCrunch",
+              "url": "https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/"
+            },
+            {
+              "name": "The Verge",
+              "url": "https://www.theverge.com/ai-artificial-intelligence/1040134/anthropic-claude-ship-ai-pull-requests"
+            },
+            {
+              "name": "Techmeme",
+              "url": "https://www.techmeme.com/261123/p41#a261123p41"
+            }
+          ]
+        },
+        {
+          "headline": "Google: VMware vCenter bug exploited in September",
+          "tag": "Security",
+          "sources": [
+            {
+              "name": "The Register Security",
+              "url": "https://www.theregister.com/virtualization/2026/11/23/google-claims-last-weeks-critical-vmware-bug-was-under-attack-in-september/5311547"
+            }
+          ]
+        },
+        {
+          "headline": "KEPCO confirms breach affecting 1.5 million people",
+          "tag": "Breach",
+          "sources": [
+            {
+              "name": "BleepingComputer",
+              "url": "https://www.bleepingcomputer.com/news/security/south-koreas-power-giant-kepco-confirms-data-breach-impacting-15-million/"
+            }
+          ]
+        },
+        {
+          "headline": "Anthropic opens Enterprise Frontier Safeguards in beta",
+          "tag": "AI",
+          "sources": [
+            {
+              "name": "The Next Web",
+              "url": "https://thenextweb.com/news/anthropic-enterprise-frontier-safeguards-zero-data-retention-beta"
+            }
+          ]
+        }
+      ],
+      "tags": [
+        "Cisco",
+        "Expressway",
+        "Azure",
+        "API Management",
+        "Microsoft",
+        "VMware",
+        "vCenter",
+        "ShinyHunters",
+        "Okta",
+        "Anthropic",
+        "Claude Ship",
+        "KEPCO",
+        "data breach",
+        "cybersecurity"
+      ],
+      "pub_date": "2026-11-24T05:34:04+05:30",
+      "mp3": "episodes/2026-11-24.mp3",
+      "bytes": 3482968,
+      "duration": 282.81,
+      "guid": "4dfd90cc-502c-5f82-99b7-8a1359aba8b3"
+    },
+    {
       "date": "2026-11-23",
       "title": "OpenRouter Drops 3 AI Hosts, GL.iNet Routers Hacked, Ghostscript Flaw",
       "description": "Researchers found attackers copying prompts inside three AI inference providers, and OpenRouter removed them. GL.iNet confirmed hackers infected routers and KVM devices through its cloud, and a patched Ghostscript flaw lets crafted uploads run commands. The episode also covers Claude Code secret leaks, the Cleverbridge card breach, and Google's Agent Compute Engine.",
