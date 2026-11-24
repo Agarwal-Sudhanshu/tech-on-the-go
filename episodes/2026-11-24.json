@@ -1,0 +1,129 @@
+{
+  "channel": "Tech On The Go with Sudhanshu",
+  "date": "2026-11-24",
+  "title": "Cisco Expressway bug exploited; Azure API credentials stolen",
+  "description": "Attackers are exploiting a critical Cisco Expressway flaw, and Microsoft warns that an Azure API Management flaw exposed stored credentials. Google says a China-linked group hit VMware vCenter before the patch. The episode also covers the ShinyHunters-linked Inception group, Claude Ship, the KEPCO breach and Anthropic's Enterprise Frontier Safeguards.",
+  "tags": [
+    "Cisco",
+    "Expressway",
+    "Azure",
+    "API Management",
+    "Microsoft",
+    "VMware",
+    "vCenter",
+    "ShinyHunters",
+    "Okta",
+    "Anthropic",
+    "Claude Ship",
+    "KEPCO",
+    "data breach",
+    "cybersecurity"
+  ],
+  "thumbnail_text": "Cisco Expressway bug exploited",
+  "segments": [
+    {
+      "kind": "intro",
+      "text": "Attackers are exploiting a critical Cisco Expressway bug, an Azure flaw exposed stored A P I credentials, and VMware vCenter was hit before its patch. This is Tech On The Go with Sudhanshu, for Monday, the twenty third of November."
+    },
+    {
+      "kind": "story",
+      "headline": "Azure API Management flaw exploited to steal credentials",
+      "tag": "Security",
+      "text": "Microsoft is warning that a flaw in Azure A P I Management Classic tiers was exploited to steal stored credentials, according to BleepingComputer. Microsoft says it found the problem on the eighteenth of November and closed the access path the next day. Exposed data may include client secrets for identity providers and tokens for management A P Is. Norway's security authority links the flaw to attacks on energy firms. The fix does not invalidate credentials taken earlier, and the newer version two tiers are not affected. If you run Classic instances, rotate those secrets and review your logs.",
+      "sources": [
+        {
+          "name": "BleepingComputer",
+          "url": "https://www.bleepingcomputer.com/news/security/microsoft-azure-flaw-exploited-to-steal-customers-api-credentials/"
+        },
+        {
+          "name": "The Register Security",
+          "url": "https://www.theregister.com/security/2026/11/23/norway-links-energy-firm-cyberattacks-to-critical-azure-api-management-flaw/5311598"
+        }
+      ]
+    },
+    {
+      "kind": "story",
+      "headline": "Critical Cisco Expressway bug under attack",
+      "tag": "Security",
+      "text": "Attackers are exploiting a critical flaw in Cisco Expressway that allows remote commands as root with no login, according to The Register. The bug scores nine point eight and affects Expressway C and Expressway E gateways set up in clusters. Cisco fixed it in October. Russian firm F6 reported the first observed attack after a public proof of concept appeared. CISA added the flaw to its exploited list and told federal agencies to patch by Monday, though Cisco says it has no direct evidence of exploitation. Patch any clustered Expressway gateways first.",
+      "sources": [
+        {
+          "name": "The Register Security",
+          "url": "https://www.theregister.com/security/2026/11/23/critical-cisco-remote-code-execution-bug-under-attack/5311722"
+        }
+      ]
+    },
+    {
+      "kind": "story",
+      "headline": "Possible ShinyHunters reboot Inception claims seven victims",
+      "tag": "Breach",
+      "text": "A group called Inception has claimed seven victims in a week, and Okta thinks it may be ShinyHunters under a new name. Okta tracks the activity as one cluster that uses voice phishing to get credentials and approval of multi-factor prompts. Claimed victims include A M D, Cigna, PepsiCo, AutoZone and Lucid. According to The Register, none of the companies has confirmed a breach, and Okta cannot validate the published data. Warn staff that callers asking them to enter credentials or approve M F A prompts may be part of this campaign.",
+      "sources": [
+        {
+          "name": "The Register Security",
+          "url": "https://www.theregister.com/security/2026/11/23/inception-possibly-a-shinyhunters-reboot-claims-seven-victims-in-a-week/5311768"
+        }
+      ]
+    },
+    {
+      "kind": "story",
+      "headline": "Anthropic launches Claude Ship for code review and approval",
+      "tag": "AI",
+      "text": "Anthropic has launched Claude Ship, a set of agents that review, fix and approve routine code changes. Code Review is already generally available. Two new agents, PR Steward and Claude Approvals, are in beta. PR Steward handles failing checks and merge conflicts. Claude Approvals applies a policy that the team writes in natural language and stores in the repository. It is rolling out to Team and Enterprise plans for GitHub repositories. Anthropic suggests starting in observe-only mode, so try it on one repository first, with a monthly spending limit.",
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1040134/anthropic-claude-ship-ai-pull-requests"
+        },
+        {
+          "name": "Techmeme",
+          "url": "https://www.techmeme.com/261123/p41#a261123p41"
+        }
+      ]
+    },
+    {
+      "kind": "story",
+      "headline": "Google: VMware vCenter bug exploited in September",
+      "tag": "Security",
+      "text": "Google says a critical VMware vCenter flaw was exploited in September, weeks before VMware disclosed it on the nineteenth of November. According to Google, a China-linked group it calls ARMORY CASTLE got in through BeyondTrust remote access appliances. It then used custom malware called BONESAW to forge authentication tokens, bypass M F A and impersonate any user. Google says the group built five custom tools in all. VMware told The Register that customers should apply the recommended patches immediately. Patch your vCenter servers now, because they can give attackers reach into thousands of virtual machines.",
+      "sources": [
+        {
+          "name": "The Register Security",
+          "url": "https://www.theregister.com/virtualization/2026/11/23/google-claims-last-weeks-critical-vmware-bug-was-under-attack-in-september/5311547"
+        }
+      ]
+    },
+    {
+      "kind": "story",
+      "headline": "KEPCO confirms breach affecting 1.5 million people",
+      "tag": "Breach",
+      "text": "South Korea's power company KEPCO has confirmed a breach that exposed data on more than one and a half million people, according to BleepingComputer. It detected the attack on the twentieth of November, in its customer billing platform and its procurement system. For about six hundred fifty thousand customers, the data includes bank account and card numbers. Employees and company representatives were also affected. A threat actor called Noiem claimed the attack, but that is unconfirmed. Affected people should expect targeted phishing and avoid sharing verification codes over calls or texts.",
+      "sources": [
+        {
+          "name": "BleepingComputer",
+          "url": "https://www.bleepingcomputer.com/news/security/south-koreas-power-giant-kepco-confirms-data-breach-impacting-15-million/"
+        }
+      ]
+    },
+    {
+      "kind": "story",
+      "headline": "Anthropic opens Enterprise Frontier Safeguards in beta",
+      "tag": "AI",
+      "text": "Anthropic has opened Enterprise Frontier Safeguards in public beta, according to The Next Web. It lets Anthropic scan for Claude misuse while companies keep their data in their own Amazon or Google cloud account. It answers pushback over the thirty day data retention that came with Fable five. When the system flags a risk, the customer's security team must look into it within seven days or risk losing access. It is free, though customers pay their cloud provider for storage. If thirty day retention blocked your Claude rollout, review this option.",
+      "sources": [
+        {
+          "name": "The Next Web",
+          "url": "https://thenextweb.com/news/anthropic-enterprise-frontier-safeguards-zero-data-retention-beta"
+        }
+      ]
+    },
+    {
+      "kind": "outro",
+      "text": "That's all for today. Thanks for listening, and see you next time."
+    }
+  ]
+}
