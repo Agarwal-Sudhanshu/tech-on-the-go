@@ -1,0 +1,138 @@
+{
+  "channel": "Tech On The Go with Sudhanshu",
+  "date": "2026-11-26",
+  "title": "Palo Alto Fragnesia attacks, 1Password breach, VMware patches",
+  "description": "Attackers are exploiting the Fragnesia flaw against Palo Alto PAN-OS firewalls, 1Password disclosed a breach through an employee GitHub account, and VMware released its third critical advisory in a week. The episode also covers the Todoist breach, a fake job assessment campaign using malicious NuGet packages, ChatGPT's merged usage limits, and attacks on GeoServer.",
+  "tags": [
+    "Palo Alto Networks",
+    "PAN-OS",
+    "Fragnesia",
+    "PHP2Shell",
+    "1Password",
+    "VMware",
+    "vCenter",
+    "Todoist",
+    "NuGet",
+    "supply chain",
+    "OpenAI",
+    "ChatGPT",
+    "GeoServer",
+    "data breach",
+    "security news"
+  ],
+  "thumbnail_text": "PAN-OS firewalls under attack",
+  "segments": [
+    {
+      "kind": "intro",
+      "text": "Palo Alto firewalls are being attacked through the Fragnesia flaw, 1Password confirmed a breach through an employee's GitHub account, and VMware shipped a third critical patch bundle in a week. This is Tech On The Go with Sudhanshu, for Wednesday, the twenty fifth of November."
+    },
+    {
+      "kind": "story",
+      "headline": "Palo Alto warns of Fragnesia exploited against PAN-OS",
+      "tag": "Security",
+      "text": "Palo Alto Networks says attackers are exploiting a Linux kernel flaw called Fragnesia against firewalls running PAN-OS, according to BleepingComputer. The attacks chain it with PHP2Shell, two critical PHP flaws that let an unauthenticated attacker run code remotely. The company says all the activity it saw involved devices with the management interface exposed to the public internet. Fixes are out for PAN-OS ten point two, eleven point one, eleven point two, twelve point one and twelve point two. Admins who already applied the PHP2Shell updates should be safe. Check that no PAN-OS management interface is reachable from the internet, and limit it to trusted internal addresses.",
+      "sources": [
+        {
+          "name": "BleepingComputer",
+          "url": "https://www.bleepingcomputer.com/news/security/palo-alto-networks-warns-of-fragnesia-flaw-exploited-in-pan-os-attacks/"
+        }
+      ]
+    },
+    {
+      "kind": "story",
+      "headline": "1Password discloses breach via employee GitHub account",
+      "tag": "Breach",
+      "text": "1Password has disclosed a breach after an attacker took over an employee's GitHub account and used it to push malicious code to its backend services. According to BleepingComputer, that code downloaded customer account records. The company says customer vaults and their encryption keys were not compromised, and that it began investigating on the nineteenth of November. Stolen data included invitation and account recovery tokens, which cannot be used alone to get into an account. 1Password says only a small number of users were affected and have been notified. It is not requiring password changes. Treat any email about securing your 1Password account as suspect, and go straight to the app instead.",
+      "sources": [
+        {
+          "name": "BleepingComputer",
+          "url": "https://www.bleepingcomputer.com/news/security/1password-customer-data-stolen-after-employee-github-account-breach/"
+        },
+        {
+          "name": "DataBreaches.net",
+          "url": "https://databreaches.net/2026/11/25/1password-says-a-hacker-used-an-employees-github-account-to-take-customer-data/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/tech/1042409/1password-data-breach-leak"
+        },
+        {
+          "name": "Techmeme",
+          "url": "https://www.techmeme.com/261125/p32#a261125p32"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/11/25/1password-said-hackers-broke-into-its-internal-systems-but-customer-passwords-are-safe/"
+        },
+        {
+          "name": "Hacker News",
+          "url": "https://1password.com/blog/update-on-nov-2026-security-incident"
+        }
+      ]
+    },
+    {
+      "kind": "story",
+      "headline": "VMware issues third critical advisory in a week",
+      "tag": "Security",
+      "text": "VMware has issued its third critical security advisory in a week, according to The Register. The latest, published on the twenty fourth of November, covers four critical flaws among twenty three issues. One is a vCenter authentication bypass rated nine point eight, the third such vCenter fix since July. Two more let an attacker run code on an ESX host. The fourth is a guest escape in Workstation and Fusion, which can be mitigated by turning off the USB controller. Some updates from last week already include these fixes. Check whether last week's updates cover you, and patch vCenter and ESX first.",
+      "sources": [
+        {
+          "name": "The Register Security",
+          "url": "https://www.theregister.com/virtualization/2026/11/25/this-could-mess-with-thanksgiving-says-vmware-as-it-drops-third-critical-patch-bundle-in-a-week/5312017"
+        }
+      ]
+    },
+    {
+      "kind": "story",
+      "headline": "Todoist says 6% of customers' details were stolen",
+      "tag": "Breach",
+      "text": "Todoist says a hacker stole customer data from its production systems, according to TechCrunch. The data included email addresses, password hashes and account creation dates, and about six percent of customers were affected. The company blames stolen credentials and says the attacker accessed its version control system on the twenty second and twenty third of November. For a very small number of users, the attacker also searched tasks and comments for credentials such as A P I keys. Todoist has reset passwords and disabled its Outlook add-on. If you stored keys or tokens in Todoist comments, revoke and replace them.",
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/11/25/todoist-confirms-6-of-customers-details-were-stolen-in-data-breach/"
+        }
+      ]
+    },
+    {
+      "kind": "story",
+      "headline": "Fake job tests deliver malicious NuGet packages",
+      "tag": "Security",
+      "text": "Researchers at Socket found thirteen malicious NuGet packages in a fake recruitment campaign aimed at dot net developers, according to Dark Reading. The packages arrive inside fake home assessment projects, mostly posing as button controls for WinUI three and W P F. Building the project is enough to run the attacker's code. Payloads include an infostealer that copies Chrome profiles, with saved logins and cookies, and a loader that can deliver different payloads to individual victims. Socket could not determine how the lures reached candidates. Build any take-home assessment on an isolated machine, because a developer's laptop holds source code, keys and cloud tokens.",
+      "sources": [
+        {
+          "name": "Dark Reading",
+          "url": "https://www.darkreading.com/threat-intelligence/attackers-net-developers-poisoned-job-assessments"
+        }
+      ]
+    },
+    {
+      "kind": "story",
+      "headline": "ChatGPT merges Chat and Work with one usage meter",
+      "tag": "AI",
+      "text": "OpenAI has started rolling out a unified Chat and Work experience in ChatGPT to a small group of Pro subscribers, according to TechCrunch. The two will share a single usage meter. An OpenAI spokesperson said most users should not see more frequent resets, but a small fraction of the heaviest users may hit their limits sooner. Conversations using the Instant model stay unlimited. OpenAI plans to bring shared limits more broadly in December. If your team leans heavily on advanced models in ChatGPT, watch your usage once the December rollout arrives.",
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/11/25/openai-says-heavy-chatgpt-users-may-hit-limits-sooner-as-it-merges-chat-and-work/"
+        }
+      ]
+    },
+    {
+      "kind": "story",
+      "headline": "Two new GeoServer flaws under attack",
+      "tag": "Security",
+      "text": "Attackers are probing GeoServer instances for two newly disclosed high severity flaws, according to SecurityWeek. The report says the flaws can be chained with other bugs to reach unauthenticated remote code execution. If you run GeoServer, check your exposure now, since attackers are already probing for these flaws.",
+      "sources": [
+        {
+          "name": "SecurityWeek",
+          "url": "https://www.securityweek.com/two-newly-disclosed-geoserver-vulnerabilities-under-attack/"
+        }
+      ]
+    },
+    {
+      "kind": "outro",
+      "text": "That is all for today. Thanks for listening."
+    }
+  ]
+}
