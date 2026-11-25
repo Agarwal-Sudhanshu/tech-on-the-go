@@ -1,6 +1,108 @@
 {
   "episodes": [
     {
+      "date": "2026-11-25",
+      "title": "Check Point servers hit, Radware key exposure, Microsoft Code Red",
+      "description": "Attackers compromised two dozen Check Point management servers, and Radware disclosed that customer cloud log export keys may have been exposed. Microsoft declared a Code Red after its November outage, and Google set new rules for AI agents in Workspace. The episode also covers the Inception extortion gang, a coding agent attack on a financial firm, and a Turnitin cyberattack.",
+      "show_notes_html": "<p>Attackers compromised two dozen Check Point management servers, and Radware disclosed that customer cloud log export keys may have been exposed. Microsoft declared a Code Red after its November outage, and Google set new rules for AI agents in Workspace. The episode also covers the Inception extortion gang, a coding agent attack on a financial firm, and a Turnitin cyberattack.</p><p>Stories covered:</p><ul><li>Hackers compromise Check Point servers in 22 organizations &mdash; Sources: <a href=\"https://www.bleepingcomputer.com/news/security/hackers-compromise-check-point-servers-in-22-organizations/\">BleepingComputer</a></li><li>Radware breach exposes customer cloud access keys &mdash; Sources: <a href=\"https://www.bleepingcomputer.com/news/security/radware-discloses-breach-exposing-customer-cloud-access-keys/\">BleepingComputer</a></li><li>Free coding agent finds financial firm&#x27;s key in 6 minutes &mdash; Sources: <a href=\"https://www.theregister.com/security/2026/11/24/an-ai-coding-agent-a-browser-and-a-mac-tool-found-a-financial-firms-access-key-in-under-6-minutes/5311922\">The Register Security</a></li><li>Microsoft declares Code Red after historic outage &mdash; Sources: <a href=\"https://www.reuters.com/business/microsoft-declares-code-red-after-historic-outage-internal-memos-show-2026-11-24/\">Hacker News</a>, <a href=\"https://arstechnica.com/gadgets/2026/11/microsofts-historic-cloud-outage-exposed-an-engineering-fog-of-war/\">Ars Technica</a></li><li>Google requires AI agents to use new Workspace gateways &mdash; Sources: <a href=\"https://thenextweb.com/news/google-workspace-ai-agents-mcp-servers-rules\">The Next Web</a></li><li>New Inception extortion gang runs large vishing campaign &mdash; Sources: <a href=\"https://www.bleepingcomputer.com/news/security/new-inception-extortion-gang-launches-large-scale-vishing-campaign/\">BleepingComputer</a></li><li>Turnitin discloses cyberattack on customer-facing systems &mdash; Sources: <a href=\"https://www.bleepingcomputer.com/news/security/turnitin-discloses-cyberattack-affecting-customer-facing-systems/\">BleepingComputer</a></li></ul>",
+      "stories": [
+        {
+          "headline": "Hackers compromise Check Point servers in 22 organizations",
+          "tag": "Security",
+          "sources": [
+            {
+              "name": "BleepingComputer",
+              "url": "https://www.bleepingcomputer.com/news/security/hackers-compromise-check-point-servers-in-22-organizations/"
+            }
+          ]
+        },
+        {
+          "headline": "Radware breach exposes customer cloud access keys",
+          "tag": "Breach",
+          "sources": [
+            {
+              "name": "BleepingComputer",
+              "url": "https://www.bleepingcomputer.com/news/security/radware-discloses-breach-exposing-customer-cloud-access-keys/"
+            }
+          ]
+        },
+        {
+          "headline": "Free coding agent finds financial firm's key in 6 minutes",
+          "tag": "Security",
+          "sources": [
+            {
+              "name": "The Register Security",
+              "url": "https://www.theregister.com/security/2026/11/24/an-ai-coding-agent-a-browser-and-a-mac-tool-found-a-financial-firms-access-key-in-under-6-minutes/5311922"
+            }
+          ]
+        },
+        {
+          "headline": "Microsoft declares Code Red after historic outage",
+          "tag": "Outage",
+          "sources": [
+            {
+              "name": "Hacker News",
+              "url": "https://www.reuters.com/business/microsoft-declares-code-red-after-historic-outage-internal-memos-show-2026-11-24/"
+            },
+            {
+              "name": "Ars Technica",
+              "url": "https://arstechnica.com/gadgets/2026/11/microsofts-historic-cloud-outage-exposed-an-engineering-fog-of-war/"
+            }
+          ]
+        },
+        {
+          "headline": "Google requires AI agents to use new Workspace gateways",
+          "tag": "AI",
+          "sources": [
+            {
+              "name": "The Next Web",
+              "url": "https://thenextweb.com/news/google-workspace-ai-agents-mcp-servers-rules"
+            }
+          ]
+        },
+        {
+          "headline": "New Inception extortion gang runs large vishing campaign",
+          "tag": "Security",
+          "sources": [
+            {
+              "name": "BleepingComputer",
+              "url": "https://www.bleepingcomputer.com/news/security/new-inception-extortion-gang-launches-large-scale-vishing-campaign/"
+            }
+          ]
+        },
+        {
+          "headline": "Turnitin discloses cyberattack on customer-facing systems",
+          "tag": "Breach",
+          "sources": [
+            {
+              "name": "BleepingComputer",
+              "url": "https://www.bleepingcomputer.com/news/security/turnitin-discloses-cyberattack-affecting-customer-facing-systems/"
+            }
+          ]
+        }
+      ],
+      "tags": [
+        "Check Point",
+        "GreyNoise",
+        "Radware",
+        "Microsoft",
+        "Code Red",
+        "Google Workspace",
+        "AI agents",
+        "OpenCode",
+        "Inception",
+        "ShinyHunters",
+        "Okta",
+        "Turnitin",
+        "cybersecurity"
+      ],
+      "pub_date": "2026-11-25T05:41:03+05:30",
+      "mp3": "episodes/2026-11-25.mp3",
+      "bytes": 3602430,
+      "duration": 292.77,
+      "guid": "bd4434b7-f299-5b33-b005-9c4c7372cb0a"
+    },
+    {
       "date": "2026-11-24",
       "title": "Cisco Expressway bug exploited; Azure API credentials stolen",
       "description": "Attackers are exploiting a critical Cisco Expressway flaw, and Microsoft warns that an Azure API Management flaw exposed stored credentials. Google says a China-linked group hit VMware vCenter before the patch. The episode also covers the ShinyHunters-linked Inception group, Claude Ship, the KEPCO breach and Anthropic's Enterprise Frontier Safeguards.",
