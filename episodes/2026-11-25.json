@@ -1,0 +1,120 @@
+{
+  "channel": "Tech On The Go with Sudhanshu",
+  "date": "2026-11-25",
+  "title": "Check Point servers hit, Radware key exposure, Microsoft Code Red",
+  "description": "Attackers compromised two dozen Check Point management servers, and Radware disclosed that customer cloud log export keys may have been exposed. Microsoft declared a Code Red after its November outage, and Google set new rules for AI agents in Workspace. The episode also covers the Inception extortion gang, a coding agent attack on a financial firm, and a Turnitin cyberattack.",
+  "tags": [
+    "Check Point",
+    "GreyNoise",
+    "Radware",
+    "Microsoft",
+    "Code Red",
+    "Google Workspace",
+    "AI agents",
+    "OpenCode",
+    "Inception",
+    "ShinyHunters",
+    "Okta",
+    "Turnitin",
+    "cybersecurity"
+  ],
+  "thumbnail_text": "Check Point servers hacked",
+  "segments": [
+    {
+      "kind": "intro",
+      "text": "Attackers have compromised two dozen Check Point management servers, Radware says customer cloud keys may be exposed, and Microsoft has declared a Code Red after its big outage. This is Tech On The Go with Sudhanshu, for Tuesday, the twenty fourth of November."
+    },
+    {
+      "kind": "story",
+      "headline": "Hackers compromise Check Point servers in 22 organizations",
+      "tag": "Security",
+      "text": "Attackers have compromised two dozen Check Point security management servers across twenty two organizations, according to BleepingComputer, citing research from GreyNoise. GreyNoise tracks the activity as G T thirteen. It says the victims, in seventeen countries, include government, finance and energy firms. The attackers used an authentication bypass in Check Point SmartConsole, which Check Point flagged as an exploited zero day in July. GreyNoise could not say how the servers were first breached, and believes the campaign may still be active. If you run Check Point management servers, check them against the indicators of compromise GreyNoise has shared.",
+      "sources": [
+        {
+          "name": "BleepingComputer",
+          "url": "https://www.bleepingcomputer.com/news/security/hackers-compromise-check-point-servers-in-22-organizations/"
+        }
+      ]
+    },
+    {
+      "kind": "story",
+      "headline": "Radware breach exposes customer cloud access keys",
+      "tag": "Breach",
+      "text": "Radware says an internal Cloud W A F management A P I was reachable from the internet without authentication, according to a root cause report seen by BleepingComputer. An unauthorized party accessed it on the nineteenth of November. Radware says customer contact details were potentially exposed, and for some customers, log export credentials for A W S S three, Azure Blob Storage or S F T P. It says traffic inspection and customer applications were not affected. Some customers reported A W S alerts about an unfamiliar I P address. If you use Radware Cloud W A F, rotate your log export credentials and review storage access logs since the nineteenth of November.",
+      "sources": [
+        {
+          "name": "BleepingComputer",
+          "url": "https://www.bleepingcomputer.com/news/security/radware-discloses-breach-exposing-customer-cloud-access-keys/"
+        }
+      ]
+    },
+    {
+      "kind": "story",
+      "headline": "Free coding agent finds financial firm's key in 6 minutes",
+      "tag": "Security",
+      "text": "A Romanian attacker used a free coding agent called OpenCode to probe a financial services firm, according to security startup Jesta, in a report shared with The Register. The attempt ran from a Mac with an ordinary Chrome browser and took under six minutes. The agent found an access key, but the key was a decoy set up by Jesta. The targeted firm is a Jesta customer and was not named. Jesta's chief technology officer says this shows such tools are already used in the field. Expect automated probing from free coding agents, not only from custom malware.",
+      "sources": [
+        {
+          "name": "The Register Security",
+          "url": "https://www.theregister.com/security/2026/11/24/an-ai-coding-agent-a-browser-and-a-mac-tool-found-a-financial-firms-access-key-in-under-6-minutes/5311922"
+        }
+      ]
+    },
+    {
+      "kind": "story",
+      "headline": "Microsoft declares Code Red after historic outage",
+      "tag": "Outage",
+      "text": "Microsoft has declared a Code Red to change how it prevents and handles major outages, according to Reuters, citing internal memos. It follows the global outage of the twelfth and thirteenth of November, which knocked out Exchange Online, Outlook, Teams and Copilot for about twenty four hours. Ars Technica reports the memos describe an engineering fog of war and set ambitious one hour recovery goals. This matters if your business runs on Exchange Online or Teams, since those were the services down for about a day.",
+      "sources": [
+        {
+          "name": "Hacker News",
+          "url": "https://www.reuters.com/business/microsoft-declares-code-red-after-historic-outage-internal-memos-show-2026-11-24/"
+        },
+        {
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/gadgets/2026/11/microsofts-historic-cloud-outage-exposed-an-engineering-fog-of-war/"
+        }
+      ]
+    },
+    {
+      "kind": "story",
+      "headline": "Google requires AI agents to use new Workspace gateways",
+      "tag": "AI",
+      "text": "Google says AI agents must use new gateways to reach Gmail, Drive and other Workspace apps from the first of February twenty twenty seven, according to The Next Web. The gateways are Workspace M C P servers and a command line tool, both now generally available. Every request is checked against company policies, and agents need a person's sign off before sending email or changing Drive sharing. A new addendum bars A I tools from training on Workspace data. If you build agents on Workspace, plan to move off the existing REST A P Is before the first of February twenty twenty seven.",
+      "sources": [
+        {
+          "name": "The Next Web",
+          "url": "https://thenextweb.com/news/google-workspace-ai-agents-mcp-servers-rules"
+        }
+      ]
+    },
+    {
+      "kind": "story",
+      "headline": "New Inception extortion gang runs large vishing campaign",
+      "tag": "Security",
+      "text": "A new extortion group called Inception is running a large phone based campaign aimed at single sign on credentials, according to BleepingComputer. The group surfaced on the seventeenth of November and claims seven victims, including AMD and PepsiCo, though none has confirmed a breach. The campaign uses fake legal themed sign in sites, mostly imitating Okta. Okta links it to a cluster tied to ShinyHunters, which Inception denies. Review D N S, proxy and identity provider logs back to the twenty first of October, as ReversingLabs recommends.",
+      "sources": [
+        {
+          "name": "BleepingComputer",
+          "url": "https://www.bleepingcomputer.com/news/security/new-inception-extortion-gang-launches-large-scale-vishing-campaign/"
+        }
+      ]
+    },
+    {
+      "kind": "story",
+      "headline": "Turnitin discloses cyberattack on customer-facing systems",
+      "tag": "Breach",
+      "text": "Turnitin says it detected unauthorized activity involving certain customer facing systems, according to a statement from chief executive Chris Caren. The company says it activated its incident response plan, brought in outside specialists, and notified law enforcement and cyber regulators. It says its systems are fully operational and do not hold government I D or institutional financial information. It has not said when this happened or whether user data was accessed. If your institution uses Turnitin, watch for further updates from the company.",
+      "sources": [
+        {
+          "name": "BleepingComputer",
+          "url": "https://www.bleepingcomputer.com/news/security/turnitin-discloses-cyberattack-affecting-customer-facing-systems/"
+        }
+      ]
+    },
+    {
+      "kind": "outro",
+      "text": "That's the brief for today. Thanks for listening."
+    }
+  ]
+}
