@@ -1,6 +1,109 @@
 {
   "episodes": [
     {
+      "date": "2026-11-27",
+      "title": "Microsoft on Artex AI Tool, Rackspace Spot Breach, Juniper Flaw",
+      "description": "Microsoft says Chinese and North Korean state groups have adopted the Artex AI attack tool. Rackspace is shutting down its Spot cloud service after a breach, and a critical Juniper flaw is being exploited. The episode also covers Mitel, Drupal, the PolinRider GitHub campaign and a CERT-In advisory on India's DIGIT platform.",
+      "show_notes_html": "<p>Microsoft says Chinese and North Korean state groups have adopted the Artex AI attack tool. Rackspace is shutting down its Spot cloud service after a breach, and a critical Juniper flaw is being exploited. The episode also covers Mitel, Drupal, the PolinRider GitHub campaign and a CERT-In advisory on India&#x27;s DIGIT platform.</p><p>Stories covered:</p><ul><li>Critical Juniper Session Smart Conductor flaw exploited &mdash; Sources: <a href=\"https://www.securityweek.com/critical-juniper-session-smart-conductor-flaw-exploited-in-attacks/\">SecurityWeek</a></li><li>Mitel MiCollab zero-days exploited, Accenture says &mdash; Sources: <a href=\"https://www.securityweek.com/mitel-micollab-zero-days-exploited-in-suspected-ai-assisted-attacks/\">SecurityWeek</a></li><li>Drupal installer patch left a gap attackers exploit &mdash; Sources: <a href=\"https://www.securityweek.com/drupal-installer-patch-left-a-gap-attackers-are-already-exploiting/\">SecurityWeek</a></li><li>Microsoft: Chinese, North Korean hackers use Artex AI tool &mdash; Sources: <a href=\"https://therecord.media/microsoft-china-salt-typhoon-using-artex-ai-tool\">The Record</a>, <a href=\"https://www.theregister.com/security/2026/11/26/microsoft-hackers-in-china-n-korea-using-artex-ai-tool-to-break-into-global-tech-systems/5312433\">The Register Security</a></li><li>Rackspace shuts down Spot cloud service after breach &mdash; Sources: <a href=\"https://www.theregister.com/cyber-crime/2026/11/26/rackspace-pulls-plug-on-spot-cloud-service-after-security-breach/5312352\">The Register</a></li><li>North Korea-linked PolinRider loader found in GitHub repos &mdash; Sources: <a href=\"https://thehackernews.com/2026/11/north-korea-linked-polinrider-poisons.html\">The Hacker News</a></li><li>CERT-In flags SQL injection flaw in eGov&#x27;s DIGIT platform &mdash; Sources: <a href=\"https://www.medianama.com/2026/11/223-cert-in-high-severity-vulnerability-egov-digit-platform/\">MediaNama</a></li></ul>",
+      "stories": [
+        {
+          "headline": "Critical Juniper Session Smart Conductor flaw exploited",
+          "tag": "Security",
+          "sources": [
+            {
+              "name": "SecurityWeek",
+              "url": "https://www.securityweek.com/critical-juniper-session-smart-conductor-flaw-exploited-in-attacks/"
+            }
+          ]
+        },
+        {
+          "headline": "Mitel MiCollab zero-days exploited, Accenture says",
+          "tag": "Security",
+          "sources": [
+            {
+              "name": "SecurityWeek",
+              "url": "https://www.securityweek.com/mitel-micollab-zero-days-exploited-in-suspected-ai-assisted-attacks/"
+            }
+          ]
+        },
+        {
+          "headline": "Drupal installer patch left a gap attackers exploit",
+          "tag": "Security",
+          "sources": [
+            {
+              "name": "SecurityWeek",
+              "url": "https://www.securityweek.com/drupal-installer-patch-left-a-gap-attackers-are-already-exploiting/"
+            }
+          ]
+        },
+        {
+          "headline": "Microsoft: Chinese, North Korean hackers use Artex AI tool",
+          "tag": "Security",
+          "sources": [
+            {
+              "name": "The Record",
+              "url": "https://therecord.media/microsoft-china-salt-typhoon-using-artex-ai-tool"
+            },
+            {
+              "name": "The Register Security",
+              "url": "https://www.theregister.com/security/2026/11/26/microsoft-hackers-in-china-n-korea-using-artex-ai-tool-to-break-into-global-tech-systems/5312433"
+            }
+          ]
+        },
+        {
+          "headline": "Rackspace shuts down Spot cloud service after breach",
+          "tag": "Breach",
+          "sources": [
+            {
+              "name": "The Register",
+              "url": "https://www.theregister.com/cyber-crime/2026/11/26/rackspace-pulls-plug-on-spot-cloud-service-after-security-breach/5312352"
+            }
+          ]
+        },
+        {
+          "headline": "North Korea-linked PolinRider loader found in GitHub repos",
+          "tag": "Security",
+          "sources": [
+            {
+              "name": "The Hacker News",
+              "url": "https://thehackernews.com/2026/11/north-korea-linked-polinrider-poisons.html"
+            }
+          ]
+        },
+        {
+          "headline": "CERT-In flags SQL injection flaw in eGov's DIGIT platform",
+          "tag": "Security",
+          "sources": [
+            {
+              "name": "MediaNama",
+              "url": "https://www.medianama.com/2026/11/223-cert-in-high-severity-vulnerability-egov-digit-platform/"
+            }
+          ]
+        }
+      ],
+      "tags": [
+        "Artex",
+        "Salt Typhoon",
+        "Rackspace Spot",
+        "Juniper",
+        "Mitel MiCollab",
+        "Drupal",
+        "PolinRider",
+        "GitHub",
+        "CERT-In",
+        "DIGIT",
+        "Kubernetes",
+        "cybersecurity",
+        "AI security",
+        "supply chain"
+      ],
+      "pub_date": "2026-11-27T05:34:04+05:30",
+      "mp3": "episodes/2026-11-27.mp3",
+      "bytes": 3068849,
+      "duration": 248.3,
+      "guid": "8ed65134-13cf-5f2e-97d4-1be45d1dc2b2"
+    },
+    {
       "date": "2026-11-26",
       "title": "Palo Alto Fragnesia attacks, 1Password breach, VMware patches",
       "description": "Attackers are exploiting the Fragnesia flaw against Palo Alto PAN-OS firewalls, 1Password disclosed a breach through an employee GitHub account, and VMware released its third critical advisory in a week. The episode also covers the Todoist breach, a fake job assessment campaign using malicious NuGet packages, ChatGPT's merged usage limits, and attacks on GeoServer.",

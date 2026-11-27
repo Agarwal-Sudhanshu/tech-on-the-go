@@ -8,7 +8,7 @@
 <language>en</language>
 <copyright>© 2026 Sudhanshu Agarwal</copyright>
 <generator>briefstudio podcast.py</generator>
-<lastBuildDate>Wed, 25 Nov 2026 23:49:08 +0000</lastBuildDate>
+<lastBuildDate>Fri, 27 Nov 2026 00:04:06 +0000</lastBuildDate>
 <itunes:type>episodic</itunes:type>
 <itunes:author>Sudhanshu Agarwal</itunes:author>
 <itunes:summary>Your 5-minute tech catch-up.</itunes:summary>
@@ -17,6 +17,20 @@
 <image><url>https://agarwal-sudhanshu.github.io/tech-on-the-go/cover.jpg</url><title>Tech On The Go with Sudhanshu</title><link>https://agarwal-sudhanshu.github.io/tech-on-the-go/</link></image>
 <itunes:category text="Technology"/>
 <itunes:owner><itunes:name>Sudhanshu Agarwal</itunes:name><itunes:email>agarwal.sudh@gmail.com</itunes:email></itunes:owner>
+<item>
+<title>Microsoft on Artex AI Tool, Rackspace Spot Breach, Juniper Flaw</title>
+<link>https://agarwal-sudhanshu.github.io/tech-on-the-go/#2026-11-27</link>
+<description><![CDATA[<p>Microsoft says Chinese and North Korean state groups have adopted the Artex AI attack tool. Rackspace is shutting down its Spot cloud service after a breach, and a critical Juniper flaw is being exploited. The episode also covers Mitel, Drupal, the PolinRider GitHub campaign and a CERT-In advisory on India&#x27;s DIGIT platform.</p><p>Stories covered:</p><ul><li>Critical Juniper Session Smart Conductor flaw exploited &mdash; Sources: <a href="https://www.securityweek.com/critical-juniper-session-smart-conductor-flaw-exploited-in-attacks/">SecurityWeek</a></li><li>Mitel MiCollab zero-days exploited, Accenture says &mdash; Sources: <a href="https://www.securityweek.com/mitel-micollab-zero-days-exploited-in-suspected-ai-assisted-attacks/">SecurityWeek</a></li><li>Drupal installer patch left a gap attackers exploit &mdash; Sources: <a href="https://www.securityweek.com/drupal-installer-patch-left-a-gap-attackers-are-already-exploiting/">SecurityWeek</a></li><li>Microsoft: Chinese, North Korean hackers use Artex AI tool &mdash; Sources: <a href="https://therecord.media/microsoft-china-salt-typhoon-using-artex-ai-tool">The Record</a>, <a href="https://www.theregister.com/security/2026/11/26/microsoft-hackers-in-china-n-korea-using-artex-ai-tool-to-break-into-global-tech-systems/5312433">The Register Security</a></li><li>Rackspace shuts down Spot cloud service after breach &mdash; Sources: <a href="https://www.theregister.com/cyber-crime/2026/11/26/rackspace-pulls-plug-on-spot-cloud-service-after-security-breach/5312352">The Register</a></li><li>North Korea-linked PolinRider loader found in GitHub repos &mdash; Sources: <a href="https://thehackernews.com/2026/11/north-korea-linked-polinrider-poisons.html">The Hacker News</a></li><li>CERT-In flags SQL injection flaw in eGov&#x27;s DIGIT platform &mdash; Sources: <a href="https://www.medianama.com/2026/11/223-cert-in-high-severity-vulnerability-egov-digit-platform/">MediaNama</a></li></ul>]]></description>
+<content:encoded><![CDATA[<p>Microsoft says Chinese and North Korean state groups have adopted the Artex AI attack tool. Rackspace is shutting down its Spot cloud service after a breach, and a critical Juniper flaw is being exploited. The episode also covers Mitel, Drupal, the PolinRider GitHub campaign and a CERT-In advisory on India&#x27;s DIGIT platform.</p><p>Stories covered:</p><ul><li>Critical Juniper Session Smart Conductor flaw exploited &mdash; Sources: <a href="https://www.securityweek.com/critical-juniper-session-smart-conductor-flaw-exploited-in-attacks/">SecurityWeek</a></li><li>Mitel MiCollab zero-days exploited, Accenture says &mdash; Sources: <a href="https://www.securityweek.com/mitel-micollab-zero-days-exploited-in-suspected-ai-assisted-attacks/">SecurityWeek</a></li><li>Drupal installer patch left a gap attackers exploit &mdash; Sources: <a href="https://www.securityweek.com/drupal-installer-patch-left-a-gap-attackers-are-already-exploiting/">SecurityWeek</a></li><li>Microsoft: Chinese, North Korean hackers use Artex AI tool &mdash; Sources: <a href="https://therecord.media/microsoft-china-salt-typhoon-using-artex-ai-tool">The Record</a>, <a href="https://www.theregister.com/security/2026/11/26/microsoft-hackers-in-china-n-korea-using-artex-ai-tool-to-break-into-global-tech-systems/5312433">The Register Security</a></li><li>Rackspace shuts down Spot cloud service after breach &mdash; Sources: <a href="https://www.theregister.com/cyber-crime/2026/11/26/rackspace-pulls-plug-on-spot-cloud-service-after-security-breach/5312352">The Register</a></li><li>North Korea-linked PolinRider loader found in GitHub repos &mdash; Sources: <a href="https://thehackernews.com/2026/11/north-korea-linked-polinrider-poisons.html">The Hacker News</a></li><li>CERT-In flags SQL injection flaw in eGov&#x27;s DIGIT platform &mdash; Sources: <a href="https://www.medianama.com/2026/11/223-cert-in-high-severity-vulnerability-egov-digit-platform/">MediaNama</a></li></ul>]]></content:encoded>
+<itunes:summary>Microsoft says Chinese and North Korean state groups have adopted the Artex AI attack tool. Rackspace is shutting down its Spot cloud service after a breach, and a critical Juniper flaw is being exploited. The episode also covers Mitel, Drupal, the PolinRider GitHub campaign and a CERT-In advisory on India&apos;s DIGIT platform.</itunes:summary>
+<enclosure url="https://agarwal-sudhanshu.github.io/tech-on-the-go/episodes/2026-11-27.mp3" length="3068849" type="audio/mpeg"/>
+<guid isPermaLink="false">8ed65134-13cf-5f2e-97d4-1be45d1dc2b2</guid>
+<pubDate>Fri, 27 Nov 2026 05:34:04 +0530</pubDate>
+<itunes:duration>00:04:08</itunes:duration>
+<itunes:author>Sudhanshu Agarwal</itunes:author>
+<itunes:episodeType>full</itunes:episodeType>
+<itunes:explicit>false</itunes:explicit>
+</item>
 <item>
 <title>Palo Alto Fragnesia attacks, 1Password breach, VMware patches</title>
 <link>https://agarwal-sudhanshu.github.io/tech-on-the-go/#2026-11-26</link>
