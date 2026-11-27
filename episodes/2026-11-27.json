@@ -1,0 +1,121 @@
+{
+  "channel": "Tech On The Go with Sudhanshu",
+  "date": "2026-11-27",
+  "title": "Microsoft on Artex AI Tool, Rackspace Spot Breach, Juniper Flaw",
+  "description": "Microsoft says Chinese and North Korean state groups have adopted the Artex AI attack tool. Rackspace is shutting down its Spot cloud service after a breach, and a critical Juniper flaw is being exploited. The episode also covers Mitel, Drupal, the PolinRider GitHub campaign and a CERT-In advisory on India's DIGIT platform.",
+  "tags": [
+    "Artex",
+    "Salt Typhoon",
+    "Rackspace Spot",
+    "Juniper",
+    "Mitel MiCollab",
+    "Drupal",
+    "PolinRider",
+    "GitHub",
+    "CERT-In",
+    "DIGIT",
+    "Kubernetes",
+    "cybersecurity",
+    "AI security",
+    "supply chain"
+  ],
+  "thumbnail_text": "State Hackers Adopt Artex",
+  "segments": [
+    {
+      "kind": "intro",
+      "text": "State hackers are adopting the Artex A I attack tool, Rackspace is shutting down Spot after a breach, and a critical Juniper flaw is under attack. This is Tech On The Go with Sudhanshu, for Thursday, the twenty sixth of November."
+    },
+    {
+      "kind": "story",
+      "headline": "Critical Juniper Session Smart Conductor flaw exploited",
+      "tag": "Security",
+      "text": "A critical flaw in Juniper's Session Smart Conductor is being exploited in attacks, according to SecurityWeek. The vulnerability lets remote attackers run arbitrary commands as root. The material supplied gives no detail on fixes, affected versions or how widespread the attacks are. It matters because remote root command execution is already being used against this product, so check whether any Session Smart Conductor is reachable from outside.",
+      "sources": [
+        {
+          "name": "SecurityWeek",
+          "url": "https://www.securityweek.com/critical-juniper-session-smart-conductor-flaw-exploited-in-attacks/"
+        }
+      ]
+    },
+    {
+      "kind": "story",
+      "headline": "Mitel MiCollab zero-days exploited, Accenture says",
+      "tag": "Security",
+      "text": "Hackers exploited flaws in Mitel MiCollab before Mitel published an advisory, according to SecurityWeek. Accenture says the attacks were likely aided by A I, and it describes them as a suspected extortion campaign. The report summary offers no further detail here. It matters because these were zero-days, so an advisory was not available when the attacks began, and any MiCollab server should be checked against Mitel's advisory.",
+      "sources": [
+        {
+          "name": "SecurityWeek",
+          "url": "https://www.securityweek.com/mitel-micollab-zero-days-exploited-in-suspected-ai-assisted-attacks/"
+        }
+      ]
+    },
+    {
+      "kind": "story",
+      "headline": "Drupal installer patch left a gap attackers exploit",
+      "tag": "Security",
+      "text": "Drupal warns that its earlier installer patch left some websites open to takeover, and according to SecurityWeek, attackers are already exploiting the gap. The supplied summary does not say how many sites are affected or which versions are involved. It matters because a patch you already applied may not be enough, so check Drupal's latest guidance for any site you run.",
+      "sources": [
+        {
+          "name": "SecurityWeek",
+          "url": "https://www.securityweek.com/drupal-installer-patch-left-a-gap-attackers-are-already-exploiting/"
+        }
+      ]
+    },
+    {
+      "kind": "story",
+      "headline": "Microsoft: Chinese, North Korean hackers use Artex AI tool",
+      "tag": "Security",
+      "text": "Microsoft says state-backed hackers from China and North Korea are using Artex, an A I platform that automates stages of an intrusion. According to Microsoft, Salt Typhoon and Crystal Typhoon use it for reconnaissance, credential attacks and web application exploitation. Microsoft says Artex can go from reconnaissance to privileged access in minutes. It adds that the most durable signal is behavioral, meaning bursts of requests at machine speed from a single source. It matters because defenders should look for that traffic pattern rather than rely on fixed signatures, which attackers can vary.",
+      "sources": [
+        {
+          "name": "The Record",
+          "url": "https://therecord.media/microsoft-china-salt-typhoon-using-artex-ai-tool"
+        },
+        {
+          "name": "The Register Security",
+          "url": "https://www.theregister.com/security/2026/11/26/microsoft-hackers-in-china-n-korea-using-artex-ai-tool-to-break-into-global-tech-systems/5312433"
+        }
+      ]
+    },
+    {
+      "kind": "story",
+      "headline": "Rackspace shuts down Spot cloud service after breach",
+      "tag": "Breach",
+      "text": "Rackspace is shutting down its Spot cloud service after a security breach. According to The Register, Spot stops operating at five P M Central Time on the eighth of December, and workloads still running then will be terminated. A customer notice says attackers used leaked credentials for almost twenty two hours on the seventeenth of November. They created pods in customer Kubernetes clusters and could have read stored Secrets. Rackspace has revoked affected tokens and sessions. If you use Spot, move your workloads before the eighth of December and rotate every credential stored in your clusters.",
+      "sources": [
+        {
+          "name": "The Register",
+          "url": "https://www.theregister.com/cyber-crime/2026/11/26/rackspace-pulls-plug-on-spot-cloud-service-after-security-breach/5312352"
+        }
+      ]
+    },
+    {
+      "kind": "story",
+      "headline": "North Korea-linked PolinRider loader found in GitHub repos",
+      "tag": "Security",
+      "text": "A North Korea-linked campaign called PolinRider is planting a Python loader in GitHub repositories, according to The Hacker News. Security firm SafeDep says it found the loader in three hundred seventy five public repositories belonging to two hundred sixty accounts. The loader hides in a small utils package or in a file called conftest dot py. When Python imports it, it fetches and runs JavaScript through Node J S. SafeDep found no evidence of spread through PyPI or npm. Activity may date back to February twenty twenty five. It matters because you should check your repositories for that file and loader pattern.",
+      "sources": [
+        {
+          "name": "The Hacker News",
+          "url": "https://thehackernews.com/2026/11/north-korea-linked-polinrider-poisons.html"
+        }
+      ]
+    },
+    {
+      "kind": "story",
+      "headline": "CERT-In flags SQL injection flaw in eGov's DIGIT platform",
+      "tag": "Security",
+      "text": "India's cyber agency CERT-In has flagged a high-severity S Q L injection flaw in DIGIT, an open-source platform that state governments and municipalities use for public services. The advisory came out on the twenty fifth of November. According to CERT-In, an unauthenticated remote attacker could run arbitrary database queries through an A P I endpoint in the user and access control service. CERT-In does not say whether the flaw has been exploited, and no DIGIT system is confirmed affected. It tells users to upgrade to version two point nine point three, so any DIGIT operator should do that.",
+      "sources": [
+        {
+          "name": "MediaNama",
+          "url": "https://www.medianama.com/2026/11/223-cert-in-high-severity-vulnerability-egov-digit-platform/"
+        }
+      ]
+    },
+    {
+      "kind": "outro",
+      "text": "That is the brief for today. Thanks for listening."
+    }
+  ]
+}
