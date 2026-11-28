@@ -1,0 +1,134 @@
+{
+  "channel": "Tech On The Go with Sudhanshu",
+  "date": "2026-11-28",
+  "title": "SAP source code incident, NFS2ROOT Linux flaw, Cacti zero-day",
+  "description": "SAP confirms a cybersecurity incident involving its GitHub source code, a twelve-year-old Linux NFS flaw called NFS2ROOT allows remote root access, and a Cacti zero-day has a public exploit. Also: pCloud Pass attack, a second exploited Drupal flaw, a Hex package manager warning and CERT-In's WhatsApp advisory.",
+  "tags": [
+    "SAP",
+    "GitHub",
+    "Linux",
+    "NFS2ROOT",
+    "Cacti",
+    "zero-day",
+    "pCloud",
+    "Drupal",
+    "Hex",
+    "hex.pm",
+    "WhatsApp",
+    "CERT-In",
+    "cybersecurity",
+    "data breach",
+    "patching"
+  ],
+  "thumbnail_text": "SAP Confirms Cyber Incident",
+  "segments": [
+    {
+      "kind": "intro",
+      "text": "SAP confirms a cyber incident with source code reportedly copied and altered, a twelve-year-old Linux flaw gives remote root, and a Cacti zero-day now has a public exploit. This is Tech On The Go with Sudhanshu, for Friday, the twenty seventh of November."
+    },
+    {
+      "kind": "story",
+      "headline": "SAP confirms incident tied to GitHub source code",
+      "tag": "Breach",
+      "text": "SAP has confirmed a cybersecurity incident. According to SecurityWeek, hackers reportedly used stolen employee tokens to copy and alter source code stored on GitHub. BleepingComputer reports that SAP said it took urgent action to protect its customers after detecting suspicious activity in its I T environment. The Record says the reports point to SAP's software development infrastructure. Details are still thin. For SAP customers this matters because the reports say code was altered, not only copied, and the sources give no specific customer action yet.",
+      "sources": [
+        {
+          "name": "Techmeme",
+          "url": "https://www.techmeme.com/261127/p9#a261127p9"
+        },
+        {
+          "name": "The Record",
+          "url": "https://therecord.media/sap-germany-cyberattack-github"
+        },
+        {
+          "name": "BleepingComputer",
+          "url": "https://www.bleepingcomputer.com/news/security/sap-confirms-security-incident-after-suspicious-github-activity/"
+        },
+        {
+          "name": "SecurityWeek",
+          "url": "https://www.securityweek.com/sap-confirms-cyberattack-source-code-reportedly-compromised/"
+        }
+      ]
+    },
+    {
+      "kind": "story",
+      "headline": "NFS2ROOT Linux flaw allows remote root access",
+      "tag": "Security",
+      "text": "A critical Linux kernel flaw nicknamed NFS2ROOT lets remote attackers gain root privileges. According to BleepingComputer, it sits in the kernel's NFS server and has existed for about twelve years. It affects older kernels when the NFS server is running and port two zero four nine is reachable from the internet. No attacks in the wild have been reported. Researchers at OpenSec shared an exploit and a patch with the maintainers. Apply your distribution's kernel update and reboot, and restrict port two zero four nine to trusted networks if you cannot patch yet.",
+      "sources": [
+        {
+          "name": "BleepingComputer",
+          "url": "https://www.bleepingcomputer.com/news/security/new-nfs2root-linux-flaw-can-let-attackers-gain-root-privileges/"
+        }
+      ]
+    },
+    {
+      "kind": "story",
+      "headline": "Unpatched Cacti zero-day has public exploit",
+      "tag": "Security",
+      "text": "A zero-day flaw in the Cacti network monitoring tool has been disclosed with a working exploit. According to BleepingComputer, a researcher published it on Thanksgiving Day, and it lets unauthenticated attackers run commands using just four web requests. The attack needs the Cacti guest account to be enabled. The researcher tested Cacti Core one point two point thirty one and did not report the flaw to Cacti first. There is no patch yet, and no attacks had been reported as of the twenty seventh of November. Disable the guest account and limit access to trusted networks now.",
+      "sources": [
+        {
+          "name": "BleepingComputer",
+          "url": "https://www.bleepingcomputer.com/news/security/unpatched-cacti-zero-day-with-public-poc-gives-remote-code-execution/"
+        }
+      ]
+    },
+    {
+      "kind": "story",
+      "headline": "pCloud confirms attack on its password manager",
+      "tag": "Breach",
+      "text": "The password manager pCloud Pass has suffered a cyberattack. Customers reported alerts about unknown devices signing in, even with two-factor authentication on. pCloud says it contained the attack, that a small number of user email addresses were exposed, and that login attempts were made. It says cloud storage was not affected and that stored passwords remain encrypted with users' master passwords. According to BleepingComputer, pCloud did not say whether encrypted vaults were accessed. If you use pCloud Pass, expect phishing, because the company says it will never ask for your master password by email, phone or chat.",
+      "sources": [
+        {
+          "name": "BleepingComputer",
+          "url": "https://www.bleepingcomputer.com/news/security/pcloud-confirms-password-manager-hack-after-suspicious-login-alerts/"
+        }
+      ]
+    },
+    {
+      "kind": "story",
+      "headline": "Second Drupal takeover flaw exploited in attacks",
+      "tag": "Security",
+      "text": "Drupal says attackers are exploiting a second critical flaw that lets them hijack unpatched sites. According to BleepingComputer, it follows a flaw in the Drupal installer that was patched last week and exploited a day later. Drupal says some sites in unusual or incomplete install states remain vulnerable, and that this is happening in the wild. Fixed versions are ten point six point twenty three, eleven point three point twenty three and eleven point four point fourteen. Upgrade, or block access to the installer file, then check that the user one email address is one you control.",
+      "sources": [
+        {
+          "name": "BleepingComputer",
+          "url": "https://www.bleepingcomputer.com/news/security/drupal-warns-of-new-access-bypass-flaw-exploited-in-attacks/"
+        }
+      ]
+    },
+    {
+      "kind": "story",
+      "headline": "Hex package manager warns of potential data breach",
+      "tag": "Breach",
+      "text": "The Hex package manager has warned of a potential data breach. According to SecurityWeek, a vulnerability in hex.pm allowed hackers to run commands on its web servers. No evidence of data modification was found. However, database reads are not logged, so it is not possible to rule out that data was read. The sources supplied give no further details. If you publish or depend on packages from hex.pm, this matters because exposure cannot be ruled out, so watch for further guidance from the Hex team.",
+      "sources": [
+        {
+          "name": "SecurityWeek",
+          "url": "https://www.securityweek.com/hex-package-manager-warns-of-potential-data-breach/"
+        }
+      ]
+    },
+    {
+      "kind": "story",
+      "headline": "CERT-In flags five WhatsApp vulnerabilities",
+      "tag": "Security",
+      "text": "India's cybersecurity agency CERT-In has flagged five vulnerabilities in WhatsApp. According to Inc forty two, it issued a high severity advisory on the twenty sixth of November covering WhatsApp and WhatsApp Business on Android, iOS, Windows and Mac. The flaws could let attackers delete files, expose information or execute code through a crafted message, attachment or link. WhatsApp reported no evidence of exploitation for four of them. The fifth, an advertisement link flaw on Android, may have been abused alongside specific spam messages. Update WhatsApp on every device your team uses.",
+      "sources": [
+        {
+          "name": "Inc42",
+          "url": "https://inc42.com/buzz/cert-in-flags-five-cybersecurity-vulnerabilities-in-whatsapp-warns-of-data-exposure/"
+        },
+        {
+          "name": "MediaNama",
+          "url": "https://www.medianama.com/2026/11/223-cert-in-vulnerabilities-whatsapp/"
+        }
+      ]
+    },
+    {
+      "kind": "outro",
+      "text": "That's the brief for today. Thanks for listening, and see you next time."
+    }
+  ]
+}
