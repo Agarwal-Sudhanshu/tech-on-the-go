@@ -1,6 +1,122 @@
 {
   "episodes": [
     {
+      "date": "2026-11-28",
+      "title": "SAP source code incident, NFS2ROOT Linux flaw, Cacti zero-day",
+      "description": "SAP confirms a cybersecurity incident involving its GitHub source code, a twelve-year-old Linux NFS flaw called NFS2ROOT allows remote root access, and a Cacti zero-day has a public exploit. Also: pCloud Pass attack, a second exploited Drupal flaw, a Hex package manager warning and CERT-In's WhatsApp advisory.",
+      "show_notes_html": "<p>SAP confirms a cybersecurity incident involving its GitHub source code, a twelve-year-old Linux NFS flaw called NFS2ROOT allows remote root access, and a Cacti zero-day has a public exploit. Also: pCloud Pass attack, a second exploited Drupal flaw, a Hex package manager warning and CERT-In&#x27;s WhatsApp advisory.</p><p>Stories covered:</p><ul><li>SAP confirms incident tied to GitHub source code &mdash; Sources: <a href=\"https://www.techmeme.com/261127/p9#a261127p9\">Techmeme</a>, <a href=\"https://therecord.media/sap-germany-cyberattack-github\">The Record</a>, <a href=\"https://www.bleepingcomputer.com/news/security/sap-confirms-security-incident-after-suspicious-github-activity/\">BleepingComputer</a>, <a href=\"https://www.securityweek.com/sap-confirms-cyberattack-source-code-reportedly-compromised/\">SecurityWeek</a></li><li>NFS2ROOT Linux flaw allows remote root access &mdash; Sources: <a href=\"https://www.bleepingcomputer.com/news/security/new-nfs2root-linux-flaw-can-let-attackers-gain-root-privileges/\">BleepingComputer</a></li><li>Unpatched Cacti zero-day has public exploit &mdash; Sources: <a href=\"https://www.bleepingcomputer.com/news/security/unpatched-cacti-zero-day-with-public-poc-gives-remote-code-execution/\">BleepingComputer</a></li><li>pCloud confirms attack on its password manager &mdash; Sources: <a href=\"https://www.bleepingcomputer.com/news/security/pcloud-confirms-password-manager-hack-after-suspicious-login-alerts/\">BleepingComputer</a></li><li>Second Drupal takeover flaw exploited in attacks &mdash; Sources: <a href=\"https://www.bleepingcomputer.com/news/security/drupal-warns-of-new-access-bypass-flaw-exploited-in-attacks/\">BleepingComputer</a></li><li>Hex package manager warns of potential data breach &mdash; Sources: <a href=\"https://www.securityweek.com/hex-package-manager-warns-of-potential-data-breach/\">SecurityWeek</a></li><li>CERT-In flags five WhatsApp vulnerabilities &mdash; Sources: <a href=\"https://inc42.com/buzz/cert-in-flags-five-cybersecurity-vulnerabilities-in-whatsapp-warns-of-data-exposure/\">Inc42</a>, <a href=\"https://www.medianama.com/2026/11/223-cert-in-vulnerabilities-whatsapp/\">MediaNama</a></li></ul>",
+      "stories": [
+        {
+          "headline": "SAP confirms incident tied to GitHub source code",
+          "tag": "Breach",
+          "sources": [
+            {
+              "name": "Techmeme",
+              "url": "https://www.techmeme.com/261127/p9#a261127p9"
+            },
+            {
+              "name": "The Record",
+              "url": "https://therecord.media/sap-germany-cyberattack-github"
+            },
+            {
+              "name": "BleepingComputer",
+              "url": "https://www.bleepingcomputer.com/news/security/sap-confirms-security-incident-after-suspicious-github-activity/"
+            },
+            {
+              "name": "SecurityWeek",
+              "url": "https://www.securityweek.com/sap-confirms-cyberattack-source-code-reportedly-compromised/"
+            }
+          ]
+        },
+        {
+          "headline": "NFS2ROOT Linux flaw allows remote root access",
+          "tag": "Security",
+          "sources": [
+            {
+              "name": "BleepingComputer",
+              "url": "https://www.bleepingcomputer.com/news/security/new-nfs2root-linux-flaw-can-let-attackers-gain-root-privileges/"
+            }
+          ]
+        },
+        {
+          "headline": "Unpatched Cacti zero-day has public exploit",
+          "tag": "Security",
+          "sources": [
+            {
+              "name": "BleepingComputer",
+              "url": "https://www.bleepingcomputer.com/news/security/unpatched-cacti-zero-day-with-public-poc-gives-remote-code-execution/"
+            }
+          ]
+        },
+        {
+          "headline": "pCloud confirms attack on its password manager",
+          "tag": "Breach",
+          "sources": [
+            {
+              "name": "BleepingComputer",
+              "url": "https://www.bleepingcomputer.com/news/security/pcloud-confirms-password-manager-hack-after-suspicious-login-alerts/"
+            }
+          ]
+        },
+        {
+          "headline": "Second Drupal takeover flaw exploited in attacks",
+          "tag": "Security",
+          "sources": [
+            {
+              "name": "BleepingComputer",
+              "url": "https://www.bleepingcomputer.com/news/security/drupal-warns-of-new-access-bypass-flaw-exploited-in-attacks/"
+            }
+          ]
+        },
+        {
+          "headline": "Hex package manager warns of potential data breach",
+          "tag": "Breach",
+          "sources": [
+            {
+              "name": "SecurityWeek",
+              "url": "https://www.securityweek.com/hex-package-manager-warns-of-potential-data-breach/"
+            }
+          ]
+        },
+        {
+          "headline": "CERT-In flags five WhatsApp vulnerabilities",
+          "tag": "Security",
+          "sources": [
+            {
+              "name": "Inc42",
+              "url": "https://inc42.com/buzz/cert-in-flags-five-cybersecurity-vulnerabilities-in-whatsapp-warns-of-data-exposure/"
+            },
+            {
+              "name": "MediaNama",
+              "url": "https://www.medianama.com/2026/11/223-cert-in-vulnerabilities-whatsapp/"
+            }
+          ]
+        }
+      ],
+      "tags": [
+        "SAP",
+        "GitHub",
+        "Linux",
+        "NFS2ROOT",
+        "Cacti",
+        "zero-day",
+        "pCloud",
+        "Drupal",
+        "Hex",
+        "hex.pm",
+        "WhatsApp",
+        "CERT-In",
+        "cybersecurity",
+        "data breach",
+        "patching"
+      ],
+      "pub_date": "2026-11-28T05:39:32+05:30",
+      "mp3": "episodes/2026-11-28.mp3",
+      "bytes": 3454401,
+      "duration": 280.45,
+      "guid": "749f6bc0-cac8-55f3-8ce1-5f4120698433"
+    },
+    {
       "date": "2026-11-27",
       "title": "Microsoft on Artex AI Tool, Rackspace Spot Breach, Juniper Flaw",
       "description": "Microsoft says Chinese and North Korean state groups have adopted the Artex AI attack tool. Rackspace is shutting down its Spot cloud service after a breach, and a critical Juniper flaw is being exploited. The episode also covers Mitel, Drupal, the PolinRider GitHub campaign and a CERT-In advisory on India's DIGIT platform.",
